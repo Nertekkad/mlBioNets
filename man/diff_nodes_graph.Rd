@@ -57,9 +57,12 @@ sparccNet <- abs(sparccNet$Cor) >= 0.4
 plant_sparCC<-adj2igraph(sparccNet)
 vertex.attributes(plant_sparCC) <- list(name = colnames(Plantmat))
 
+# Node's abundence differences between layers
 mat_list<-list(Insectmat, Plantmat)
 g.list<-list(insect_sparCC, plant_sparCC)
 # We'll considere only the 20 nodes more important according to the abundances.
 diff_g<-diff_nodes_graph(T_Collapsed, n = 20, mat_list, g.list, alpha = 0.05)
 
+plot(diff_g, vertex.label.color="black", vertex.color = vertex.attributes(diff_g)$colorA,
+     vertex.label.cex=.5, vertex.label.dist=1,layout=layout_with_kk, vertex.size = 5)
 }
