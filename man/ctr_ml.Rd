@@ -1,20 +1,16 @@
-\name{TaxGroup}
-\alias{TaxGroup}
-\title{TaxGroup}
+\name{ctr_ml}
+\alias{ctr_ml}
+\title{ctr_ml}
 \usage{
-TaxGroup(g, T_table, g_tax, p_tax)
+ctr_ml(g.list, ctr_type)
 }
 \description{
-Identifies the membership of a node to a certain higher-ranking taxon.
+Colors the nodes according to their centrality.
 }
 \arguments{
-\item{g}{An \emph{igraph} object.}
+\item{g.list}{List of \emph{igraph} objects.}
 
-\item{T_table}{Taxa table as \emph{data.frame}.}
-
-\item{g_tax}{The taxonomic level at which the nodes will be colored.}
-
-\item{p_tax}{The taxonomic level at which the network was built.}
+\item{ctr_type}{Centrality type ("degree", "betweenness" or "closeness").}
 }
 
 \examples{
@@ -55,8 +51,11 @@ sparccNet <- abs(sparccNet$Cor) >= 0.4
 plant_sparCC<-adj2igraph(sparccNet)
 vertex.attributes(plant_sparCC) <- list(name = colnames(Plantmat))
 
-# Phylum identification for each node
-insect_sparCC<-TaxGroup(insect_sparCC, T_table, "Phylum", "Genus")
-plant_sparCC<-TaxGroup(plant_sparCC, T_table, "Phylum", "Genus")
-vertex.attributes(insect_sparCC)$Taxon[1:12]
+# Plot the centrality
+g.list<-list(insect_sparCC, plant_sparCC)
+g.list<-ctr_ml(g.list, ctr_type = "degree")
+plot(g.list[[1]], vertex.label.color="black",
+     vertex.color = vertex.attributes(g.list[[1]])$hl, vertex.label.cex=.5,
+     vertex.label.dist=1,layout=layout_with_kk, vertex.size = 5)
+title(main = "Insect")
 }
