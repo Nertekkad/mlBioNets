@@ -2,7 +2,7 @@
 
 ctr_g<-function(g, ctr_type){
   require(igraph)
-  for(i in 1:length(g.list)){
+  if(ctr_type == "degree"){
     ctr_max<-which.max(degree(g))
     ctr<-degree(g)/degree(g)[ctr_max]
     Redpal<-heat.colors(5, alpha=1)

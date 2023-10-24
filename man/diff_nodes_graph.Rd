@@ -57,7 +57,7 @@ sparccNet <- abs(sparccNet$Cor) >= 0.4
 plant_sparCC<-adj2igraph(sparccNet)
 vertex.attributes(plant_sparCC) <- list(name = colnames(Plantmat))
 
-# Node's abundence differences between layers
+# Nodes' abundence differences between layers
 mat_list<-list(Insectmat, Plantmat)
 g.list<-list(insect_sparCC, plant_sparCC)
 # We'll considere only the 20 nodes more important according to the abundances.
