@@ -53,7 +53,7 @@ vertex.attributes(plant_sparCC) <- list(name = colnames(Plantmat))
 
 # Plot the centrality
 g.list<-list(insect_sparCC, plant_sparCC)
-g.list<-ctr(g.list, ctr_type = "degree")
+g.list<-ctr_ml(g.list, ctr_type = "degree")
 plot(g.list[[1]], vertex.label.color="black",
      vertex.color = vertex.attributes(g.list[[1]])$hl, vertex.label.cex=.5,
      vertex.label.dist=1,layout=layout_with_kk, vertex.size = 5)
