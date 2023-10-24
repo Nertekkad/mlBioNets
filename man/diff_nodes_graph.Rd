@@ -1,16 +1,22 @@
-\name{ctr_ml}
-\alias{ctr_ml}
-\title{ctr_ml}
+\name{diff_nodes_graph}
+\alias{diff_nodes_graph}
+\title{diff_nodes_graph}
 \usage{
-ctr_ml(g.list, ctr_type)
+diff_nodes_graph(T_Collapsed, n, mat_list, g.list, alpha)
 }
 \description{
-Colors the nodes according to their centrality.
+Identifies the most abundant taxa and recognizes which nodes have significant differences between their abundances (red) and which ones don't (blue).
 }
 \arguments{
+\item{T_collapsed}{Abundance table collapsed at a certain taxonomic level.}
+
+\item{n}{Number of nodes to considere.}
+
+\item{mat_list}{List of abundance matrices.}
+
 \item{g.list}{List of \emph{igraph} objects.}
 
-\item{ctr_type}{Centrality type ("degree", "betweenness" or "closeness").}
+\item{alpha}{Significance. It must be a number between 0 and 1.}
 }
 
 \examples{
@@ -51,11 +57,9 @@ sparccNet <- abs(sparccNet$Cor) >= 0.4
 plant_sparCC<-adj2igraph(sparccNet)
 vertex.attributes(plant_sparCC) <- list(name = colnames(Plantmat))
 
-# Plot the centrality
+mat_list<-list(Insectmat, Plantmat)
 g.list<-list(insect_sparCC, plant_sparCC)
-g.list<-ctr(g.list, ctr_type = "degree")
-plot(g.list[[1]], vertex.label.color="black",
-     vertex.color = vertex.attributes(g.list[[1]])$hl, vertex.label.cex=.5,
-     vertex.label.dist=1,layout=layout_with_kk, vertex.size = 5)
-title(main = "Insect")
+# We'll considere only the 20 nodes more important according to the abundances.
+diff_g<-diff_nodes_graph(T_Collapsed, n = 20, mat_list, g.list, alpha = 0.05)
+
 }
