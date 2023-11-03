@@ -30,7 +30,7 @@ O_table<-as.data.frame(t(otu_table(ps2)))
 T_Collapsed<-T_collapse(T_table = T_table, O_table = O_table, names_level = "Genus")
 ```
 
-
+Data processing by layers.
 ```{r}
 # Separate insect and plant data
 Insect<-which(sample_data(ps2)$Type =="Insect")
