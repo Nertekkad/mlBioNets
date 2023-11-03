@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-After load the package and required data, 
+After load the package and required data, we can collapse the abundances at genus level using the taxonomic data.
 ```{r setup}
 library(mlBioNets)
 # Load packages and data
