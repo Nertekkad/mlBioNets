@@ -51,11 +51,20 @@ sparccNet <- abs(sparccNet$Cor) >= 0.4
 plant_sparCC<-adj2igraph(sparccNet)
 vertex.attributes(plant_sparCC) <- list(name = colnames(Plantmat))
 
-# Plot the centrality
+# Plot the centrality in a multilayer network
+library(muxViz)
 g.list<-list(insect_sparCC, plant_sparCC)
 g.list<-ctr_ml(g.list, ctr_type = "degree")
-plot(g.list[[1]], vertex.label.color="black",
-     vertex.color = vertex.attributes(g.list[[1]])$hl, vertex.label.cex=.5,
-     vertex.label.dist=1,layout=layout_with_kk, vertex.size = 5)
-title(main = "Insect")
+abs_IP<-list(Insectmat, Plantmat)
+lay <- layoutMultiplex(g.list, layout="kk", ggplot.format=F, box=T)
+plot_multiplex3D(g.list, layer.layout=lay,
+                 layer.colors=c("red3", "green3"),
+                 layer.shift.x=0.5, layer.space=2,
+                 layer.labels=NULL, layer.labels.cex=1.5,
+                 node.size.values="auto",
+                 node.size.scale=abs_mat(abs_IP, g.list, 20),
+                 node.colors=node_color_mat(g.list, "centrality"),
+                 edge.colors="#838B8B",
+                 node.colors.aggr=NULL,
+                 show.aggregate=F)
 }
