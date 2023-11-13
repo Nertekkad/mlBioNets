@@ -71,7 +71,7 @@ plot_multiplex3D(g.list, layer.layout=lay,
 # Phylo
 unq<-unique(T_table[,"Phylum"])
 colors<-rainbow(length(unq))
-v_colored_ml(g.list, T_table, g_tax = "Phylum", p_tax = "Genus",
+g.list<-v_colored_ml(g.list, T_table, g_tax = "Phylum", p_tax = "Genus",
              g_colors = colors)
 
 lay <- layoutMultiplex(g.list, layout="kk", ggplot.format=F, box=T)

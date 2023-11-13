@@ -8,7 +8,7 @@ node_color_mat<-function(g.list, type){
     }
     # Input color vector
     taxacolors<-unlist(taxacolors)
-    # Color matrix at cetain taxonomic level
+    # Color matrix at certain taxonomic level
     taxamat<-matrix(taxacolors, nrow = length(V(g.list[[1]])),
                     ncol = length(g.list))
     return(taxamat)
