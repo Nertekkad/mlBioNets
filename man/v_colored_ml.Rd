@@ -60,6 +60,7 @@ plant_sparCC<-adj2igraph(sparccNet)
 vertex.attributes(plant_sparCC) <- list(name = colnames(Plantmat))
 
 # Color assignment for the nodes of the layers
+g.list<-list(insect_sparCC, plant_sparCC)
 g.list<-v_colored(g.list, T_table, g_tax = "Phylum",
                p_tax = "Genus", g_colors = colors)
 
