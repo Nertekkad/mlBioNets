@@ -1,18 +1,23 @@
-\name{node_color_mat}
-\alias{node_color_mat}
-\title{node_color_mat}
+\name{v_colored_ml}
+\alias{v_colored_ml}
+\title{v_colored_ml}
 \usage{
-node_color_mat(g.list, type)
+v_colored(g, T_table, g_tax, p_tax, g_colors)
 }
 \description{
-Create a matrix that contains the assigned colors for the nodes of a multilayer network.
+Assign a color to each node depending of a certain taxonomic level. For example, the phylum.
 }
 \arguments{
 \item{g.list}{List of \emph{igraph} objects.}
 
-\item{type}{"phylo" assigns the colors according to a certain taxonomic level. "centrality" assings the colors according to the centrality level.}
-}
+\item{T_table}{Taxa table as \emph{data.frame}.}
 
+\item{g_tax}{The taxonomic level at which the nodes will be colored.}
+
+\item{p_tax}{The taxonomic level at which the network was built.}
+
+\item{g_colors}{Set of colors. The vector must have the same length of g_tax elements.}
+}
 \examples{
 # Load packages and data
 library(mlBioNets)
@@ -33,6 +38,9 @@ Plant<-which(sample_data(ps2)$Type =="Plant")
 Plant<-sample_data(ps2)$ID[Plant]
 Insectmat <- T_Collapsed[Insect,]
 Plantmat <- T_Collapsed[Plant,]
+# Node colors at phylum level
+unq<-unique(T_table[,"Phylum"])
+colors<-rainbow(length(unq))
 
 # Coabundance networks
 
@@ -51,29 +59,13 @@ sparccNet <- abs(sparccNet$Cor) >= 0.4
 plant_sparCC<-adj2igraph(sparccNet)
 vertex.attributes(plant_sparCC) <- list(name = colnames(Plantmat))
 
+# Color assignment for the nodes of the layers
+g.list<-v_colored(g.list, T_table, g_tax = "Phylum",
+               p_tax = "Genus", g_colors = colors)
+
 # Plot multilayer network
 library(muxViz)
-g.list<-list(insect_sparCC, plant_sparCC)
-g.list<-ctr_ml(g.list, ctr_type = "degree")
 abs_IP<-list(Insectmat, Plantmat)
-# Centrality
-lay <- layoutMultiplex(g.list, layout="kk", ggplot.format=F, box=T)
-plot_multiplex3D(g.list, layer.layout=lay,
-                 layer.colors=c("red3", "green3"),
-                 layer.shift.x=0.5, layer.space=2,
-                 layer.labels=NULL, layer.labels.cex=1.5,
-                 node.size.values="auto",
-                 node.size.scale=abs_mat(abs_IP, g.list, 20),
-                 node.colors=node_color_mat(g.list, "centrality"),
-                 edge.colors="#838B8B",
-                 node.colors.aggr=NULL,
-                 show.aggregate=F)
-# Phylo
-unq<-unique(T_table[,"Phylum"])
-colors<-rainbow(length(unq))
-v_colored_ml(g.list, T_table, g_tax = "Phylum", p_tax = "Genus",
-             g_colors = colors)
-
 lay <- layoutMultiplex(g.list, layout="kk", ggplot.format=F, box=T)
 plot_multiplex3D(g.list, layer.layout=lay,
                  layer.colors=c("red3", "green3"),
