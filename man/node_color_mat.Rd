@@ -63,18 +63,23 @@ plot_multiplex3D(g.list, layer.layout=lay,
                  layer.shift.x=0.5, layer.space=2,
                  layer.labels=NULL, layer.labels.cex=1.5,
                  node.size.values="auto",
-                 node.size.scale=abs_mat(abs_IP, g.list, 2),
+                 node.size.scale=abs_mat(abs_IP, g.list, 20),
                  node.colors=node_color_mat(g.list, "centrality"),
                  edge.colors="#838B8B",
                  node.colors.aggr=NULL,
                  show.aggregate=F)
 # Phylo
+unq<-unique(T_table[,"Phylum"])
+colors<-rainbow(length(unq))
+v_colored_ml(g.list, T_table, g_tax = "Phylum", p_tax = "Genus",
+             g_colors = colors)
+
 plot_multiplex3D(g.list, layer.layout=lay,
                  layer.colors=c("red3", "green3"),
                  layer.shift.x=0.5, layer.space=2,
                  layer.labels=NULL, layer.labels.cex=1.5,
                  node.size.values="auto",
-                 node.size.scale=abs_mat(abs_IP, g.list, 2),
+                 node.size.scale=abs_mat(abs_IP, g.list, 20),
                  node.colors=node_color_mat(g.list, "phylo"),
                  edge.colors="#838B8B",
                  node.colors.aggr=NULL,
