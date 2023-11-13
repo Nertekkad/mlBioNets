@@ -52,10 +52,11 @@ plant_sparCC<-adj2igraph(sparccNet)
 vertex.attributes(plant_sparCC) <- list(name = colnames(Plantmat))
 
 # Plot multilayer network
+library(muxViz)
 g.list<-list(insect_sparCC, plant_sparCC)
 g.list<-ctr_ml(g.list, ctr_type = "degree")
 abs_IP<-list(Insectmat, Plantmat)
-lay <- layoutMultiplex(ml_BTad, layout="kk", ggplot.format=F, box=T)
+lay <- layoutMultiplex(g.list, layout="kk", ggplot.format=F, box=T)
 # Centrality
 plot_multiplex3D(g.list, layer.layout=lay,
                  layer.colors=c("red3", "green3"),
