@@ -44,6 +44,7 @@ Plantmat <- T_Collapsed[Plant,]
 
 library(SpiecEasi)
 library(igraph)
+library(muxVix)
 
 # Insect (beetle)
 sparccNet<-sparcc(Insectmat)
