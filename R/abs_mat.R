@@ -12,3 +12,4 @@ abs_mat<-function(abs.list, g.list, n){
                  ncol = length(g.list))
   return(absmat)
 }
+#Hi
