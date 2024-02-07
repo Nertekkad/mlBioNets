@@ -1,5 +1,4 @@
 # Creates a data.frame with the degree of each layer's nodes
-
 ctr_df <- function(g.list, layer_names){
   # Identificates the degree of the nodes at each layer
   degree_ml <- list()

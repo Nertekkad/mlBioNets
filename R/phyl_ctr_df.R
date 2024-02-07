@@ -1,5 +1,4 @@
 # Creates a data.frame of the sums of centrality values at a chosen taxonomic level
-
 phyl_ctr_df <- function(ctr_df, layer_names, n_layers){
   # Sums the centrality values at a certain taxonomic level in everylayer
   phyla<-unique(BTad_degree$g_tax)
