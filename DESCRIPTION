@@ -14,3 +14,7 @@ Suggests:
     knitr,
     rmarkdown
 VignetteBuilder: knitr
+Imports:
+    ggplot2,
+    igraph,
+    devtools::install_github("manlius/muxViz")
