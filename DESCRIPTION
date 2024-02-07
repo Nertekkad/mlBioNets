@@ -17,4 +17,5 @@ VignetteBuilder: knitr
 Imports:
     ggplot2,
     igraph,
-    devtools::install_github("manlius/muxViz")
+Remotes:
+    github::manlius/muxViz
