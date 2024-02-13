@@ -1,12 +1,12 @@
 # Creates a data.frame of the sums of centrality values at a chosen taxonomic level
 phyl_ctr_df <- function(ctr_df, layer_names, n_layers){
   # Sums the centrality values at a certain taxonomic level in everylayer
-  phyla<-unique(BTad_degree$g_tax)
+  phyla<-unique(ctr_df$g_tax)
   ml_phyl_d <- list()
   for(j in 1:n_layers){
     phyl_d<-c()
     for(i in 1:length(phyla)){
-      phyl_d[i] <- sum(BTad_degree[, j][which(BTad_degree$g_tax %in% phyla[i])])
+      phyl_d[i] <- sum(ctr_df[, j][which(ctr_df$g_tax %in% phyla[i])])
     }
     ml_phyl_d[[j]] <- phyl_d
   }
