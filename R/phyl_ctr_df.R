@@ -18,7 +18,7 @@ phyl_ctr_df <- function(ctr_df, layer_names, n_layers){
   # Adds de colors and names
   degree_df2<-data.frame(
     Taxon=phyla,
-    Colors=colors
+    Colors=sample(rainbow(100), length(phyla))
   )
   # Eliminates unrelevant elements
   not_degree <- which(rowSums(degree_df1) == 0)
@@ -26,3 +26,4 @@ phyl_ctr_df <- function(ctr_df, layer_names, n_layers){
   ctr_df <- ctr_df[-not_degree,]
   return(ctr_df)
 }
+
