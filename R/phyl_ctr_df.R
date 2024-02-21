@@ -1,5 +1,6 @@
 # Creates a data.frame of the sums of centrality values at a chosen taxonomic level
 phyl_ctr_df <- function(ctr_df, layer_names, n_layers){
+  require(viridis)
   # Sums the centrality values at a certain taxonomic level in everylayer
   phyla<-unique(ctr_df$g_tax)
   ml_phyl_d <- list()
@@ -18,7 +19,7 @@ phyl_ctr_df <- function(ctr_df, layer_names, n_layers){
   # Adds de colors and names
   degree_df2<-data.frame(
     Taxon=phyla,
-    Colors=sample(rainbow(100), length(phyla))
+    Colors=sample(viridis(100), length(phyla))
   )
   # Eliminates unrelevant elements
   not_degree <- which(rowSums(degree_df1) == 0)
