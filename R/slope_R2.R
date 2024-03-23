@@ -1,0 +1,36 @@
+# slope_R2()
+slope_R2 <- function(df_properties){
+  model1 <- lm(Mean_degree ~ Treatments, data = df_properties)
+  b1 <- coef(model1)[2]
+  r2_1 <- summary(model1)$r.squared
+
+  model2 <- lm(sd_degree ~ Treatments, data = df_properties)
+  b2 <- coef(model2)[2]
+  r2_2 <- summary(model2)$r.squared
+
+  model3 <- lm(Clusterization ~ Treatments, data = df_properties)
+  b3 <- coef(model3)[2]
+  r2_3 <- summary(model3)$r.squared
+
+  model4 <- lm(Edge_density ~ Treatments, data = df_properties)
+  b4 <- coef(model4)[2]
+  r2_4 <- summary(model4)$r.squared
+
+  model5 <- lm(Connected_nodes ~ Treatments, data = df_properties)
+  b5 <- coef(model5)[2]
+  r2_5 <- summary(model5)$r.squared
+
+  model6 <- lm(Modularity ~ Treatments, data = df_properties)
+  b6 <- coef(model6)[2]
+  r2_6 <- summary(model6)$r.squared
+
+  df_colnames <- c("Mean_degree", "SD of degree", "Clusterization", "Edge_density",
+                   "Connected_nodes", "Modularity")
+
+  df_slope_R2 <- data.frame(
+    "Slope" = c(b1, b2, b3, b4, b5, b6),
+    "R_Square" = c(r2_1, r2_2, r2_3, r2_4, r2_5, r2_6)
+  )
+  rownames(df_slope_R2) <- df_colnames
+  return(df_slope_R2)
+}
