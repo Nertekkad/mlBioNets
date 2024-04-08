@@ -1,4 +1,17 @@
-# cor_degree_abs()
+# Correlation degree abundance
+#'
+#' Graph the correlation between degree and abundances.
+#' @usage cor_degree_abs(g.list, abs.list, layer_names, layer_colors, title)
+#' @param g.list List of igraph objects (multilayer network).
+#' @param abs.list List of abundances tables.
+#' @param layer_names description
+#' @param layer_colors description
+#' @param title description
+#' @return n
+#' @examples
+#' 1+1
+#'
+
 cor_degree_abs<-function(g.list, abs.list, layer_names, layer_colors, title){
   # Data.frame of degree and abundance of each layer
   cordf<-list()

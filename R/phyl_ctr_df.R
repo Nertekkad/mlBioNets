@@ -1,4 +1,11 @@
-# Creates a data.frame of the sums of centrality values at a chosen taxonomic level
+# Phylum centrality data frame
+#'
+#' Creates a data.frame of the sums of centrality values at a chosen taxonomic level
+#' @usage phyl_ctr_df(ctr_df, layer_names, n_layers)
+#' @param ctr_df Data.frame
+#' @param layer_names Name of the layers
+#' @param n_layers Number of layers.
+
 phyl_ctr_df <- function(ctr_df, layer_names, n_layers){
   require(viridis)
   # Sums the centrality values at a certain taxonomic level in everylayer

@@ -1,4 +1,14 @@
-# ml_properties()
+# Multilayer network properties
+#'
+#'Description.
+#' @usage ml_properties(g.list, treatments)
+#' @param g.list List of igraph objects (multilayer network).
+#' @param treatments description
+#' @returns Linear regression of each layer.
+#' @examples
+#' n
+#'
+
 ml_properties<-function(g.list, treatments){
   # Mean degree
   mean_degree<-c()

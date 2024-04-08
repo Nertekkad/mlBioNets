@@ -1,4 +1,11 @@
 # Network inference function
+#'
+#' Colors the nodes according to their centrality.
+#' @usage net_inference (taxa_abs, method, p)
+#' @param taxa_abs An abundance table, preprocessed with function T_collapse.
+#' @param method The method to create the network ("sparcc", "aracne")
+#' @param p When method="sparcc", a threshold between 0-1.
+
 net_inference<-function(taxa_abs, method, p){
   require(SpiecEasi)
   require(igraph)

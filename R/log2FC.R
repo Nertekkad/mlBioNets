@@ -1,4 +1,15 @@
 # log2FC
+#'
+#' Description
+#' @usage log2fc(phyl_ctr_df, control_layer, test_layer)
+#' @param phyl_ctr_df n
+#' @param control_layer description
+#' @param test_layer description
+#' @return n
+#' @examples
+#' 1+1
+#'
+
 log2fc <- function(phyl_ctr_df, control_layer, test_layer){
   # Control and test layer to compare
   cl <- which(colnames(phyl_ctr_df) == control_layer)

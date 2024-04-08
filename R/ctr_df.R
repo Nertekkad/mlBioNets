@@ -1,4 +1,12 @@
-# Creates a data.frame with the degree of each layer's nodes
+# Centrality data frame
+#'
+#' Creates a data.frame with the degree of each layer's nodes
+#'
+#' @usage ctr_df (g.list, layer_names)
+#' @param g.list List of igraph objects (multilayer network).
+#' @param layer_names Vector with the name of each layer.
+#' @return Returns a data frame with degree's value, phylum and specie of each node.
+
 ctr_df <- function(g.list, layer_names){
   # Identificates the degree of the nodes at each layer
   degree_ml <- list()
