@@ -34,3 +34,4 @@ slope_R2 <- function(df_properties){
   rownames(df_slope_R2) <- df_colnames
   return(df_slope_R2)
 }
+
