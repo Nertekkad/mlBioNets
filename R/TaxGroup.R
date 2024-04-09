@@ -1,4 +1,15 @@
 # TaxGroup
+#'
+#' Identifies the membership of a node to a certain higher-ranking taxon.
+#' @usage TaxGroup(g, T_table, g_tax, p_tax)
+#' @param g An igraph object.
+#' @param T_table Taxa table as data.frame
+#' @param g_tax The taxonomic level at which the nodes will be colored.
+#' @param p_tax The taxonomic level at which the network was built.
+#' @returns description
+#' @examples
+#' 1+1
+#'
 
 TaxGroup<-function(g, T_table, g_tax, p_tax){
   require(igraph)

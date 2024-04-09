@@ -1,4 +1,17 @@
-# diff_nodes_graph()
+# diff_nodes_graph
+#'
+#' Identifies the most abundant taxa and recognizes which nodes have significant
+#' differences between their abundances (red) and which ones don't (blue).
+#' @usage diff_nodes_graph(T_Collapsed, n, mat_list, g.list, alpha)
+#' @param T_collapsed Abundance table collapsed at a certain taxonomic level.
+#' @param n Number of nodes to considere.
+#' @param mat_list List of abundance matrices.
+#' @param g.list List of igraph objects (multilayer network).
+#' @param alpha Significance. It must be a number between 0 and 1.
+#' @return n
+#' @examples
+#' 1+1
+#'
 
 diff_nodes_graph<-function(T_Collapsed, n, mat_list, g.list, alpha){
   require("muxViz")

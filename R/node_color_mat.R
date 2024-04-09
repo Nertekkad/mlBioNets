@@ -1,4 +1,15 @@
 # Node-color matrix function
+#'
+#' Create a matrix that contains the assigned colors for the nodes of a multilayer network.
+#' @usage node_color_mat (g.list, type)
+#' @param g.list List of igraph objects.
+#' @param type "phylo" assigns the colors according to a certain taxonomic level;
+#' "centrality" assings the colors according to the centrality level.
+#' @return Check
+#' @examples
+#' # 1+1
+#'
+
 node_color_mat<-function(g.list, type){
   if(type == "phylo"){
     # Colors for each node

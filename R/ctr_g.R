@@ -1,4 +1,13 @@
-# ctr_g()
+# Centrality g
+#'
+#' Colors the nodes of a network according to their centrality.
+#' @usage ctr_g(g, ctr_type)
+#' @param g An igraph object.
+#' @param ctr_type Centrality type ("degree", "betweenness" or "closeness").
+#' @return An igraph object with
+#' @examples
+#' # 1+1
+#'
 
 ctr_g<-function(g, ctr_type){
   require(igraph)

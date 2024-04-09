@@ -1,4 +1,16 @@
 # Network plotting
+#'
+#' Create a graph of the network.
+#' @usage net_plot(g, type)
+#' @param g An igraph object preprocessed by v_colored or ctr_g functions.
+#' @param type ("phylo", "centrality").
+#' @return An igraph object with
+#' @examples
+#' # x <- 1
+#' # 1+x
+#' 1+x
+#'
+
 net_plot<-function(g, type){
   # Taxonomic classification
   if(type == "phylo"){

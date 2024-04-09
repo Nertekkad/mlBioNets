@@ -1,4 +1,17 @@
-# v_colored()
+# v_colored
+#'
+#' Assign a color to each node of a network depending of a certain taxonomic level,
+#' for example, the phylum.
+#' @usage v_colored(g, T_table, g_tax, p_tax, g_colors)
+#' @param g An igraph object.
+#' @param T_table Taxa table as data.frame.
+#' @param g_tax The taxonomic level at which the nodes will be colored.
+#' @param p_tax The taxonomic level at which the network was built.
+#' @param g_colors Set of colors. The vector must have the same length of g_tax elements.
+#' @return An igraph object
+#' @examples
+#' # 1+1
+#'
 
 v_colored<-function(g, T_table, g_tax, p_tax, g_colors){
   require(igraph)

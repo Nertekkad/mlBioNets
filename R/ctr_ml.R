@@ -1,4 +1,13 @@
-# ctr_ml()
+# Multilayer centrality
+#'
+#' Colors the nodes according to their centrality.
+#' @usage ctr_ml (g.list, ctr_type)
+#' @param g.list List of igraph objects (multilayer network).
+#' @param ctr_type Centrality type ("degree", "betweenness", "closeness").
+#' @return A list of igraph objects which
+#' @examples
+#' # 1+1
+#'
 
 ctr_ml<-function(g.list, ctr_type){
   require(igraph)
