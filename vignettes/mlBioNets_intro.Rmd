@@ -1,5 +1,5 @@
 ---
-title: "Vignette Title"
+title: "mlBioNets"
 author:
 - name: Víctor Lázaro-Vidal
   affiliation: Universidad Autónoma de Querétaro
