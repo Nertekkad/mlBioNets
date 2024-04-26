@@ -19,6 +19,34 @@ vignette: |
   %\VignetteEncoding{UTF-8}
 ---
 
+# Network inference
+
+Load and preprocessing of data
+```{r small, fig.cap="Small figure. A plot produced by a code chunk with option `fig.small = TRUE`.", fig.small=TRUE, echo=FALSE}
+# Load packages and data
+library(mlBioNets)
+library(phyloseq)
+BN_bacter<-data(ps2)
+# Let's extract the taxonomic and abundance tables
+T_table<-as.data.frame(tax_table(ps2)); dim(T_table)
+O_table<-as.data.frame(t(otu_table(ps2))); dim(O_table)
+# The ASVs abundances are collapsed at genus level
+BN_bacter2<-T_collapse(is_phyloseq = F, T_table = T_table,
+                       O_table = O_table,
+                       names_level = "Genus"); dim(BN_bacter2)
+# Eliminate unclassified data
+BN_bacter2<-BN_bacter2[,-c(which(colnames(BN_bacter2)=="unclassified"))]
+# Separate beetle and nightshade samples' ID
+Insect<-which(sample_data(ps2)$Type =="Insect")
+Insect<-sample_data(ps2)$ID[Insect]; Insect
+Plant<-which(sample_data(ps2)$Type =="Plant")
+Plant<-sample_data(ps2)$ID[Plant]; Plant
+# Separate abundances
+Insectmat <- T_Collapsed[Insect,]
+Plantmat <- T_Collapsed[Plant,]
+```
+
+
 # Getting started
 
 To enable the _Bioconductor_ style in your R Markdown vignette you need to include the following in the `DESCRIPTION` file:
