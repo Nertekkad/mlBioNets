@@ -46,6 +46,94 @@ Insectmat <- T_Collapsed[Insect,]
 Plantmat <- T_Collapsed[Plant,]
 ```
 
+Network inference using the SparCC algorithm
+```{r}
+library(igraph)
+# Beetle layer
+library(SpiecEasi)
+sparccNet<-sparcc(Insectmat)
+sparccNet <- abs(sparccNet$Cor) >= 0.4
+insect_sparCC<-adj2igraph(sparccNet)
+vertex.attributes(insect_sparCC) <- list(name = colnames(Insectmat))
+plot_network(insect_sparCC)
+# Nightshade layer
+sparccNet<-sparcc(Plantmat)
+sparccNet <- abs(sparccNet$Cor) >= 0.4
+plant_sparCC<-adj2igraph(sparccNet)
+vertex.attributes(plant_sparCC) <- list(name = colnames(Plantmat))
+plot_network(plant_sparCC)
+```
+
+Multilayer plotting
+```{r}
+library(muxViz)
+library(viridis)
+# Multilayer object
+g.list<-list(insect_sparCC, plant_sparCC)
+# Nodes' colors
+g.list<-v_colored_ml(g.list, T_table, "Phylum", "Genus",
+                     sample(viridis(100), length(unique(T_table[, "Phylum"]))))
+matctr<-node_color_mat(g.list, "phylo")
+# Nodes' size
+matsize<-abs_mat(list(Insectmat, Plantmat), g.list, 10)
+# Multilayer plot
+lay <- layoutMultiplex(g.list, layout="kk", ggplot.format=F, box=T)
+plot_multiplex3D(g.list, layer.layout=lay,
+                 layer.colors=c("red3", "green3"),
+                 layer.shift.x=0.5, layer.space=2,
+                 layer.labels=NULL,
+                 layer.labels.cex=1.5, node.size.values="auto",
+                 node.size.scale=matsize,
+                 node.colors=matctr,
+                 edge.colors="black",
+                 node.colors.aggr=NULL,
+                 show.aggregate=F)
+
+```
+Network inference using ARACNe algorithm
+
+```{r}
+library(minet)
+# Beetle layer
+mim <- build.mim(Insectmat,estimator="spearman")
+Imat <- aracne(mim)
+insect_aracne<-graph.adjacency(Imat)
+insect_aracne<-as.undirected(insect_aracne)
+plot_network(insect_aracne)
+# Nightshade layer
+mim <- build.mim(Plantmat,estimator="spearman")
+Pmat <- aracne(mim)
+plant_aracne<-graph.adjacency(Pmat)
+plant_aracne<-as.undirected(plant_aracne)
+plot_network(plant_aracne)
+```
+
+Multilayer plotting
+```{r}
+library(muxViz)
+library(viridis)
+# Multilayer object
+g.list<-list(insect_aracne, plant_aracne)
+# Nodes' colors
+g.list<-v_colored_ml(g.list, T_table, "Phylum", "Genus",
+                     sample(viridis(100), length(unique(T_table[, "Phylum"]))))
+matctr<-node_color_mat(g.list, "phylo")
+# Nodes' size
+matsize<-abs_mat(list(Insectmat, Plantmat), g.list, 10)
+# Multilayer plot
+lay <- layoutMultiplex(g.list, layout="kk", ggplot.format=F, box=T)
+plot_multiplex3D(g.list, layer.layout=lay,
+                 layer.colors=c("red3", "green3"),
+                 layer.shift.x=0.5, layer.space=2,
+                 layer.labels=NULL,
+                 layer.labels.cex=1.5, node.size.values="auto",
+                 node.size.scale=matsize,
+                 node.colors=matctr,
+                 edge.colors="black",
+                 node.colors.aggr=NULL,
+                 show.aggregate=F)
+
+```
 
 # Getting started
 
