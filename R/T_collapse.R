@@ -2,13 +2,19 @@
 #'
 #'Adds the abundances at a certain taxonomic level
 #'
-#' @usage T_collapse (T_table, O_table, names_level)
-#' @param ps A phyloseq object
-#' @param T_table A taxa table
-#' @param O_table An OTU table (ASV?)
-#' @param names_level Taxonomic level to separate _
+#' @usage T_collapse (is_phyloseq = T or F)
+#' @param ps A phyloseq object.
+#' @param T_table (If is_phyloseq=F) you have to introduce a taxa table.
+#' @param O_table (If is_phyloseq=F) An OTU table.
+#' @param names_level (If is_phyloseq=F) Taxonomic level to separate.
 #' @return Returns a class array matrix at a certain taxonomic level.
-#' @examples 1+1
+#' @examples
+#' # With BiocManager, package "microbiome"
+#' # if is_phyloseq = T
+#'
+#' library (microbiome)
+#' data ("dietswap")
+#' T_collapse (is_phyloseq = T, ps = ps2, names_level ="Genus")
 
 
 T_collapse <- function(is_phyloseq, ps, T_table, O_table, names_level) {
@@ -43,6 +49,3 @@ T_collapse <- function(is_phyloseq, ps, T_table, O_table, names_level) {
     return(mat)
   }
 }
-
-# Error in delayedAssign(x, ps, eval.env, assign.env) :
-#  cannot change value of locked binding for 'ps'
