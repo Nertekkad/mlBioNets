@@ -5,6 +5,16 @@
 #' @param taxa_abs An abundance table, preprocessed with function T_collapse.
 #' @param method The method to create the network ("sparcc", "aracne")
 #' @param p When method="sparcc", a threshold between 0-1.
+#' @return Description
+#' @examples
+#'
+#' sparcc_net <- net_inference(a, "sparcc", 0.4)
+#' multilayer_net <- load ("data/obj_ml.RData")
+#' plot (multilayer_net)
+#'
+#' aracne_net <- net_inference(a, "aracne")
+#' aracne_obj <- load ("data/obj_aracne.RData")
+#' plot(aracne_obj)
 
 net_inference<-function(taxa_abs, method, p){
   require(SpiecEasi)

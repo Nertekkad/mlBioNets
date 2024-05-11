@@ -1,4 +1,13 @@
-# slope_R2()
+# Slope R^2
+#'
+#'Description
+#' @usage slope_R2(df_properties)
+#' @param df_properties description
+#' @returns description
+#' @examples
+#' 1+1
+#'
+
 slope_R2 <- function(df_properties){
   model1 <- lm(Mean_degree ~ Treatments, data = df_properties)
   b1 <- coef(model1)[2]

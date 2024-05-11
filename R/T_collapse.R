@@ -1,12 +1,12 @@
 # T_collapse
 #'
-#'Adds the abundances at a certain taxonomic level
+#' Adds the abundances at a certain taxonomic level.
 #'
-#' @usage T_collapse (is_phyloseq = T or F)
-#' @param ps A phyloseq object.
-#' @param T_table (If is_phyloseq=F) you have to introduce a taxa table.
-#' @param O_table (If is_phyloseq=F) An OTU table.
-#' @param names_level (If is_phyloseq=F) Taxonomic level to separate.
+#' @usage T_collapse (is_phyloseq)
+#' @param ps If "is_phyloseq = T" A phyloseq object.
+#' @param T_table (If is_phyloseq = F) You have to introduce a taxa table.
+#' @param O_table (If is_phyloseq = F) An OTU table.
+#' @param names_level (If is_phyloseq = F) Taxonomic level to separate.
 #' @return Returns a class array matrix at a certain taxonomic level.
 #' @examples
 #' # With BiocManager, package "microbiome"
@@ -15,6 +15,10 @@
 #' library (microbiome)
 #' data ("dietswap")
 #' T_collapse (is_phyloseq = T, ps = ps2, names_level ="Genus")
+#'
+#' # if is_phyloseq = F
+#'
+#' T_collapse(F, T_table = david_stool_lineages, O_table = david_stoolA_otus, names_level = "V7")
 
 
 T_collapse <- function(is_phyloseq, ps, T_table, O_table, names_level) {
