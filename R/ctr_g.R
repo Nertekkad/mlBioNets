@@ -6,8 +6,14 @@
 #' @param ctr_type Centrality type ("degree", "betweenness" or "closeness").
 #' @return An igraph object with
 #' @examples
-#' # 1+1
 #'
+#' graph <- readRDS("data/dstool_net.rds")
+#' ctr_g (graph, ctr_type = "degree")
+#'
+#' graf <- readRDS("data/dstool_net.rds")
+#' ctrg (graf, ctr_type = "betweenness")
+#'
+#' ctrg (graf, ctr_type="closeness")
 
 ctr_g<-function(g, ctr_type){
   require(igraph)

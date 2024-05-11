@@ -26,6 +26,15 @@ Assign a color to each node of a network depending of a certain taxonomic level,
 for example, the phylum.
 }
 \examples{
-# 1+1
+
+library(viridis)
+
+graph <- readRDS("data/dstool_net.rds")
+
+v <- v_colored (graph, david_stool_lineages, g_tax = "Family", p_tax = "Order",
+g_colors = )
+# Nodes will be colored by Family, and the net was built by Order
+
+plot(v)
 
 }

@@ -1,20 +1,22 @@
 # Network inference function
 #'
 #' Colors the nodes according to their centrality.
-#' @usage net_inference (taxa_abs, method, p)
+#' @usage net_inference (taxa_abs, method)
 #' @param taxa_abs An abundance table, preprocessed with function T_collapse.
 #' @param method The method to create the network ("sparcc", "aracne")
 #' @param p When method="sparcc", a threshold between 0-1.
-#' @return Description
+#' @return The function returns an igraph object..
 #' @examples
 #'
-#' sparcc_net <- net_inference(a, "sparcc", 0.4)
-#' multilayer_net <- load ("data/obj_ml.RData")
-#' plot (multilayer_net)
+#' object_tc <- readRDS("data/object_tc_dietswap.rds")
+#' sparccnet <- net_inference (object_tc, "sparcc", 0.4)
+#' plot (sparccnet)
 #'
-#' aracne_net <- net_inference(a, "aracne")
-#' aracne_obj <- load ("data/obj_aracne.RData")
-#' plot(aracne_obj)
+#'
+#' object_tc2 <- readRDS("data/object_tc_dstool.rds")
+#' aracnet <- net_inference (object_tc2, "aracne")
+#' plot (aracnet)
+#'
 
 net_inference<-function(taxa_abs, method, p){
   require(SpiecEasi)

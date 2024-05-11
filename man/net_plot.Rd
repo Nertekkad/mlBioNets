@@ -9,17 +9,17 @@ net_plot(g, type)
 \arguments{
 \item{g}{An igraph object preprocessed by v_colored or ctr_g functions.}
 
-\item{type}{("phylo", "centrality").}
+\item{type}{You can choose between "phylo" or "centrality".}
 }
 \value{
-An igraph object with
+An igraph object..
 }
 \description{
 Create a graph of the network.
 }
 \examples{
-# x <- 1
-# 1+x
-1+x
 
+graph <- readRDS("data/dstool_net.rds")
+net_plot (graph, type = "centrality")
+net_plot (graph, type = "phylo")
 }

@@ -4,14 +4,14 @@
 \alias{T_collapse}
 \title{Adds the abundances at a certain taxonomic level.}
 \usage{
-T_collapse (is_phyloseq)
+T_collapse (is_phyloseq=T, ps=..., names_level=...)
 }
 \arguments{
 \item{ps}{A phyloseq object}
 
 \item{T_table}{A taxa table}
 
-\item{O_table}{An OTU table (ASV?)}
+\item{O_table}{An OTU table}
 
 \item{names_level}{Taxonomic level to separate}
 }
@@ -27,9 +27,15 @@ Adds the abundances at a certain taxonomic level.
 
 library (microbiome)
 data ("dietswap")
-T_collapse (is_phyloseq = T, ps = ps2, names_level ="Genus")
+T_collapse (is_phyloseq = T, ps = dietswap, names_level ="Phylum")
 
 # if is_phyloseq = F
 
-T_collapse(F, T_table = david_stool_lineages, O_table = david_stoolA_otus, names_level = "V7")
+library(seqtime)
+colnames(david_stool_lineages)<- c("ID", "Kingdom", "Phylum", "Class", "Order",
+
+T_collapse(F, T_table = david_stool_lineages, O_table = david_stoolA_otus, names_level = "Genus")
+}
+\references{
+_
 }

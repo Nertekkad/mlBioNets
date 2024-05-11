@@ -18,6 +18,12 @@ An igraph object with
 Colors the nodes of a network according to their centrality.
 }
 \examples{
-# 1+1
 
+graph <- readRDS("data/dstool_net.rds")
+ctr_g (graph, ctr_type = "degree")
+
+graf <- readRDS("data/dstool_net.rds")
+ctrg (graf, ctr_type = "betweenness")
+
+ctrg (graf, ctr_type="closeness")
 }

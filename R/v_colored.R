@@ -10,7 +10,17 @@
 #' @param g_colors Set of colors. The vector must have the same length of g_tax elements.
 #' @return An igraph object
 #' @examples
-#' # 1+1
+#'
+#'library(viridis)
+# sample(viridis(100), num_nodos)
+#'
+#' graph <- readRDS("data/dstool_net.rds")
+#'
+#' v <- v_colored (graph, david_stool_lineages, g_tax = "Family", p_tax = "Order",
+#' g_colors = )
+#' # Nodes will be colored by Family, and the net was built by Order
+#'
+#' plot(v)
 #'
 
 v_colored<-function(g, T_table, g_tax, p_tax, g_colors){
