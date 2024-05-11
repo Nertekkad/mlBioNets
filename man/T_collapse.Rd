@@ -2,9 +2,9 @@
 % Please edit documentation in R/T_collapse.R
 \name{T_collapse}
 \alias{T_collapse}
-\title{Adds the abundances at a certain taxonomic level}
+\title{Adds the abundances at a certain taxonomic level.}
 \usage{
-T_collapse (T_table, O_table, names_level)
+T_collapse (is_phyloseq)
 }
 \arguments{
 \item{ps}{A phyloseq object}
@@ -13,14 +13,23 @@ T_collapse (T_table, O_table, names_level)
 
 \item{O_table}{An OTU table (ASV?)}
 
-\item{names_level}{Taxonomic level to separate _}
+\item{names_level}{Taxonomic level to separate}
 }
 \value{
 Returns a class array matrix at a certain taxonomic level.
 }
 \description{
-Adds the abundances at a certain taxonomic level
+Adds the abundances at a certain taxonomic level.
 }
 \examples{
-1+1
+# With BiocManager, package "microbiome"
+# if is_phyloseq = T
+
+library (microbiome)
+data ("dietswap")
+T_collapse (is_phyloseq = T, ps = ps2, names_level ="Genus")
+
+# if is_phyloseq = F
+
+T_collapse(F, T_table = david_stool_lineages, O_table = david_stoolA_otus, names_level = "V7")
 }

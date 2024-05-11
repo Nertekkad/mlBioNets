@@ -2,24 +2,24 @@
 % Please edit documentation in R/TaxGroup.R
 \name{TaxGroup}
 \alias{TaxGroup}
-\title{Description}
+\title{Identifies the membership of a node to a certain higher-ranking taxon.}
 \usage{
 TaxGroup(g, T_table, g_tax, p_tax)
 }
 \arguments{
 \item{g}{An igraph object.}
 
-\item{T_table}{Taxa table.}
+\item{T_table}{Taxa table as data.frame}
 
-\item{g_tax}{description}
+\item{g_tax}{The taxonomic level at which the nodes will be colored.}
 
-\item{p_tax}{description}
+\item{p_tax}{The taxonomic level at which the network was built.}
 }
 \value{
 description
 }
 \description{
-Description
+Identifies the membership of a node to a certain higher-ranking taxon.
 }
 \examples{
 1+1

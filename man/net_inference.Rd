@@ -13,6 +13,19 @@ net_inference (taxa_abs, method, p)
 
 \item{p}{When method="sparcc", a threshold between 0-1.}
 }
+\value{
+Description
+}
 \description{
 Colors the nodes according to their centrality.
+}
+\examples{
+
+sparcc_net <- net_inference(a, "sparcc", 0.4)
+multilayer_net <- load ("data/obj_ml.RData")
+plot (multilayer_net)
+
+aracne_net <- net_inference(a, "aracne")
+aracne_obj <- load ("data/obj_aracne.RData")
+plot(aracne_obj)
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/abs_mat.R
 \name{abs_mat}
 \alias{abs_mat}
-\title{Colors nodes according their abundance.}
+\title{Colors nodes according to their abundance.}
 \usage{
 abs_mat(abs.list, g.list, n)
 }
@@ -17,7 +17,7 @@ abs_mat(abs.list, g.list, n)
 Information
 }
 \description{
-Colors nodes according their abundance.
+Colors nodes according to their abundance.
 }
 \examples{
 # 1+1

@@ -2,26 +2,28 @@
 % Please edit documentation in R/diff_nodes_graph.R
 \name{diff_nodes_graph}
 \alias{diff_nodes_graph}
-\title{Description}
+\title{Identifies the most abundant taxa and recognizes which nodes have significant
+differences between their abundances (red) and which ones don't (blue).}
 \usage{
 diff_nodes_graph(T_Collapsed, n, mat_list, g.list, alpha)
 }
 \arguments{
-\item{n}{description}
+\item{n}{Number of nodes to considere.}
 
-\item{mat_list}{description}
+\item{mat_list}{List of abundance matrices.}
 
 \item{g.list}{List of igraph objects (multilayer network).}
 
-\item{alpha}{description}
+\item{alpha}{Significance. It must be a number between 0 and 1.}
 
-\item{T_collapsed}{description}
+\item{T_collapsed}{Abundance table collapsed at a certain taxonomic level.}
 }
 \value{
 n
 }
 \description{
-Description
+Identifies the most abundant taxa and recognizes which nodes have significant
+differences between their abundances (red) and which ones don't (blue).
 }
 \examples{
 1+1

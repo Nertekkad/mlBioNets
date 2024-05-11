@@ -2,12 +2,12 @@
 % Please edit documentation in R/g_abundance.R
 \name{g_abundance}
 \alias{g_abundance}
-\title{Description}
+\title{Assign a color to each node depending of the relative abundance.}
 \usage{
 g_abundance(layer_mat, g)
 }
 \arguments{
-\item{layer_mat}{description}
+\item{layer_mat}{Abundance data.frame.}
 
 \item{g}{An igraph obejct.}
 }
@@ -15,7 +15,7 @@ g_abundance(layer_mat, g)
 k
 }
 \description{
-Description
+Assign a color to each node depending of the relative abundance.
 }
 \examples{
 # k
