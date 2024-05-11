@@ -7,6 +7,10 @@
 #' @param T_table (If is_phyloseq = F) You have to introduce a taxa table.
 #' @param O_table (If is_phyloseq = F) An OTU table.
 #' @param names_level (If is_phyloseq = F) Taxonomic level to separate.
+#' @param ps A phyloseq object
+#' @param T_table A taxa table
+#' @param O_table An OTU table (ASV?)
+#' @param names_level Taxonomic level to separate
 #' @return Returns a class array matrix at a certain taxonomic level.
 #' @examples
 #' # With BiocManager, package "microbiome"
