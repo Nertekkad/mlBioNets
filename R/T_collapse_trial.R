@@ -25,7 +25,7 @@
 #' T_collapse(F, T_table = david_stool_lineages, O_table = david_stoolA_otus, names_level = "V7")
 
 
-T_collapse <- function(is_phyloseq, ps, T_table, O_table, names_level) {
+T_collapse_trial <- function(is_phyloseq, ps, T_table, O_table, names_level) {
   if(is_phyloseq == T){
     T_table<-as.data.frame(tax_table(ps))
     O_table<-as.data.frame(t(otu_table(ps))) # t?
