@@ -11,8 +11,8 @@
 #' @return An igraph object
 #' @examples
 #'
-#'library(viridis)
-# sample(viridis(100), num_nodos)
+#' library(viridis)
+#  sample(viridis(100), num_nodos)
 #'
 #' graph <- readRDS("data/dstool_net.rds")
 #'

@@ -11,16 +11,20 @@ ml_TaxGroup(g.list, T_table, g_tax, p_tax)
 
 \item{T_table}{Taxa table.}
 
-\item{g_tax}{description}
+\item{g_tax}{The taxonomic level at which the nodes will be assigned.}
 
-\item{p_tax}{description}
+\item{p_tax}{The taxonomic level at which the network was built.}
 }
 \value{
-n
+The function returns a multilayer network (g.list) with each node named according its taxonomic level.
 }
 \description{
 Assigns the taxonomic membership of the nodes.
 }
 \examples{
-n
+
+mlDstool <- readRDS(file = "data/Dstool_mlnet")
+colnames(david_stool_lineages)<- c("ID", "Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species", "Summary", "ID")
+
+ml_TaxGroup (mlDstool, david_stool_lineages, g_tax = "Phylum", p_tax = "Family")
 }

@@ -18,6 +18,10 @@ A list of igraph objects which
 Colors the nodes according to their centrality.
 }
 \examples{
-# 1+1
 
+nDstool <- readRDS("data/Dstool_mlnet")
+
+ctrl_ml(nDstoolm, ctr_type="degree")
+ctrl_ml(nDstoolm, ctr_type="betweenness")
+ctrl_ml(nDstoolm, ctr_type="closeness")
 }

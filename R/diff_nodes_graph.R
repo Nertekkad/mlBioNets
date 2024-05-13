@@ -8,9 +8,12 @@
 #' @param mat_list List of abundance matrices.
 #' @param g.list List of igraph objects (multilayer network).
 #' @param alpha Significance. It must be a number between 0 and 1.
-#' @return n
+#' @return .
 #' @examples
-#' 1+1
+#'
+#' mlDstool <- readRDS(file = "data/Dstool_mlnet.rds")
+#'
+#' diff_nodes_graph(tcDstool, 10, mtrx, mlDstool, 0.5)
 #'
 
 diff_nodes_graph<-function(T_Collapsed, n, mat_list, g.list, alpha){

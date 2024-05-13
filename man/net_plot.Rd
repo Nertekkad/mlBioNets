@@ -22,4 +22,8 @@ Create a graph of the network.
 graph <- readRDS("data/dstool_net.rds")
 net_plot (graph, type = "centrality")
 net_plot (graph, type = "phylo")
+
+g <- readRDS (file="data/dietswap_net.rds")
+net_plot (g, type = "centrality")
+net_plot (g, type = "phylo")
 }

@@ -7,19 +7,20 @@
 log2fc(phyl_ctr_df, control_layer, test_layer)
 }
 \arguments{
-\item{phyl_ctr_df}{n}
+\item{phyl_ctr_df}{A data.frame preprocessed with phyl_ctr_df function.}
 
-\item{control_layer}{description}
+\item{control_layer}{"Name" of control layer.}
 
-\item{test_layer}{description}
+\item{test_layer}{"Name" of test layer.}
 }
 \value{
-n
+.
 }
 \description{
 Description
 }
 \examples{
-1+1
 
+phcDstool <- readRDS(file = "data/Dstool_phyl_ctr.rds")
+log2fc (phcDstool, "Control", "Post-sick")
 }

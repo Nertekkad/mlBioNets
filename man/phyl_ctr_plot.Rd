@@ -9,7 +9,7 @@ phyl_ctr_plot(phyl_ctr_df, layer_name, title)
 \arguments{
 \item{phyl_ctr_df}{A data.frame preprocessed by phyl_ctr_df}
 
-\item{layer_name}{Name of the layer to graph/plot}
+\item{layer_name}{Name of the layer to graph/plot.}
 
 \item{title}{Name for the graph.}
 }
@@ -20,6 +20,7 @@ description
 Description
 }
 \examples{
-1+1
 
+phyl_ds <- readRDS(file = "phyl_Dstool.rds")
+phyl_ctr_plot (phyl_ds, "Control", "Example")
 }

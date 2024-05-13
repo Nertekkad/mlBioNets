@@ -9,15 +9,18 @@ ml_properties(g.list, treatments)
 \arguments{
 \item{g.list}{List of igraph objects (multilayer network).}
 
-\item{treatments}{description}
+\item{treatments}{A vector which contain the name of each layer.}
 }
 \value{
-Linear regression of each layer.
+The function returns a linear regression of each layer.
 }
 \description{
 Description.
 }
 \examples{
-n
+
+mlDstool <- readRDS (file = "data/Dstool_mlnet.rds")
+ntreat <- c("Control", "post-sickness")
+ml_properties (mlDstool, ntreat)
 
 }

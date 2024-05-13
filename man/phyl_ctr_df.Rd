@@ -7,12 +7,21 @@
 phyl_ctr_df(ctr_df, layer_names, n_layers)
 }
 \arguments{
-\item{ctr_df}{Data.frame}
+\item{ctr_df}{Data.frame preprocessed with ctr_df function.}
 
 \item{layer_names}{Name of the layers}
 
 \item{n_layers}{Number of layers.}
 }
+\value{
+A data.frame.
+}
 \description{
 Creates a data.frame of the sums of centrality values at a chosen taxonomic level
+}
+\examples{
+
+Dstool_ctr <- readRDS(file="data/Dstool_ctr_df.rds")
+layersn <- c("Control", "Post_sick")
+phyl_ctr_df (Dstool_ctr, layersn, 2)
 }

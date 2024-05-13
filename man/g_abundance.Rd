@@ -9,15 +9,17 @@ g_abundance(layer_mat, g)
 \arguments{
 \item{layer_mat}{Abundance data.frame.}
 
-\item{g}{An igraph obejct.}
+\item{g}{An igraph object.}
 }
 \value{
-k
+A graph with colored nodes.
 }
 \description{
 Assign a color to each node depending of the relative abundance.
 }
 \examples{
-# k
+
+nDstool <- readRDS(file = "data/Dstool_net")
+g_abundance (david_stool_lineages, nDstool)
 
 }

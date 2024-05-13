@@ -26,6 +26,15 @@ Assign a color to each node of a multilayer netweork depending of a certain
 taxonomic level, for example, the phylum.
 }
 \examples{
-# 1 + 1
+
+library(viridis)
+
+g <- readRDS("data/dstool_mlnet.rds")
+
+ml_v <- v_colored (g, david_stool_lineages, g_tax = "Family", p_tax = "Order",
+g_colors = )
+# Nodes will be colored by Family, and the net was built by Order
+
+plot(ml_v)
 
 }

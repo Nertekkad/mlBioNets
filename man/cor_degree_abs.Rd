@@ -18,12 +18,14 @@ cor_degree_abs(g.list, abs.list, layer_names, layer_colors, title)
 \item{title}{description}
 }
 \value{
-n
+Returns a g.list and a plot.
 }
 \description{
 Graph the correlation between degree and abundances.
 }
 \examples{
-1+1
+
+nDstool <- readRDS(file = "data/Dstool_mlnet")
+cor_degree_abs(nDstool, david_stool_lineage)
 
 }

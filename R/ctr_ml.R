@@ -6,8 +6,12 @@
 #' @param ctr_type Centrality type ("degree", "betweenness", "closeness").
 #' @return A list of igraph objects which
 #' @examples
-#' # 1+1
 #'
+#' nDstool <- readRDS("data/Dstool_mlnet")
+#'
+#'ctrl_ml(nDstoolm, ctr_type="degree")
+#'ctrl_ml(nDstoolm, ctr_type="betweenness")
+#'ctrl_ml(nDstoolm, ctr_type="closeness")
 
 ctr_ml<-function(g.list, ctr_type){
   require(igraph)

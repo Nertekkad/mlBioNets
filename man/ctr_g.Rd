@@ -19,10 +19,10 @@ Colors the nodes of a network according to their centrality.
 }
 \examples{
 
-graph <- readRDS("data/dstool_net.rds")
+graph <- readRDS("data/dietswap_net.rds")
 ctr_g (graph, ctr_type = "degree")
 
-graf <- readRDS("data/dstool_net.rds")
+graf <- readRDS("data/Dstool_net.rds")
 ctrg (graf, ctr_type = "betweenness")
 
 ctrg (graf, ctr_type="closeness")

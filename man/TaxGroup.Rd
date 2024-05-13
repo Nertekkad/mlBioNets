@@ -26,7 +26,9 @@ Identifies the membership of a node to a certain higher-ranking taxon.
 # The input can be a net preprocessed by net_inference
 # The data is david_stool
 
-ex <- net_inference(object_tc, "aracne")
+tcollapsed <- readRDS (file="data/object_tc_dstool.rds")
+
+ex <- net_inference(tcollapsed, "aracne")
 graph <- readRDS("data/dstool_net.rds")
-TaxGroup(graph, T_table = david_stool_lineages, g_tax = "Phylum", p_tax = "Order")
+TaxGroup (g, T_table = david_stool_lineages, g_tax = "Phylum", p_tax = "Order")
 }

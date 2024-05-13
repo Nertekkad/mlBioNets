@@ -7,9 +7,11 @@
 #' @param layer_names description
 #' @param layer_colors description
 #' @param title description
-#' @return n
+#' @return Returns a g.list and a plot.
 #' @examples
-#' 1+1
+#'
+#' nDstool <- readRDS(file = "data/Dstool_mlnet")
+#' cor_degree_abs(nDstool, david_stool_lineage)
 #'
 
 cor_degree_abs<-function(g.list, abs.list, layer_names, layer_colors, title){

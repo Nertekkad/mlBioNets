@@ -17,3 +17,10 @@ Returns a data frame with degree's value, phylum and specie of each node.
 \description{
 Creates a data.frame with the degree of each layer's nodes
 }
+\examples{
+
+nDstool <- readRDS("data/Dstool_net.rds")
+
+vector <- c()
+ctr_df (nDstool, layer_names=vector)
+}

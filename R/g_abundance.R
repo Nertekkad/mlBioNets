@@ -3,10 +3,12 @@
 #' Assign a color to each node depending of the relative abundance.
 #' @usage g_abundance(layer_mat, g)
 #' @param layer_mat Abundance data.frame.
-#' @param g An igraph obejct.
-#' @return k
+#' @param g An igraph object.
+#' @return A graph with colored nodes.
 #' @examples
-#' # k
+#'
+#' nDstool <- readRDS(file = "data/Dstool_net")
+#' g_abundance (david_stool_lineages, nDstool)
 #'
 
 g_abundance<-function(layer_mat, g){

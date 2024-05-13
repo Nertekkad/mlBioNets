@@ -19,13 +19,16 @@ diff_nodes_graph(T_Collapsed, n, mat_list, g.list, alpha)
 \item{T_collapsed}{Abundance table collapsed at a certain taxonomic level.}
 }
 \value{
-n
+.
 }
 \description{
 Identifies the most abundant taxa and recognizes which nodes have significant
 differences between their abundances (red) and which ones don't (blue).
 }
 \examples{
-1+1
+
+mlDstool <- readRDS(file = "data/Dstool_mlnet.rds")
+
+diff_nodes_graph(tcDstool, 10, mtrx, mlDstool, 0.5)
 
 }

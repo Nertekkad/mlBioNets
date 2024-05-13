@@ -3,10 +3,13 @@
 #'Description.
 #' @usage ml_properties(g.list, treatments)
 #' @param g.list List of igraph objects (multilayer network).
-#' @param treatments description
-#' @returns Linear regression of each layer.
+#' @param treatments A vector which contain the name of each layer.
+#' @returns The function returns a linear regression of each layer.
 #' @examples
-#' n
+#'
+#' mlDstool <- readRDS (file = "data/Dstool_mlnet.rds")
+#' ntreat <- c("Control", "post-sickness")
+#' ml_properties (mlDstool, ntreat)
 #'
 
 ml_properties<-function(g.list, treatments){

@@ -13,12 +13,16 @@ node_color_mat (g.list, type)
 "centrality" assings the colors according to the centrality level.}
 }
 \value{
-Check
+Returns a heatmap of the multilayer network according the type you choosed.
 }
 \description{
 Create a matrix that contains the assigned colors for the nodes of a multilayer network.
 }
 \examples{
-# 1+1
+
+mlDstool <- readRDS(file = "data/Dstool_mlnet.rds")
+node_color_mat (mlDstool, type = "phylo")
+
+node_color_mat(mlDstool, type = "centrality")
 
 }

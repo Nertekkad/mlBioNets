@@ -5,9 +5,11 @@
 #' @param abs.list Abundance list
 #' @param g.list List of igraph objects (multilayer network).
 #' @param n A vertex
-#' @return Information
+#' @return Returns an igraph object.
 #' @examples
-#' # 1+1
+#'
+#' dstool_net <- readRDS(file = "data/Dstool_mlnet.rds")
+#' abs_mat(david_stool_lineage, dstool_net, 2)
 
 abs_mat<-function(abs.list, g.list, n){
   # Colors for each node

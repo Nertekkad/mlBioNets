@@ -21,12 +21,12 @@ Colors the nodes according to their centrality.
 }
 \examples{
 
-object_tc <- readRDS("data/object_tc_dietswap.rds")
+object_tc <- readRDS(file = "data/object_tc_dietswap.rds")
 sparccnet <- net_inference (object_tc, "sparcc", 0.4)
 plot (sparccnet)
 
 
-object_tc2 <- readRDS("data/object_tc_dstool.rds")
+object_tc2 <- readRDS(file = "data/object_tc_dstool.rds")
 aracnet <- net_inference (object_tc2, "aracne")
 plot (aracnet)
 

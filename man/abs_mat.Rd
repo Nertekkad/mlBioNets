@@ -14,11 +14,13 @@ abs_mat(abs.list, g.list, n)
 \item{n}{A vertex}
 }
 \value{
-Information
+Returns an igraph object.
 }
 \description{
 Colors nodes according to their abundance.
 }
 \examples{
-# 1+1
+
+dstool_net <- readRDS(file = "data/Dstool_mlnet.rds")
+abs_mat(david_stool_lineage, dstool_net, 2)
 }

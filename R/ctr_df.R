@@ -6,6 +6,12 @@
 #' @param g.list List of igraph objects (multilayer network).
 #' @param layer_names Vector with the name of each layer.
 #' @return Returns a data frame with degree's value, phylum and specie of each node.
+#' @examples
+#'
+#' nDstool <- readRDS("data/Dstool_net.rds")
+#'
+#' vector <- c()
+#' ctr_df (nDstool, layer_names=vector)
 
 ctr_df <- function(g.list, layer_names){
   # Identificates the degree of the nodes at each layer

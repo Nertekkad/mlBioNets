@@ -2,13 +2,14 @@
 #'
 #' Description
 #' @usage log2fc(phyl_ctr_df, control_layer, test_layer)
-#' @param phyl_ctr_df n
-#' @param control_layer description
-#' @param test_layer description
-#' @return n
+#' @param phyl_ctr_df A data.frame preprocessed with phyl_ctr_df function.
+#' @param control_layer "Name" of control layer.
+#' @param test_layer "Name" of test layer.
+#' @return .
 #' @examples
-#' 1+1
 #'
+#' phcDstool <- readRDS(file = "data/Dstool_phyl_ctr.rds")
+#' log2fc (phcDstool, "Control", "Post-sick")
 
 log2fc <- function(phyl_ctr_df, control_layer, test_layer){
   # Control and test layer to compare
