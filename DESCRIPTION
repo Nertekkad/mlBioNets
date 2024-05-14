@@ -17,5 +17,10 @@ VignetteBuilder: knitr
 Imports:
     ggplot2,
     igraph,
+    ggpubr,
+    viridis
 Remotes:
-    github::manlius/muxViz
+    github::manlius/muxViz,
+    github::hallucigenia-sparsa/seqtime,
+    github::zdk123/SpiecEasi,
+    
