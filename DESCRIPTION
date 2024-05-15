@@ -19,3 +19,4 @@ Imports:
     igraph,
 Remotes:
     github::manlius/muxViz
+RoxygenNote: 7.3.1
