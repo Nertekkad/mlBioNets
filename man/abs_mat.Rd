@@ -2,25 +2,28 @@
 % Please edit documentation in R/abs_mat.R
 \name{abs_mat}
 \alias{abs_mat}
-\title{Colors nodes according to their abundance.}
+\title{Colors nodes according to their abundance.
+# A partir de listas de abundancias, la red multicapa}
 \usage{
-abs_mat(abs.list, g.list, n)
+abs_mat (abs.list, g.list, n)
 }
 \arguments{
-\item{abs.list}{Abundance list}
+\item{abs.list}{Abundance list, the same lists you to generate the network.}
 
 \item{g.list}{List of igraph objects (multilayer network).}
 
-\item{n}{A vertex}
+\item{n}{Vertex number. Notice that if n>20 the nodes couldn't be so big.}
 }
 \value{
-Returns an igraph object.
+Returns a matrix, each column is a layer, and the values of the rows corresponds to the size of each node.
 }
 \description{
 Colors nodes according to their abundance.
+# A partir de listas de abundancias, la red multicapa
 }
 \examples{
 
-dstool_net <- readRDS(file = "data/Dstool_mlnet.rds")
-abs_mat(david_stool_lineage, dstool_net, 2)
+dstool_net <- readRDS (file = "data/Dstool_mlnet.rds")
+abs_mat (david_stool_lineage, dstool_net, 10)
+
 }

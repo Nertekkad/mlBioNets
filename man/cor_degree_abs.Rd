@@ -11,14 +11,14 @@ cor_degree_abs(g.list, abs.list, layer_names, layer_colors, title)
 
 \item{abs.list}{List of abundances tables.}
 
-\item{layer_names}{description}
+\item{layer_names}{The names of each layer of the network (ex. "control layer").}
 
-\item{layer_colors}{description}
+\item{layer_colors}{Assign a color to represent the layer (ex. "pink")}
 
-\item{title}{description}
+\item{title}{Plot's title.}
 }
 \value{
-Returns a g.list and a plot.
+Returns a correlation plot between the degree and abundance of each node. It shows the R-square and p-value.
 }
 \description{
 Graph the correlation between degree and abundances.
@@ -26,6 +26,7 @@ Graph the correlation between degree and abundances.
 \examples{
 
 nDstool <- readRDS(file = "data/Dstool_mlnet")
-cor_degree_abs(nDstool, david_stool_lineage)
+
+cor_degree_abs (nDstool, david_stool_lineage, layer_names = c("before_travel", "traveling", "after_travel"), layer_colors = c("blue", "purple", "yellow"), title = "Example")
 
 }

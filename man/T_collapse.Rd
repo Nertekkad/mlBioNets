@@ -7,13 +7,13 @@
 T_collapse (is_phyloseq=T, ps=..., names_level=...)
 }
 \arguments{
-\item{ps}{A phyloseq object}
+\item{ps}{If "is_phyloseq = T" A phyloseq object.}
 
-\item{T_table}{A taxa table}
+\item{T_table}{(If is_phyloseq = F) You have to introduce a taxa table.}
 
-\item{O_table}{An OTU table}
+\item{O_table}{(If is_phyloseq = F) An OTUs table.}
 
-\item{names_level}{Taxonomic level to separate}
+\item{names_level}{(If is_phyloseq = F) Taxonomic level to separate.}
 }
 \value{
 Returns a class array matrix at a certain taxonomic level.

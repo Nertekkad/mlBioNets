@@ -4,7 +4,7 @@
 \alias{g_abundance}
 \title{Assign a color to each node depending of the relative abundance.}
 \usage{
-g_abundance(layer_mat, g)
+g_abundance (layer_mat, g)
 }
 \arguments{
 \item{layer_mat}{Abundance data.frame.}

@@ -1,15 +1,15 @@
 # Phylum centrality plot
 #'
-#' Description
+#' Shows centrality importance of the phyla.
 #' @usage phyl_ctr_plot(phyl_ctr_df, layer_name, title)
 #' @param phyl_ctr_df A data.frame preprocessed by phyl_ctr_df
 #' @param layer_name Name of the layer to graph/plot.
 #' @param title Name for the graph.
-#' @returns description
+#' @returns A bar plot of degree importance for each phylum.
 #' @examples
 #'
 #' phyl_ds <- readRDS(file = "phyl_Dstool.rds")
-#' phyl_ctr_plot (phyl_ds, "Control", "Example")
+#' phyl_ctr_plot (phyl_ds, "before_travel", "after_travel")
 
 phyl_ctr_plot<-function(phyl_ctr_df, layer_name, title){
   # Barplot of degree centrality at certain taxonomic level

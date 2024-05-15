@@ -1,7 +1,7 @@
 # g_abundance
 #'
 #' Assign a color to each node depending of the relative abundance.
-#' @usage g_abundance(layer_mat, g)
+#' @usage g_abundance (layer_mat, g)
 #' @param layer_mat Abundance data.frame.
 #' @param g An igraph object.
 #' @return A graph with colored nodes.

@@ -2,25 +2,25 @@
 % Please edit documentation in R/ctr_df.R
 \name{ctr_df}
 \alias{ctr_df}
-\title{Creates a data.frame with the degree of each layer's nodes}
+\title{Creates a data.frame with the degree of each layer's nodes.}
 \usage{
 ctr_df (g.list, layer_names)
 }
 \arguments{
-\item{g.list}{List of igraph objects (multilayer network).}
+\item{g.list}{List of igraph objects (multilayer network), preprocessed by ml_TaxGroup.}
 
 \item{layer_names}{Vector with the name of each layer.}
 }
 \value{
-Returns a data frame with degree's value, phylum and specie of each node.
+Returns a data.frame with centrality value (if you preprocessed with ctr_ml or ctr_g: degree, betweenness or closeness), p_tax and g_tax of each node (function take this info from TaxGroup_ml).
 }
 \description{
-Creates a data.frame with the degree of each layer's nodes
+Creates a data.frame with the degree of each layer's nodes.
 }
 \examples{
 
 nDstool <- readRDS("data/Dstool_net.rds")
 
-vector <- c()
-ctr_df (nDstool, layer_names=vector)
+vector <- c ("before_travel", "traveling", "after_travel")
+ctr_df (nDstool, layer_names = vector)
 }

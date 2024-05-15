@@ -20,9 +20,8 @@ Create a matrix that contains the assigned colors for the nodes of a multilayer 
 }
 \examples{
 
-mlDstool <- readRDS(file = "data/Dstool_mlnet.rds")
+mlDstool <- readRDS (file = "data/Dstool_mlnet.rds")
 node_color_mat (mlDstool, type = "phylo")
 
 node_color_mat(mlDstool, type = "centrality")
-
 }

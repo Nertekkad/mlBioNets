@@ -1,11 +1,11 @@
 # Network inference function
 #'
-#' Colors the nodes according to their centrality.
+#' Allows ro infer a co-abundance network from an abundance table.
 #' @usage net_inference (taxa_abs, method)
 #' @param taxa_abs An abundance table, preprocessed with function T_collapse.
-#' @param method The method to create the network ("sparcc", "aracne")
+#' @param method The method to create the network ("sparcc", "aracne").
 #' @param p When method="sparcc", a threshold between 0-1.
-#' @return The function returns an igraph object..
+#' @return The function returns an igraph object representing the existing co-abundances between nodes at a certain taxonomic level.
 #' @examples
 #'
 #' object_tc <- readRDS(file = "data/object_tc_dietswap.rds")

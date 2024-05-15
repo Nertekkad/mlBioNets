@@ -2,7 +2,7 @@
 % Please edit documentation in R/phyl_ctr_plot.R
 \name{phyl_ctr_plot}
 \alias{phyl_ctr_plot}
-\title{Description}
+\title{Shows centrality importance of the phyla.}
 \usage{
 phyl_ctr_plot(phyl_ctr_df, layer_name, title)
 }
@@ -14,13 +14,13 @@ phyl_ctr_plot(phyl_ctr_df, layer_name, title)
 \item{title}{Name for the graph.}
 }
 \value{
-description
+A bar plot of degree importance for each phylum.
 }
 \description{
-Description
+Shows centrality importance of the phyla.
 }
 \examples{
 
 phyl_ds <- readRDS(file = "phyl_Dstool.rds")
-phyl_ctr_plot (phyl_ds, "Control", "Example")
+phyl_ctr_plot (phyl_ds, "before_travel", "after_travel")
 }

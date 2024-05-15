@@ -1,16 +1,15 @@
 # Multilayer network properties
 #'
-#'Description.
-#' @usage ml_properties(g.list, treatments)
+#' Quantifies different topological properties of a multilayer network.
+#' @usage ml_properties (g.list, treatments)
 #' @param g.list List of igraph objects (multilayer network).
-#' @param treatments A vector which contain the name of each layer.
-#' @returns The function returns a linear regression of each layer.
+#' @param treatments A vector with the names of each layer.
+#' @returns The function returns a data.frame, which contains topological metrics of the networks.
 #' @examples
 #'
 #' mlDstool <- readRDS (file = "data/Dstool_mlnet.rds")
-#' ntreat <- c("Control", "post-sickness")
+#' ntreat <- c("before_travel", "traveling")
 #' ml_properties (mlDstool, ntreat)
-#'
 
 ml_properties<-function(g.list, treatments){
   # Mean degree

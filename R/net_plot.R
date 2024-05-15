@@ -2,9 +2,9 @@
 #'
 #' Create a graph of the network.
 #' @usage net_plot(g, type)
-#' @param g An igraph object preprocessed by v_colored or ctr_g functions.
+#' @param g An igraph object preprocessed by v_colored or ctr_g.
 #' @param type You can choose between "phylo" or "centrality".
-#' @return An igraph object..
+#' @return An igraph object.
 #' @examples
 #'
 #' graph <- readRDS("data/dstool_net.rds")

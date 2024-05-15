@@ -2,25 +2,24 @@
 % Please edit documentation in R/ml_properties.R
 \name{ml_properties}
 \alias{ml_properties}
-\title{Description.}
+\title{Quantifies different topological properties of a multilayer network.}
 \usage{
-ml_properties(g.list, treatments)
+ml_properties (g.list, treatments)
 }
 \arguments{
 \item{g.list}{List of igraph objects (multilayer network).}
 
-\item{treatments}{A vector which contain the name of each layer.}
+\item{treatments}{A vector with the names of each layer.}
 }
 \value{
-The function returns a linear regression of each layer.
+The function returns a data.frame, which contains topological metrics of the networks.
 }
 \description{
-Description.
+Quantifies different topological properties of a multilayer network.
 }
 \examples{
 
 mlDstool <- readRDS (file = "data/Dstool_mlnet.rds")
-ntreat <- c("Control", "post-sickness")
+ntreat <- c("before_travel", "traveling")
 ml_properties (mlDstool, ntreat)
-
 }

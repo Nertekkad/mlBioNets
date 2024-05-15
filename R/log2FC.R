@@ -5,11 +5,11 @@
 #' @param phyl_ctr_df A data.frame preprocessed with phyl_ctr_df function.
 #' @param control_layer "Name" of control layer.
 #' @param test_layer "Name" of test layer.
-#' @return .
+#' @return Returns a plot of Log Fold Change of the centrality between layers.
 #' @examples
 #'
 #' phcDstool <- readRDS(file = "data/Dstool_phyl_ctr.rds")
-#' log2fc (phcDstool, "Control", "Post-sick")
+#' log2fc (phcDstool, "after_travel", "traveling")
 
 log2fc <- function(phyl_ctr_df, control_layer, test_layer){
   # Control and test layer to compare

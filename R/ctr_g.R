@@ -13,7 +13,7 @@
 #' graf <- readRDS("data/Dstool_net.rds")
 #' ctrg (graf, ctr_type = "betweenness")
 #'
-#' ctrg (graf, ctr_type="closeness")
+#' ctrg (graf, ctr_type = "closeness")
 
 ctr_g<-function(g, ctr_type){
   require(igraph)

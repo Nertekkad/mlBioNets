@@ -2,22 +2,22 @@
 % Please edit documentation in R/net_inference.R
 \name{net_inference}
 \alias{net_inference}
-\title{Colors the nodes according to their centrality.}
+\title{Allows ro infer a co-abundance network from an abundance table.}
 \usage{
 net_inference (taxa_abs, method)
 }
 \arguments{
 \item{taxa_abs}{An abundance table, preprocessed with function T_collapse.}
 
-\item{method}{The method to create the network ("sparcc", "aracne")}
+\item{method}{The method to create the network ("sparcc", "aracne").}
 
 \item{p}{When method="sparcc", a threshold between 0-1.}
 }
 \value{
-The function returns an igraph object..
+The function returns an igraph object representing the existing co-abundances between nodes at a certain taxonomic level.
 }
 \description{
-Colors the nodes according to their centrality.
+Allows ro infer a co-abundance network from an abundance table.
 }
 \examples{
 

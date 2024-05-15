@@ -7,12 +7,12 @@
 net_plot(g, type)
 }
 \arguments{
-\item{g}{An igraph object preprocessed by v_colored or ctr_g functions.}
+\item{g}{An igraph object preprocessed by v_colored or ctr_g.}
 
 \item{type}{You can choose between "phylo" or "centrality".}
 }
 \value{
-An igraph object..
+An igraph object.
 }
 \description{
 Create a graph of the network.

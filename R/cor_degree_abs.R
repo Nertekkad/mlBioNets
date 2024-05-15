@@ -4,14 +4,15 @@
 #' @usage cor_degree_abs(g.list, abs.list, layer_names, layer_colors, title)
 #' @param g.list List of igraph objects (multilayer network).
 #' @param abs.list List of abundances tables.
-#' @param layer_names description
-#' @param layer_colors description
-#' @param title description
-#' @return Returns a g.list and a plot.
+#' @param layer_names The names of each layer of the network (ex. "control layer").
+#' @param layer_colors Assign a color to represent the layer (ex. "pink")
+#' @param title Plot's title.
+#' @return Returns a correlation plot between the degree and abundance of each node. It shows the R-square and p-value.
 #' @examples
 #'
 #' nDstool <- readRDS(file = "data/Dstool_mlnet")
-#' cor_degree_abs(nDstool, david_stool_lineage)
+#'
+#' cor_degree_abs (nDstool, david_stool_lineage, layer_names = c("before_travel", "traveling", "after_travel"), layer_colors = c("blue", "purple", "yellow"), title = "Example")
 #'
 
 cor_degree_abs<-function(g.list, abs.list, layer_names, layer_colors, title){

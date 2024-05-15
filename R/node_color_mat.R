@@ -8,11 +8,10 @@
 #' @return Returns a heatmap of the multilayer network according the type you choosed.
 #' @examples
 #'
-#' mlDstool <- readRDS(file = "data/Dstool_mlnet.rds")
+#' mlDstool <- readRDS (file = "data/Dstool_mlnet.rds")
 #' node_color_mat (mlDstool, type = "phylo")
 #'
 #' node_color_mat(mlDstool, type = "centrality")
-#'
 
 node_color_mat<-function(g.list, type){
   if(type == "phylo"){

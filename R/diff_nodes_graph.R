@@ -3,17 +3,18 @@
 #' Identifies the most abundant taxa and recognizes which nodes have significant
 #' differences between their abundances (red) and which ones don't (blue).
 #' @usage diff_nodes_graph(T_Collapsed, n, mat_list, g.list, alpha)
-#' @param T_collapsed Abundance table collapsed at a certain taxonomic level.
-#' @param n Number of nodes to considere.
-#' @param mat_list List of abundance matrices.
-#' @param g.list List of igraph objects (multilayer network).
+#' @param T_collapsed Abundance table collapsed at a certain taxonomic level (preprocessed by T_collapse).
+#' @param n Number of nodes to consider.
+#' @param mat_list List of abundance matrices (preprocessed by T_collapse).
+#' @param g.list List of igraph objects (multilayer network), just 2 layers.
 #' @param alpha Significance. It must be a number between 0 and 1.
-#' @return .
+#' @return Returns a plot with both networks collapsed.
 #' @examples
 #'
-#' mlDstool <- readRDS(file = "data/Dstool_mlnet.rds")
+#' mlDstool <- readRDS (file = "data/Dstool_mlnet.rds")
+#' mtDstool <- readRDS (file = "data/object_tc_dstool.rds")
 #'
-#' diff_nodes_graph(tcDstool, 10, mtrx, mlDstool, 0.5)
+#' diff_nodes_graph (tcDstool, 10, mat_list = mtDstoo, g.list = mlDstool, 0.5)
 #'
 
 diff_nodes_graph<-function(T_Collapsed, n, mat_list, g.list, alpha){
