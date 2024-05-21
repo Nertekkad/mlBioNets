@@ -20,7 +20,6 @@ Returns a plot of Log Fold Change of the centrality between layers.
 Description
 }
 \examples{
-
 phcDstool <- readRDS(file = "data/Dstool_phyl_ctr.rds")
 log2fc (phcDstool, "after_travel", "traveling")
 }

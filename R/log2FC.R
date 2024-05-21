@@ -2,25 +2,13 @@
 #'
 #' Description
 #' @usage log2fc(phyl_ctr_df, control_layer, test_layer)
-<<<<<<< HEAD
 #' @param phyl_ctr_df A data.frame preprocessed with phyl_ctr_df function.
 #' @param control_layer "Name" of control layer.
 #' @param test_layer "Name" of test layer.
 #' @return Returns a plot of Log Fold Change of the centrality between layers.
-=======
-#' @param phyl_ctr_df n
-#' @param control_layer description
-#' @param test_layer description
-#' @return n
->>>>>>> 3a84d11df11f3f65c28eaeee30f695fd1f14c3d4
 #' @examples
-#' 1+1
-#'
-<<<<<<< HEAD
 #' phcDstool <- readRDS(file = "data/Dstool_phyl_ctr.rds")
 #' log2fc (phcDstool, "after_travel", "traveling")
-=======
->>>>>>> 3a84d11df11f3f65c28eaeee30f695fd1f14c3d4
 
 log2fc <- function(phyl_ctr_df, control_layer, test_layer){
   require(ggpubr)
