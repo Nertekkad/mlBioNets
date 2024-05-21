@@ -21,12 +21,6 @@ Imports:
     viridis,
     phyloseq
 Remotes:
-<<<<<<< HEAD
-    github::manlius/muxViz
-RoxygenNote: 7.3.1
-=======
     github::manlius/muxViz,
     github::hallucigenia-sparsa/seqtime,
     github::zdk123/SpiecEasi
-    
->>>>>>> 3a84d11df11f3f65c28eaeee30f695fd1f14c3d4
