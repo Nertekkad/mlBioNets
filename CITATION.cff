@@ -1,0 +1,58 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: mlBioNets
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Víctor
+    family-names: Lázaro-Vidal
+    email: LaV_Victor@outlook.com
+    affiliation: Universidad Autónoma de Querétaro
+  - given-names: 'Valeria '
+    family-names: Hernández-Zendejas
+    affiliation: Universidad Autónoma de Querétaro
+  - given-names: Roberto
+    family-names: Álvarez-Martínez
+    affiliation: Universidad Autónoma de Querétaro
+    orcid: 'https://orcid.org/0000-0002-0821-0067'
+repository-code: 'https://github.com/Nertekkad/mlBioNets'
+abstract: >-
+  mlBionets is an R package designed to comprehensively
+  analyze microbiota data using a multilayer network
+  approach. This package enables researchers to integrate
+  and analyze multiple types of biological data, providing a
+  robust framework for studying complex microbial
+  communities and their interactions within different
+  environmental and biological contexts.
+
+
+  Features
+
+
+  Multilayer Network Construction: Build and visualize
+  multilayer networks from microbiota data, incorporating
+  various layers such as phylogenetic, functional, and
+  environmental information.
+
+  Data Integration: Seamlessly integrate different types of
+  microbiota data, including taxonomic profiles and metadata
+
+  Advanced Analysis Tools: Perform network-based analyses,
+  including community detection, network centrality, and
+  inter-layer connectivity.
+
+  Visualization: Generate publication-quality visualizations
+  to illustrate complex network structures and interactions.
+
+  Customizable Workflows: Easily customize analysis
+  workflows to suit specific research needs, facilitating
+  reproducible and flexible data analysis.
+keywords:
+  - multi-layer networks
+  - microbiota
+  - sequencing
+  - phyloseq
