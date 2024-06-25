@@ -19,7 +19,7 @@ v_colored(g, T_table, g_tax, p_tax, g_colors)
 \item{g_colors}{Set of colors. The vector must have the same length of g_tax elements.}
 }
 \value{
-An igraph object
+An igraph object.
 }
 \description{
 Assign a color to each node of a network depending of a certain taxonomic level,

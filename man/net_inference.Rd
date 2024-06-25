@@ -2,12 +2,12 @@
 % Please edit documentation in R/net_inference.R
 \name{net_inference}
 \alias{net_inference}
-\title{Allows ro infer a co-abundance network from an abundance table.}
+\title{Allows to infer a co-abundance network from an abundance table.}
 \usage{
 net_inference (taxa_abs, method)
 }
 \arguments{
-\item{taxa_abs}{An abundance table, preprocessed with function T_collapse.}
+\item{taxa_abs}{An abundance table (data.frame) preprocessed with function T_collapse.}
 
 \item{method}{The method to create the network ("sparcc", "aracne").}
 
@@ -17,17 +17,15 @@ net_inference (taxa_abs, method)
 The function returns an igraph object representing the existing co-abundances between nodes at a certain taxonomic level.
 }
 \description{
-Allows ro infer a co-abundance network from an abundance table.
+Allows to infer a co-abundance network from an abundance table.
 }
 \examples{
 
-object_tc <- readRDS(file = "data/object_tc_dietswap.rds")
-sparccnet <- net_inference (object_tc, "sparcc", 0.4)
-plot (sparccnet)
-
-
-object_tc2 <- readRDS(file = "data/object_tc_dstool.rds")
-aracnet <- net_inference (object_tc2, "aracne")
+object_tc <- readRDS("examples/object_tc_dietswap.rds")
+aracnet <- net_inference (object_tc, "aracne")
 plot (aracnet)
 
+object_tc2 <- readRDS(file = "examples/object_tc_dstool.rds")
+sparccnet <- net_inference (object_tc2, "sparcc", p = 0.4)
+plot (sparccnet)
 }

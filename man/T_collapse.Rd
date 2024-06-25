@@ -2,24 +2,24 @@
 % Please edit documentation in R/T_collapse.R
 \name{T_collapse}
 \alias{T_collapse}
-\title{Adds the abundances at a certain taxonomic level.}
+\title{Group the abundances at a selected taxonomic level. The entrance can be a phyloseq object or a data.frame.}
 \usage{
 T_collapse (is_phyloseq=T, ps=..., names_level=...)
 }
 \arguments{
-\item{ps}{If "is_phyloseq = T" A phyloseq object.}
+\item{ps}{If "is_phyloseq = T", a phyloseq object, and "is_phyloseq = F" for data.frame.}
 
-\item{T_table}{(If is_phyloseq = F) You have to introduce a taxa table.}
+\item{T_table}{(If is_phyloseq = F) A taxa table.}
 
-\item{O_table}{(If is_phyloseq = F) An OTUs table.}
+\item{O_table}{(If is_phyloseq = F) An OTUs/ASV table.}
 
-\item{names_level}{(If is_phyloseq = F) Taxonomic level to separate.}
+\item{names_level}{(If is_phyloseq = F) Taxonomic level to group (ex. class, genus).}
 }
 \value{
-Returns a class array matrix at a certain taxonomic level.
+Returns a class array matrix at a selected  taxonomic level.
 }
 \description{
-Adds the abundances at a certain taxonomic level.
+Group the abundances at a selected taxonomic level. The entrance can be a phyloseq object or a data.frame.
 }
 \examples{
 # With BiocManager, package "microbiome"
