@@ -6,16 +6,16 @@
 #' @param T_table Taxa table as data.frame
 #' @param g_tax The taxonomic level at which the nodes will be colored.
 #' @param p_tax The taxonomic level at which the network was built.
-#' @returns Returns an igraph object
+#' @returns Returns an igraph object with nodes colored according to their taxonomic rank.
 #' @examples
 #'
 #' # The input can be a net pre-processed by net_inference
 #' # The data is david_stool
 #'
 #' tcollapsed <- readRDS (file="examples/object_tc_dstool.rds")
-#'
 #' g <- net_inference (tcollapsed, "aracne")
-#' TaxGroup (g, T_table = ds_taxatable, g_tax = "Phylum", p_tax = "Order")
+#'
+#' TaxGroup (g, T_table = david_stool_lineages, g_tax = "Order", p_tax = "Genus")
 
 TaxGroup<-function(g, T_table, g_tax, p_tax){
   require(igraph)

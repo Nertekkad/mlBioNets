@@ -16,7 +16,7 @@ TaxGroup(g, T_table, g_tax, p_tax)
 \item{p_tax}{The taxonomic level at which the network was built.}
 }
 \value{
-Returns an igraph object
+Returns an igraph object with nodes colored according to their taxonomic rank.
 }
 \description{
 Identifies the membership of a node to a certain higher-ranking taxon.
@@ -27,7 +27,7 @@ Identifies the membership of a node to a certain higher-ranking taxon.
 # The data is david_stool
 
 tcollapsed <- readRDS (file="examples/object_tc_dstool.rds")
-
 g <- net_inference (tcollapsed, "aracne")
-TaxGroup (g, T_table = ds_taxatable, g_tax = "Phylum", p_tax = "Order")
+
+TaxGroup (g, T_table = david_stool_lineages, g_tax = "Order", p_tax = "Genus")
 }
