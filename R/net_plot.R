@@ -1,19 +1,19 @@
 # Network plotting
 #'
-#' Create a graph of the network.
-#' @usage net_plot(g, type)
+#' Creates a graph of the network.
+#' @usage net_plot (g, type)
 #' @param g An igraph object preprocessed by v_colored or ctr_g.
 #' @param type You can choose between "phylo" or "centrality".
 #' @return An igraph object.
 #' @examples
 #'
-#' graph <- readRDS("data/dstool_net.rds")
-#' net_plot (graph, type = "centrality")
-#' net_plot (graph, type = "phylo")
-#'
-#' g <- readRDS (file="data/dietswap_net.rds")
+#' g <- readRDS("examples/Dstool_net.rds")
 #' net_plot (g, type = "centrality")
 #' net_plot (g, type = "phylo")
+#'
+#' j <- readRDS (file="examples/net_dietswap.rds")
+#' net_plot (j, type = "centrality")
+#' net_plot (j, type = "phylo")
 
 net_plot<-function(g, type){
   # Taxonomic classification

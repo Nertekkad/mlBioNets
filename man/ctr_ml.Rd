@@ -12,16 +12,16 @@ ctr_ml (g.list, ctr_type)
 \item{ctr_type}{Centrality type ("degree", "betweenness", "closeness").}
 }
 \value{
-A list of igraph objects which
+A list of igraph objects which nodes are colored.
 }
 \description{
 Colors the nodes according to their centrality.
 }
 \examples{
 
-nDstool <- readRDS("data/Dstool_mlnet")
+g <- readRDS("examples/Dstool_mlnet.rds")
 
-ctrl_ml(nDstoolm, ctr_type = "degree")
-ctrl_ml(nDstoolm, ctr_type = "betweenness")
-ctrl_ml(nDstoolm, ctr_type = "closeness")
+ctrl_ml (g, ctr_type = "degree")
+ctrl_ml (g, ctr_type = "betweenness")
+ctrl_ml (g, ctr_type = "closeness")
 }

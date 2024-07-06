@@ -1,7 +1,5 @@
 # Abundances matrix function
-#'
-#' Colors nodes according to their abundance.
-#' # A partir de listas de abundancias, la red multicapa
+#' Colors the nodes according to their abundance.
 #' @usage abs_mat (abs.list, g.list, n)
 #' @param abs.list Abundance list, the same lists you used to generate the network.
 #' @param g.list List of igraph objects (multilayer network).
@@ -9,9 +7,9 @@
 #' @return Returns a matrix, each column is a layer, and the values of the rows corresponds to the size of each node.
 #' @examples
 #'
-#' dstool_net <- readRDS (file = "data/Dstool_mlnet.rds")
-#' abs_mat (david_stool_lineage, dstool_net, 10)
+#' g <- readRDS (file = "examples/Dstool_mlnet.rds")
 #'
+#' abs_mat (david_stool_lineage, g, 10)
 
 abs_mat<-function(abs.list, g.list, n){
   # Colors for each node

@@ -1,19 +1,19 @@
 # Centrality g
 #'
 #' Colors the nodes of a network according to their centrality.
-#' @usage ctr_g(g, ctr_type)
+#' @usage ctr_g (g, ctr_type)
 #' @param g An igraph object.
 #' @param ctr_type Centrality type ("degree", "betweenness" or "closeness").
-#' @return An igraph object with
+#' @return An igraph object with colored nodes.
 #' @examples
 #'
-#' graph <- readRDS("data/dietswap_net.rds")
-#' ctr_g (graph, ctr_type = "degree")
+#' g <- readRDS("examples/net_dietswap.rds")
+#' ctr_g (g, ctr_type = "degree")
 #'
-#' graf <- readRDS("data/Dstool_net.rds")
-#' ctrg (graf, ctr_type = "betweenness")
+#' j <- readRDS("examples/Dstool_net.rds")
+#' ctrg (j, ctr_type = "betweenness")
 #'
-#' ctrg (graf, ctr_type = "closeness")
+#' ctrg (j, ctr_type = "closeness")
 
 ctr_g<-function(g, ctr_type){
   require(igraph)

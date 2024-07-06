@@ -2,9 +2,9 @@
 % Please edit documentation in R/log2FC.R
 \name{log2fc}
 \alias{log2fc}
-\title{Description}
+\title{Quantifies and compares Log Fold Change value between chosen layers.}
 \usage{
-log2fc(phyl_ctr_df, control_layer, test_layer)
+log2fc (phyl_ctr_df, control_layer, test_layer)
 }
 \arguments{
 \item{phyl_ctr_df}{A data.frame preprocessed with phyl_ctr_df function.}
@@ -17,9 +17,11 @@ log2fc(phyl_ctr_df, control_layer, test_layer)
 Returns a plot of Log Fold Change of the centrality between layers.
 }
 \description{
-Description
+Quantifies and compares Log Fold Change value between chosen layers.
 }
 \examples{
-phcDstool <- readRDS(file = "data/Dstool_phyl_ctr.rds")
-log2fc (phcDstool, "after_travel", "traveling")
+
+phcDstool <- readRDS (file = "examples/Dstool_phyl_ctr.rds")
+
+log2fc (phcDstool, "before_sickness", "after_sickness")
 }

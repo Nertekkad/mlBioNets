@@ -1,16 +1,17 @@
 # Phylum centrality data frame
 #'
-#' Creates a data.frame of the sums of centrality values at a chosen taxonomic level
-#' @usage phyl_ctr_df(ctr_df, layer_names, n_layers)
+#' Creates a data.frame of the sums of centrality values at a chosen taxonomic level.
+#' @usage phyl_ctr_df (ctr_df, layer_names, n_layers)
 #' @param ctr_df Data.frame preprocessed with ctr_df function.
-#' @param layer_names Name of the layers
+#' @param layer_names Name of the layers.
 #' @param n_layers Number of layers.
 #' @returns A data.frame.
 #' @examples
 #'
-#' Dstool_ctr <- readRDS(file="data/Dstool_ctr_df.rds")
-#' layersn <- c("Control", "Post_sick")
-#' phyl_ctr_df (Dstool_ctr, layersn, 2)
+#' Dstool_ctr <- readRDS (file="examples/Dstool_ctr_df.rds")
+#'
+#' n <- c("before_sickness", "after_sickness")
+#' phyl_ctr_df (Dstool_ctr, layer_names=n, n_layers=2)
 
 phyl_ctr_df <- function(ctr_df, layer_names, n_layers){
   require(viridis)

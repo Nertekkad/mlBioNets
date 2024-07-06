@@ -4,7 +4,7 @@
 \alias{ml_TaxGroup}
 \title{Assigns the taxonomic membership of the nodes.}
 \usage{
-ml_TaxGroup(g.list, T_table, g_tax, p_tax)
+ml_TaxGroup (g.list, T_table, g_tax, p_tax)
 }
 \arguments{
 \item{g.list}{List of igraph objects (multilayer network).}
@@ -16,15 +16,17 @@ ml_TaxGroup(g.list, T_table, g_tax, p_tax)
 \item{p_tax}{The taxonomic level at which the network was built.}
 }
 \value{
-The function returns a multilayer network (g.list) with each node named according its taxonomic level.
+The function returns a g.list (multilayer network) with each node named according its taxonomic level.
 }
 \description{
 Assigns the taxonomic membership of the nodes.
 }
 \examples{
 
-mlDstool <- readRDS(file = "data/Dstool_mlnet")
-colnames(david_stool_lineages)<- c("ID", "Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species", "Summary", "ID")
+# Load g.list
+mlDstool <- readRDS (file="examples/Dstool_mlnet.rds")
+# Replace columns' names
+colnames (david_stool_lineages) <- c("ID", "Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species", "Summary", "ID")
 
-ml_TaxGroup (mlDstool, david_stool_lineages, g_tax = "Phylum", p_tax = "Family")
+ml_TaxGroup (mlDstool, T_table=david_stool_lineages, g_tax="Phylum", p_tax="Family")
 }

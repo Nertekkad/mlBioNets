@@ -9,19 +9,18 @@ node_color_mat (g.list, type)
 \arguments{
 \item{g.list}{List of igraph objects.}
 
-\item{type}{"phylo" assigns the colors according to a certain taxonomic level;
-"centrality" assings the colors according to the centrality level.}
+\item{type}{"phylo" assigns the colors according to a certain taxonomic level; "centrality" assings the colors according to the centrality level.}
 }
 \value{
-Returns a heatmap of the multilayer network according the type you choosed.
+Returns a heatmap of the multilayer network according the type you chose.
 }
 \description{
 Create a matrix that contains the assigned colors for the nodes of a multilayer network.
 }
 \examples{
 
-mlDstool <- readRDS (file = "data/Dstool_mlnet.rds")
-node_color_mat (mlDstool, type = "phylo")
+g <- readRDS (file = "examples/Dstool_mlnet.rds")
+node_color_mat (g, type = "phylo")
 
-node_color_mat(mlDstool, type = "centrality")
+node_color_mat (g, type = "centrality")
 }

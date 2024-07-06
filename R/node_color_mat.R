@@ -3,15 +3,14 @@
 #' Create a matrix that contains the assigned colors for the nodes of a multilayer network.
 #' @usage node_color_mat (g.list, type)
 #' @param g.list List of igraph objects.
-#' @param type "phylo" assigns the colors according to a certain taxonomic level;
-#' "centrality" assings the colors according to the centrality level.
-#' @return Returns a heatmap of the multilayer network according the type you choosed.
+#' @param type "phylo" assigns the colors according to a certain taxonomic level; "centrality" assings the colors according to the centrality level.
+#' @return Returns a heatmap of the multilayer network according the type you chose.
 #' @examples
 #'
-#' mlDstool <- readRDS (file = "data/Dstool_mlnet.rds")
-#' node_color_mat (mlDstool, type = "phylo")
+#' g <- readRDS (file = "examples/Dstool_mlnet.rds")
+#' node_color_mat (g, type = "phylo")
 #'
-#' node_color_mat(mlDstool, type = "centrality")
+#' node_color_mat (g, type = "centrality")
 
 node_color_mat<-function(g.list, type){
   if(type == "phylo"){

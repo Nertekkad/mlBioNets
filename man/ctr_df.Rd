@@ -19,8 +19,11 @@ Creates a data.frame with the degree of each layer's nodes.
 }
 \examples{
 
-nDstool <- readRDS("data/Dstool_net.rds")
+#Load the example net
+nDstool <- readRDS ("examples/Dstool_mlnet.rds")
 
-vector <- c ("before_travel", "traveling", "after_travel")
-ctr_df (nDstool, layer_names = vector)
+# Assign layers names
+v <- c("before_sickness", "after_sickness")
+
+ctr_df (nDstool, layer_names = v)
 }

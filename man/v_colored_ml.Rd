@@ -2,15 +2,14 @@
 % Please edit documentation in R/v_colored_ml.R
 \name{v_colored_ml}
 \alias{v_colored_ml}
-\title{Assign a color to each node of a multilayer netweork depending of a certain
-taxonomic level, for example, the phylum.}
+\title{Assigns a color to each node of a multilayer network depending of their taxonomic level, for example, the phylum.}
 \usage{
 v_colored_ml (g.list, T_table, g_tax, p_tax, g_colors)
 }
 \arguments{
 \item{g.list}{List of igraph objects (multilayer network).}
 
-\item{T_table}{Taxa table (as data frame).}
+\item{T_table}{Taxa table (as data.frame).}
 
 \item{g_tax}{The taxonomic level at which the nodes will be colored.}
 
@@ -22,19 +21,17 @@ v_colored_ml (g.list, T_table, g_tax, p_tax, g_colors)
 An igraph object.
 }
 \description{
-Assign a color to each node of a multilayer netweork depending of a certain
-taxonomic level, for example, the phylum.
+Assigns a color to each node of a multilayer network depending of their taxonomic level, for example, the phylum.
 }
 \examples{
 
-library(viridis)
+# Loads this library to create a vector with colors
+library (viridis)
 
-g <- readRDS("data/dstool_mlnet.rds")
+g <- readRDS("examples/Dstool_mlnet.rds")
 
-ml_v <- v_colored (g, david_stool_lineages, g_tax = "Family", p_tax = "Order",
-g_colors = )
+ml_v <- v_colored (g, david_stool_lineages, g_tax = "Family", p_tax = "Order", g_colors=c)
 # Nodes will be colored by Family, and the net was built by Order
 
 plot(ml_v)
-
 }

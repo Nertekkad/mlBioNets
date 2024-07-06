@@ -1,17 +1,19 @@
-# Centrality data frame
+# Centrality data.frame
 #'
 #' Creates a data.frame with the degree of each layer's nodes.
-#'
 #' @usage ctr_df (g.list, layer_names)
 #' @param g.list List of igraph objects (multilayer network), preprocessed by ml_TaxGroup.
 #' @param layer_names Vector with the name of each layer.
 #' @return Returns a data.frame with centrality value (if you preprocessed with ctr_ml or ctr_g: degree, betweenness or closeness), p_tax and g_tax of each node (function take this info from TaxGroup_ml).
 #' @examples
 #'
-#' nDstool <- readRDS("data/Dstool_net.rds")
+#' #Load the example net
+#' nDstool <- readRDS ("examples/Dstool_mlnet.rds")
 #'
-#' vector <- c ("before_travel", "traveling", "after_travel")
-#' ctr_df (nDstool, layer_names = vector)
+#' # Assign layers names
+#' v <- c("before_sickness", "after_sickness")
+#'
+#' ctr_df (nDstool, layer_names = v)
 
 ctr_df <- function(g.list, layer_names){
   # Identificates the degree of the nodes at each layer

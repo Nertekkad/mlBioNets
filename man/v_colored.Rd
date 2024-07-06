@@ -27,12 +27,12 @@ for example, the phylum.
 }
 \examples{
 
+# Loads this library to create a vector with colors
 library(viridis)
 
-graph <- readRDS("data/dstool_net.rds")
+g <- readRDS("examples/Dstool_net.rds")
 
-v <- v_colored (graph, david_stool_lineages, g_tax = "Family", p_tax = "Order",
-g_colors = )
+v <- v_colored (g, T_table=david_stool_lineages, g_tax = "Family", p_tax = "Order", g_colors = c)
 # Nodes will be colored by Family, and the net was built by Order
 
 plot(v)
