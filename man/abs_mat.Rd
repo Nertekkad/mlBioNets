@@ -23,5 +23,5 @@ Colors the nodes according to their abundance.
 
 g <- readRDS (file = "examples/Dstool_mlnet.rds")
 
-abs_mat (david_stool_lineage, g, 10)
+abs_mat (david_stool_lineages, g, 10)
 }

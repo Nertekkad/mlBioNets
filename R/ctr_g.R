@@ -7,10 +7,10 @@
 #' @return An igraph object with colored nodes.
 #' @examples
 #'
-#' g <- readRDS("examples/net_dietswap.rds")
+#' g <- readRDS (file = "examples/net_dietswap.rds")
 #' ctr_g (g, ctr_type = "degree")
 #'
-#' j <- readRDS("examples/Dstool_net.rds")
+#' j <- readRDS (file = "examples/Dstool_net.rds")
 #' ctrg (j, ctr_type = "betweenness")
 #'
 #' ctrg (j, ctr_type = "closeness")

@@ -8,12 +8,12 @@
 #' @examples
 #'
 #' #Load the example net
-#' nDstool <- readRDS ("examples/Dstool_mlnet.rds")
+#' g <- readRDS (file = "examples/Dstool_mlnet.rds")
 #'
-#' # Assign layers names
-#' v <- c("before_sickness", "after_sickness")
+#' # Assign layer names
+#' v <- c("before", "meanwhile", "after")
 #'
-#' ctr_df (nDstool, layer_names = v)
+#' ctr_df (g, layer_names = v)
 
 ctr_df <- function(g.list, layer_names){
   # Identificates the degree of the nodes at each layer

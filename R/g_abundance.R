@@ -7,8 +7,9 @@
 #' @return A graph with colored nodes.
 #' @examples
 #'
-#' nDstool <- readRDS(file = "data/Dstool_net")
-#' g_abundance (david_stool_lineages, nDstool)
+#' g <- readRDS(file = "examples/Dstool_net.rds")
+#'
+#' g_abundance (david_stool_lineages, g)
 #'
 
 g_abundance<-function(layer_mat, g){
