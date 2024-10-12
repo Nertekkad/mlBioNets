@@ -3,9 +3,9 @@ title: "mlBioNets"
 author:
 - name: Víctor Lázaro-Vidal
   affiliation: Universidad Autónoma de Querétaro
-- name: Valeria
+- name: Valeria Hernández Zendejas
   affiliation: Universidad Autónoma de Querétaro
-- name: Roberto
+- name: Roberto Álvarez-Martínez
   affiliation: Universidad Autónoma de Querétaro
   email: roberto.alvarez@uaq.edu.mx
 package: mlBioNets
