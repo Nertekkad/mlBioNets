@@ -24,4 +24,4 @@ Remotes:
     github::manlius/muxViz,
     github::hallucigenia-sparsa/seqtime,
     github::zdk123/SpiecEasi
-RoxygenNote: 7.3.1
+RoxygenNote: 7.3.2
