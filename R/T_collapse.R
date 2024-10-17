@@ -8,6 +8,8 @@
 #' @param O_table (If is_phyloseq = F) An OTUs/ASV table.
 #' @param names_level (If is_phyloseq = F) Taxonomic level to group (ex. class, genus).
 #' @return Returns a class array matrix at a selected  taxonomic level.
+#' @export
+#'
 #' @examples
 #' # With BiocManager, package "microbiome"
 #' # if is_phyloseq = T
