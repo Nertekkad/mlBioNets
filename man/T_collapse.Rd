@@ -2,7 +2,7 @@
 % Please edit documentation in R/T_collapse.R
 \name{T_collapse}
 \alias{T_collapse}
-\title{Aggregate the abundances at a chosen taxonomic level. The input can be a phyloseq object or a data.frame.}
+\title{This function aggregates the abundance data at a specified taxonomic level. It accepts a phyloseq object or a data.frame as input.}
 \usage{
 T_collapse (is_phyloseq=T, ps=..., names_level=...)
 }
@@ -19,7 +19,7 @@ T_collapse (is_phyloseq=T, ps=..., names_level=...)
 Returns a class array matrix at a selected  taxonomic level.
 }
 \description{
-Aggregate the abundances at a chosen taxonomic level. The input can be a phyloseq object or a data.frame.
+This function aggregates the abundance data at a specified taxonomic level. It accepts a phyloseq object or a data.frame as input.
 }
 \examples{
 # With BiocManager, package "microbiome"

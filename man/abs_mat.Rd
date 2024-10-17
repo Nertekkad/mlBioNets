@@ -2,7 +2,7 @@
 % Please edit documentation in R/abs_mat.R
 \name{abs_mat}
 \alias{abs_mat}
-\title{Assign colors to the nodes based on their abundance at the specified taxonomic level.}
+\title{This function assigns colors to the nodes based on their abundance at the specified taxonomic level.}
 \usage{
 abs_mat (abs.list, g.list, n)
 }
@@ -17,7 +17,7 @@ abs_mat (abs.list, g.list, n)
 Returns a matrix, each column is a layer, and the values of the rows corresponds to the size of each node.
 }
 \description{
-Assign colors to the nodes based on their abundance at the specified taxonomic level.
+This function assigns colors to the nodes based on their abundance at the specified taxonomic level.
 }
 \examples{
 
