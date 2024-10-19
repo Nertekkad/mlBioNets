@@ -1,6 +1,6 @@
-# T_collapse
+#' T_collapse
 #'
-#' Group the abundances at a selected taxonomic level. The entrance can be a phyloseq object or a data.frame.
+#' This function aggregates the abundance data at a specified taxonomic level. It accepts a phyloseq object or a data.frame as input.
 #'
 #' @usage T_collapse (is_phyloseq=T, ps=..., names_level=...)
 #' @param ps If "is_phyloseq = T", a phyloseq object, and "is_phyloseq = F" for data.frame.
@@ -8,6 +8,8 @@
 #' @param O_table (If is_phyloseq = F) An OTUs/ASV table.
 #' @param names_level (If is_phyloseq = F) Taxonomic level to group (ex. class, genus).
 #' @return Returns a class array matrix at a selected  taxonomic level.
+#' @export
+#'
 #' @examples
 #' # With BiocManager, package "microbiome"
 #' # if is_phyloseq = T

@@ -2,7 +2,7 @@
 % Please edit documentation in R/cor_degree_abs.R
 \name{cor_degree_abs}
 \alias{cor_degree_abs}
-\title{Graphs the correlation between degree and abundances.}
+\title{This function graphs the Pearson correlation between degree and abundance.}
 \usage{
 cor_degree_abs(g.list, abs.list, layer_names, layer_colors, title)
 }
@@ -21,7 +21,7 @@ cor_degree_abs(g.list, abs.list, layer_names, layer_colors, title)
 Returns a correlation plot between the degree and abundance of each node. It shows the R-square and p-value.
 }
 \description{
-Graphs the correlation between degree and abundances.
+This function graphs the Pearson correlation between degree and abundance.
 }
 \examples{
 

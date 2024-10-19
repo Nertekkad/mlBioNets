@@ -1,5 +1,5 @@
 # Abundances matrix function
-#' Colors the nodes according to their abundance.
+#' This function assigns colors to the nodes based on their abundance at the specified taxonomic level.
 #' @usage abs_mat (abs.list, g.list, n)
 #' @param abs.list Abundance list, the same lists you used to generate the network.
 #' @param g.list List of igraph objects (multilayer network).
