@@ -7,7 +7,7 @@
 phyl_ctr_df (ctr_df, layer_names, n_layers)
 }
 \arguments{
-\item{ctr_df}{Data.frame preprocessed with ctr_df function.}
+\item{ctr_df}{Data.frame pre-processed with ctr_df function.}
 
 \item{layer_names}{Name of the layers.}
 
