@@ -4,7 +4,7 @@
 #' @usage ctr_df (g.list, layer_names)
 #' @param g.list List of igraph objects (multilayer network), preprocessed by ml_TaxGroup.
 #' @param layer_names Vector with the name of each layer.
-#' @return Returns a data.frame with centrality value (if you preprocessed with ctr_ml or ctr_g: degree, betweenness or closeness), p_tax and g_tax of each node (function take this info from TaxGroup_ml).
+#' @return Returns a data.frame with centrality value (if preprocessed with ctr_ml or ctr_g: degree, betweenness or closeness), p_tax and g_tax of each node (function take this info from TaxGroup_ml).
 #' @examples
 #'
 #' #Load the example net

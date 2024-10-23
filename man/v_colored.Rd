@@ -27,7 +27,7 @@ for example, the phylum.
 }
 \examples{
 
-# Loads this library to create a vector with colors
+# Load this library to create a vector with colors
 library(viridis)
 
 g <- readRDS("examples/Dstool_net.rds")

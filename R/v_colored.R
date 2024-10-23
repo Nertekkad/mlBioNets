@@ -11,7 +11,7 @@
 #' @return An igraph object.
 #' @examples
 #'
-#' # Loads this library to create a vector with colors
+#' # Load this library to create a vector with colors
 #' library(viridis)
 #  c <- sample(viridis(100), 150)
 #'

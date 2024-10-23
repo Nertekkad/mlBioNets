@@ -12,7 +12,7 @@ ctr_df (g.list, layer_names)
 \item{layer_names}{Vector with the name of each layer.}
 }
 \value{
-Returns a data.frame with centrality value (if you preprocessed with ctr_ml or ctr_g: degree, betweenness or closeness), p_tax and g_tax of each node (function take this info from TaxGroup_ml).
+Returns a data.frame with centrality value (if preprocessed with ctr_ml or ctr_g: degree, betweenness or closeness), p_tax and g_tax of each node (function take this info from TaxGroup_ml).
 }
 \description{
 Creates a data.frame with the degree of each layer's nodes.

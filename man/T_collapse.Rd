@@ -2,7 +2,7 @@
 % Please edit documentation in R/T_collapse.R
 \name{T_collapse}
 \alias{T_collapse}
-\title{This function aggregates the abundance data at a specified taxonomic level. It accepts a phyloseq object or a data.frame as input.}
+\title{T_collapse}
 \usage{
 T_collapse (is_phyloseq=T, ps=..., names_level=...)
 }
@@ -31,8 +31,8 @@ T_collapse (is_phyloseq = T, ps = dietswap, names_level ="Phylum")
 
 # if is_phyloseq = F
 
-library(seqtime)
-colnames(david_stool_lineages)<- c("ID", "Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species", "Summary", "ID")
+library (seqtime)
+colnames (david_stool_lineages)<- c("ID", "Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species", "Summary", "ID")
 
 T_collapse(F, T_table = david_stool_lineages, O_table = david_stoolA_otus, names_level = "Genus")
 }

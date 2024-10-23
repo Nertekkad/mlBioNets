@@ -9,7 +9,7 @@ net_inference (taxa_abs, method)
 \arguments{
 \item{taxa_abs}{An abundance table (data.frame) preprocessed with function T_collapse.}
 
-\item{method}{The method to create the network ("sparcc", "aracne").}
+\item{method}{The method to create the network ("sparcc" or "aracne").}
 
 \item{p}{When method="sparcc", a threshold between 0-1.}
 }

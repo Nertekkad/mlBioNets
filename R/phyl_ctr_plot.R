@@ -1,6 +1,6 @@
 # Phylum centrality plot
 #'
-#' Shows centrality importance of the phyla.
+#' This function shows centrality importance of the phyla.
 #' @usage phyl_ctr_plot(phyl_ctr_df, layer_name, title)
 #' @param phyl_ctr_df A data.frame preprocessed by phyl_ctr_df
 #' @param layer_name Name of the layer to graph/plot.
