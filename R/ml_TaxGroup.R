@@ -1,4 +1,4 @@
-# Multilayer Tax Group
+#' Generating a data.frame of node degrees per layer.
 #'
 #' Assigns the taxonomic membership of the nodes.
 #' @usage ml_TaxGroup (g.list, T_table, g_tax, p_tax)
@@ -10,11 +10,12 @@
 #' @examples
 #'
 #' # Load g.list
-#' mlDstool <- readRDS (file="examples/Dstool_mlnet.rds")
-#' # Replace columns' names
+#' data (mlnet_dstoolAB)
+#'
+#' # Replace columns' names of T_table
 #' colnames (david_stool_lineages) <- c("ID", "Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species", "Summary", "ID")
 #'
-#' ml_TaxGroup (mlDstool, T_table=david_stool_lineages, g_tax="Phylum", p_tax="Family")
+#' ml_TaxGroup (mlnet_dstoolAB, T_table=david_stool_lineages, g_tax="Phylum", p_tax="Family")
 
 ml_TaxGroup <- function(g.list, T_table, g_tax, p_tax){
   gtax<-list()

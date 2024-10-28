@@ -2,7 +2,7 @@
 % Please edit documentation in R/abs_mat.R
 \name{abs_mat}
 \alias{abs_mat}
-\title{This function assigns colors to the nodes based on their abundance at the specified taxonomic level.}
+\title{This function colors nodes by abundance at a taxonomic level.}
 \usage{
 abs_mat (abs.list, g.list, n)
 }
@@ -17,11 +17,11 @@ abs_mat (abs.list, g.list, n)
 Returns a matrix, each column is a layer, and the values of the rows corresponds to the size of each node.
 }
 \description{
-This function assigns colors to the nodes based on their abundance at the specified taxonomic level.
+This function colors nodes by abundance at a taxonomic level.
 }
 \examples{
 
-g <- readRDS (file = "examples/Dstool_mlnet.rds")
+data (mlnet_dstool)
 
-abs_mat (david_stool_lineages, g, 10)
+abs_mat(abs.list = david_stool_lineages, g.list = mlnet_dstool, n=10)
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/ml_TaxGroup.R
 \name{ml_TaxGroup}
 \alias{ml_TaxGroup}
-\title{Assigns the taxonomic membership of the nodes.}
+\title{Generating a data.frame of node degrees per layer.}
 \usage{
 ml_TaxGroup (g.list, T_table, g_tax, p_tax)
 }
@@ -24,9 +24,10 @@ Assigns the taxonomic membership of the nodes.
 \examples{
 
 # Load g.list
-mlDstool <- readRDS (file="examples/Dstool_mlnet.rds")
-# Replace columns' names
+data (mlnet_dstoolAB)
+
+# Replace columns' names of T_table
 colnames (david_stool_lineages) <- c("ID", "Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species", "Summary", "ID")
 
-ml_TaxGroup (mlDstool, T_table=david_stool_lineages, g_tax="Phylum", p_tax="Family")
+ml_TaxGroup (mlnet_dstoolAB, T_table=david_stool_lineages, g_tax="Phylum", p_tax="Family")
 }

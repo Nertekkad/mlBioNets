@@ -8,13 +8,11 @@
 #' @return The function returns an igraph object representing the existing co-abundances between nodes at a certain taxonomic level.
 #' @examples
 #'
-#' object_tc <- readRDS("examples/object_tc_dietswap.rds")
-#' aracnet <- net_inference (object_tc, "aracne")
-#' plot (aracnet)
+#' data (tc_dstool)
+#' net_inference (object_tc_dstool, method = "aracne")
 #'
-#' object_tc2 <- readRDS(file = "examples/object_tc_dstool.rds")
-#' sparccnet <- net_inference (object_tc2, "sparcc", p = 0.4)
-#' plot (sparccnet)
+#' data (tc_dietex)
+#' net_inference (tc_dietswap, method = "sparcc", p = 0.2)
 
 net_inference<-function(taxa_abs, method, p){
   require(SpiecEasi)
