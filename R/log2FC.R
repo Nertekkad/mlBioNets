@@ -12,6 +12,7 @@
 #'
 #' log2fc (phcDstool, "before_sickness", "after_sickness")
 
+
 log2fc <- function(phyl_ctr_df, control_layer, test_layer){
   require(ggpubr)
   # Control and test layer to compare
