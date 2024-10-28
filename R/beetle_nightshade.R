@@ -1,4 +1,4 @@
-#' Quakes.
+#' beetle_nightshade.
 #'
 #' The distribution of earthquake magnitudes in California between 1910 and 1992.
 #'
