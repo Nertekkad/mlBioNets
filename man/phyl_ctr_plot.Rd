@@ -4,7 +4,7 @@
 \alias{phyl_ctr_plot}
 \title{This function shows centrality importance of the phyla.}
 \usage{
-phyl_ctr_plot(phyl_ctr_df, layer_name, title)
+phyl_ctr_plot (phyl_ctr_df, layer_name, title)
 }
 \arguments{
 \item{phyl_ctr_df}{A data.frame preprocessed by phyl_ctr_df}
@@ -21,6 +21,9 @@ This function shows centrality importance of the phyla.
 }
 \examples{
 
-phyl_ds <- readRDS(file = "phyl_Dstool.rds")
-phyl_ctr_plot (phyl_ds, "before_travel", "after_travel")
+data (phyl_ctr_dstool)
+
+n <- c("Sample A", "Sample B")
+
+phyl_ctr_plot (phyl_ctr_dstool, layer_name = "Sample A", title = "Graph 1")
 }

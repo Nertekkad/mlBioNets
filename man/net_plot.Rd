@@ -19,11 +19,7 @@ Creates a graph of the network.
 }
 \examples{
 
-g <- readRDS("examples/Dstool_net.rds")
-net_plot (g, type = "centrality")
-net_plot (g, type = "phylo")
+data (ctr_g_dstool)
+net_plot (ctr_g_dstool, type = "centrality")
 
-j <- readRDS (file="examples/net_dietswap.rds")
-net_plot (j, type = "centrality")
-net_plot (j, type = "phylo")
 }

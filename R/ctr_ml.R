@@ -7,11 +7,11 @@
 #' @return A list of igraph objects which nodes are colored.
 #' @examples
 #'
-#' g <- readRDS("examples/Dstool_mlnet.rds")
+#' g <- data (mlnet_dstoolAB)
 #'
-#'ctrl_ml (g, ctr_type = "degree")
-#'ctrl_ml (g, ctr_type = "betweenness")
-#'ctrl_ml (g, ctr_type = "closeness")
+#' ctrl_ml (g, ctr_type = "degree")
+#' ctrl_ml (g, ctr_type = "betweenness")
+#' ctrl_ml (g, ctr_type = "closeness")
 
 ctr_ml<-function(g.list, ctr_type){
   require(igraph)

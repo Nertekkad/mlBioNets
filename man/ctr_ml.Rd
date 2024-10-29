@@ -19,7 +19,7 @@ Colors the nodes according to their centrality.
 }
 \examples{
 
-g <- readRDS("examples/Dstool_mlnet.rds")
+g <- data (mlnet_dstoolAB)
 
 ctrl_ml (g, ctr_type = "degree")
 ctrl_ml (g, ctr_type = "betweenness")

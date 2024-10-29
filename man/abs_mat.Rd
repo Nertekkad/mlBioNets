@@ -21,7 +21,7 @@ This function colors nodes by abundance at a taxonomic level.
 }
 \examples{
 
-data (mlnet_dstool)
+data (mlnet_dstoolAB)
 
-abs_mat(abs.list = david_stool_lineages, g.list = mlnet_dstool, n=10)
+abs_mat (abs.list = david_stool_lineages, g.list = mlnet_dstoolAB, n=10)
 }

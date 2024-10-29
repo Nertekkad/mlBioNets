@@ -7,9 +7,9 @@
 #' @return Returns a matrix, each column is a layer, and the values of the rows corresponds to the size of each node.
 #' @examples
 #'
-#' data (mlnet_dstool)
+#' data (mlnet_dstoolAB)
 #'
-#' abs_mat(abs.list = david_stool_lineages, g.list = mlnet_dstool, n=10)
+#' abs_mat (abs.list = david_stool_lineages, g.list = mlnet_dstoolAB, n=10)
 
 abs_mat<-function(abs.list, g.list, n){
   # Colors for each node

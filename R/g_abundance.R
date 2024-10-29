@@ -1,15 +1,15 @@
-# g_abundance
+# Coloring nodes by relative abundance
 #'
-#' Assign a color to each node depending of the relative abundance.
+#' This function assigns colors to the nodes based on their relative abundance.
 #' @usage g_abundance (layer_mat, g)
 #' @param layer_mat Abundance data.frame.
 #' @param g An igraph object.
 #' @return A graph with colored nodes.
 #' @examples
 #'
-#' g <- readRDS(file = "examples/Dstool_net.rds")
+#' data ()
 #'
-#' g_abundance (david_stool_lineages, g)
+#' g_abundance (david_stool_lineages, net_dstA)
 #'
 
 g_abundance<-function(layer_mat, g){

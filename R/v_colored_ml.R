@@ -12,14 +12,15 @@
 #'
 #' # Loads this library to create a vector with colors
 #' library (viridis)
-#  c <- sample (viridis(100), num_nodos)
+#  c <- sample (viridis(100), num_nodes)
 #'
-#' g <- readRDS("examples/Dstool_mlnet.rds")
+#' data(mlnet_dstoolAB)
 #'
-#' ml_v <- v_colored (g, david_stool_lineages, g_tax = "Family", p_tax = "Order", g_colors=c)
-#' # Nodes will be colored by Family, and the net was built by Order
+#' g <- v_colored_ml (g.list = mlnet_dstoolAB, T_table = david_stool_lineages, g_tax = "Order", p_tax = "Genus", g_colors = c)
 #'
-#' plot(ml_v)
+#' # Nodes will be colored by Order, and the net was built by Family
+#'
+#' plot(g)
 
 v_colored_ml <- function(g.list, T_table, g_tax, p_tax, g_colors){
   for(i in 1:length(g.list)){

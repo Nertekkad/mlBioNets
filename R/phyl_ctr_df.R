@@ -5,13 +5,15 @@
 #' @param ctr_df Data.frame pre-processed with ctr_df function.
 #' @param layer_names Name of the layers.
 #' @param n_layers Number of layers.
-#' @returns A data.frame.
+#' @returns A data.frame with one column per layer with their centrality value.
 #' @examples
 #'
-#' Dstool_ctr <- readRDS (file="examples/Dstool_ctr_df.rds")
+#' data (ctr_df_dstool)
 #'
-#' n <- c("before_sickness", "after_sickness")
-#' phyl_ctr_df (Dstool_ctr, layer_names=n, n_layers=2)
+#' # Create a vector with layers' names
+#' n <- c("sample A", "sample B")
+#'
+#' phyl_ctr_df (ctr_df_dstool, layer_names = n, n_layers = 2)
 
 phyl_ctr_df <- function(ctr_df, layer_names, n_layers){
   require(viridis)

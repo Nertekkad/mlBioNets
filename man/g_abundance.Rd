@@ -2,7 +2,7 @@
 % Please edit documentation in R/g_abundance.R
 \name{g_abundance}
 \alias{g_abundance}
-\title{Assign a color to each node depending of the relative abundance.}
+\title{This function assigns colors to the nodes based on their relative abundance.}
 \usage{
 g_abundance (layer_mat, g)
 }
@@ -15,12 +15,12 @@ g_abundance (layer_mat, g)
 A graph with colored nodes.
 }
 \description{
-Assign a color to each node depending of the relative abundance.
+This function assigns colors to the nodes based on their relative abundance.
 }
 \examples{
 
-g <- readRDS(file = "examples/Dstool_net.rds")
+data ()
 
-g_abundance (david_stool_lineages, g)
+g_abundance (david_stool_lineages, net_dstA)
 
 }

@@ -9,7 +9,7 @@
 #' @examples
 #'
 #' data (tc_dstool)
-#' net_inference (object_tc_dstool, method = "aracne")
+#' net_inference (tc_dstool, method = "aracne")
 #'
 #' data (tc_dietex)
 #' net_inference (tc_dietswap, method = "sparcc", p = 0.2)

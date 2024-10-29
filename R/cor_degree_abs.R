@@ -1,5 +1,5 @@
 # Correlation between degree and abundance
-#' This function graphs the Pearson correlation between degree and abundance.
+#' Graphing Pearson correlation between degree and abundance.
 #' @usage cor_degree_abs(g.list, abs.list, layer_names, layer_colors, title)
 #' @param g.list List of igraph objects (multilayer network).
 #' @param abs.list List of abundances tables.
@@ -9,10 +9,9 @@
 #' @return Returns a correlation plot between the degree and abundance of each node. It shows the R-square and p-value.
 #' @examples
 #'
-#' # Load multilayer net
-#' g <- readRDS (file = "examples/Dstool_mlnet.rds")
+#' data (mlnet_dstoolAB)
 #'
-#' cor_degree_abs (g, david_stool_lineages, layer_names = c("before", "meanwhile", "after"), layer_colors = c("blue", "purple", "green"), title = "Example")
+#' cor_degree_abs (g.list = mlnet_dstoolAB, abs.list = david_stool_lineages, layer_names = v, layer_colors = c("yellow", "pink"), title = "Sample graph")
 #'
 
 cor_degree_abs<-function(g.list, abs.list, layer_names, layer_colors, title){

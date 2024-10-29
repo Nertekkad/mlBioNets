@@ -15,7 +15,7 @@
 #' # Replace columns' names of T_table
 #' colnames (david_stool_lineages) <- c("ID", "Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species", "Summary", "ID")
 #'
-#' ml_TaxGroup (mlnet_dstoolAB, T_table=david_stool_lineages, g_tax="Phylum", p_tax="Family")
+#' ml_TaxGroup(mlnet_dstoolAB, T_table=david_stool_lineages, g_tax="Phylum", p_tax="Family")
 
 ml_TaxGroup <- function(g.list, T_table, g_tax, p_tax){
   gtax<-list()

@@ -12,14 +12,17 @@ ml_properties (g.list, treatments)
 \item{treatments}{A vector with the names of each layer.}
 }
 \value{
-The function returns a data.frame, which contains topological metrics of the networks.
+The function returns a data.frame, which contains networks' topological metrics.
 }
 \description{
 Quantifies different topological properties of a multilayer network.
 }
 \examples{
 
-mlDstool <- readRDS (file = "data/Dstool_mlnet.rds")
-ntreat <- c("before_travel", "traveling")
-ml_properties (mlDstool, ntreat)
+data (mlnet_dstoolAB)
+
+# The vector with layers' names
+t <- c("before", "after")
+
+ml_properties (mlnet_dstoolAB, treatments = t)
 }
