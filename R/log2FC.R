@@ -5,7 +5,7 @@
 #' @param phyl_ctr_df A data.frame preprocessed with phyl_ctr_df function.
 #' @param control_layer "Name" of control layer.
 #' @param test_layer "Name" of test layer.
-#' @return Returns a plot of Log Fold Change of the centrality between layers.
+#' @return Returns a Log Fold Change plot of the centrality between layers.
 #' @examples
 #'
 #' data (phyl_ctr_dstool)
