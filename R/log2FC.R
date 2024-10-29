@@ -12,6 +12,7 @@
 #'
 #' log2fc (phyl_ctr_dstool, control_layer = "before", test_layer = "after")
 
+
 log2fc <- function(phyl_ctr_df, control_layer, test_layer){
   require(ggpubr)
   # Control and test layer to compare
