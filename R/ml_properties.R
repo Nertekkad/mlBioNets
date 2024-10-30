@@ -5,6 +5,8 @@
 #' @param g.list List of igraph objects (multilayer network).
 #' @param treatments A vector with the names of each layer.
 #' @returns The function returns a data.frame, which contains networks' topological metrics.
+#' @export
+#'
 #' @examples
 #'
 #' data (mlnet_dstoolAB)

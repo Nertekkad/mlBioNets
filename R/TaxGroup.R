@@ -7,6 +7,8 @@
 #' @param g_tax The taxonomic level at which the nodes will be colored.
 #' @param p_tax The taxonomic level at which the network was built.
 #' @returns Returns an igraph object with nodes colored based on their taxonomic rank.
+#' @export
+#'
 #' @examples
 #'
 #' # The input can be a net pre-processed by net_inference

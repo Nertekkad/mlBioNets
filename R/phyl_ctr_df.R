@@ -6,6 +6,8 @@
 #' @param layer_names Name of the layers.
 #' @param n_layers Number of layers.
 #' @returns A data.frame with one column per layer with their centrality value.
+#' @export
+#'
 #' @examples
 #'
 #' data (ctr_df_dstool)

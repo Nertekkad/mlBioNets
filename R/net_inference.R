@@ -6,6 +6,8 @@
 #' @param method The method to create the network ("sparcc" or "aracne").
 #' @param p When method="sparcc", a threshold between 0-1.
 #' @return The function returns an igraph object representing the existing co-abundances between nodes at a certain taxonomic level.
+#' @export
+#'
 #' @examples
 #'
 #' data (tc_dstool)

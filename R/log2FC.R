@@ -6,6 +6,8 @@
 #' @param control_layer "Name" of control layer.
 #' @param test_layer "Name" of test layer.
 #' @return Returns a Log Fold Change plot of the centrality between layers.
+#' @export
+#'
 #' @examples
 #'
 #' data (phyl_ctr_dstool)

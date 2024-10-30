@@ -7,6 +7,8 @@
 #' @param g_tax The taxonomic level at which the nodes will be assigned.
 #' @param p_tax The taxonomic level at which the network was built.
 #' @returns The function returns a g.list (multilayer network) with each node named according its taxonomic level.
+#' @export
+#'
 #' @examples
 #'
 #' # Load g.list

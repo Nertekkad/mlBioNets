@@ -6,6 +6,8 @@
 #' @param layer_name Name of the layer to graph/plot.
 #' @param title Name for the graph.
 #' @returns A bar plot of degree importance for each phylum.
+#' @export
+#'
 #' @examples
 #'
 #' data (phyl_ctr_dstool)

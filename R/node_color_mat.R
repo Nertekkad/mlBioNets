@@ -5,6 +5,8 @@
 #' @param g.list List of igraph objects.
 #' @param type "phylo" assigns the colors according to a certain taxonomic level; "centrality" assings the colors according to the centrality level.
 #' @return Returns a heatmap of the multilayer network according the type you chose.
+#' @export
+#'
 #' @examples
 #'
 #' data (mlnet_dstoolAB)

@@ -5,6 +5,8 @@
 #' @param g An igraph object preprocessed by v_colored or ctr_g.
 #' @param type You can choose between "phylo" or "centrality".
 #' @return An igraph object.
+#' @export
+#'
 #' @examples
 #'
 #' data (ctr_g_dstool)

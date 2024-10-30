@@ -5,4 +5,6 @@
 #' @usage data(dietex)
 #' @format The data set is in phyloseq-class format. It has 130 rows and 8 columns.
 #' @return Loads the data set in R.
+#' @export
+#'
 #' @references O'Keefe et al. Nature Communications 6:6342, 2015. dx.doi.org/10.1038/ncomms7342
