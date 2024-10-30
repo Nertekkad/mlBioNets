@@ -14,9 +14,9 @@
 #' data (mlnet_dstoolAB)
 #'
 #' # Create abundance list
-#' l <- list(david_stoolA_otus, david_stoolB_otus)
+#' lst <- list(david_stoolA_otus, david_stoolB_otus)
 #'
-#' abs_mat (abs.list = l, g.list = mlnet_dstoolAB, n=10)
+#' abs_mat (abs.list = lst, g.list = mlnet_dstoolAB, n=10)
 
 abs_mat<-function(abs.list, g.list, n){
   # Colors for each node
