@@ -19,7 +19,7 @@ TaxGroup(g, T_table, g_tax, p_tax)
 Returns an igraph object with nodes colored based on their taxonomic rank.
 }
 \description{
-Identifies the membership of a node to a certain higher-ranking taxon.
+This function identifies the membership of a node to a certain higher-ranking taxon.
 }
 \examples{
 
