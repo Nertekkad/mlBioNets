@@ -5,6 +5,8 @@
 #' @param g An igraph object.
 #' @param ctr_type Centrality type ("degree", "betweenness" or "closeness").
 #' @return An igraph object with colored nodes.
+#' @export
+#'
 #' @examples
 #'
 #' data (net_dstoolA)

@@ -5,6 +5,8 @@
 #' @param g.list List of igraph objects (multilayer network).
 #' @param ctr_type Centrality type ("degree", "betweenness", "closeness").
 #' @return A list of igraph objects which nodes are colored.
+#' @export
+#'
 #' @examples
 #'
 #' g <- data (mlnet_dstoolAB)

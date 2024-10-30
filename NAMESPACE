@@ -2,3 +2,9 @@
 
 export(T_collapse)
 export(abs_mat)
+export(cor_degree_abs)
+export(ctr_df)
+export(ctr_g)
+export(ctr_ml)
+export(diff_nodes_graph)
+export(g_abundance)

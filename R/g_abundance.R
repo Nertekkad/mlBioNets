@@ -5,6 +5,8 @@
 #' @param layer_mat Abundance data.frame.
 #' @param g An igraph object.
 #' @return A graph with colored nodes.
+#' @export
+#'
 #' @examples
 #'
 #' data ()

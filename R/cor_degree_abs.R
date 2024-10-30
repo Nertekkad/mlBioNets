@@ -7,6 +7,8 @@
 #' @param layer_colors Assign a color to represent the layer (ex. "pink")
 #' @param title Plot's title.
 #' @return Returns a correlation plot between the degree and abundance of each node. It shows the R-square and p-value.
+#' @export
+#'
 #' @examples
 #'
 #' data (mlnet_dstoolAB)

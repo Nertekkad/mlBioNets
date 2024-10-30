@@ -8,6 +8,8 @@
 #' @param g.list List of igraph objects (multilayer network), just 2 layers.
 #' @param alpha Significance. It must be a number between 0 and 1.
 #' @return Returns a plot with both networks collapsed.
+#' @export
+#'
 #' @examples
 #'
 #' data (tc_dstool)
