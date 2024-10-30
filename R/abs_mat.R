@@ -1,4 +1,5 @@
 #' Abundances matrix function
+#'
 #' This function colors nodes by abundance at a taxonomic level.
 #' @usage abs_mat (abs.list, g.list, n)
 #' @param abs.list Abundance list, the same lists you used to generate the network.
