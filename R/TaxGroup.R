@@ -1,19 +1,19 @@
-# TaxGroup
+#' TaxGroup
 #'
-#' Identifies the membership of a node to a certain higher-ranking taxon.
+#' This function identifies the membership of a node to a certain higher-ranking taxon.
 #' @usage TaxGroup(g, T_table, g_tax, p_tax)
 #' @param g An igraph object.
 #' @param T_table Taxa table as data.frame
 #' @param g_tax The taxonomic level at which the nodes will be colored.
 #' @param p_tax The taxonomic level at which the network was built.
-#' @returns Returns an igraph object with nodes colored according to their taxonomic rank.
+#' @returns Returns an igraph object with nodes colored based on their taxonomic rank.
 #' @examples
 #'
 #' # The input can be a net pre-processed by net_inference
-#' # The data is david_stool
+#' # This example uses david_stool data set
 #'
-#' tcollapsed <- readRDS (file="examples/object_tc_dstool.rds")
-#' g <- net_inference (tcollapsed, "aracne")
+#' data (tc_dstool)
+#' g <- net_inference (tc_dstool, "aracne")
 #'
 #' TaxGroup (g, T_table = david_stool_lineages, g_tax = "Order", p_tax = "Genus")
 

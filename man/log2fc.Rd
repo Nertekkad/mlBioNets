@@ -14,14 +14,14 @@ log2fc (phyl_ctr_df, control_layer, test_layer)
 \item{test_layer}{"Name" of test layer.}
 }
 \value{
-Returns a plot of Log Fold Change of the centrality between layers.
+Returns a Log Fold Change plot of the centrality between layers.
 }
 \description{
 Quantifies and compares Log Fold Change value between chosen layers.
 }
 \examples{
 
-phcDstool <- readRDS (file = "examples/Dstool_phyl_ctr.rds")
+data (phyl_ctr_dstool)
 
-log2fc (phcDstool, "before_sickness", "after_sickness")
+log2fc (phyl_ctr_dstool, control_layer = "before", test_layer = "after")
 }

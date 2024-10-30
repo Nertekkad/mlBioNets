@@ -20,10 +20,10 @@
 #'
 #' # if is_phyloseq = F
 #'
-#' library(seqtime)
-#' colnames(david_stool_lineages)<- c("ID", "Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species", "Summary", "ID")
+#' library (seqtime)
+#' colnames (david_stool_lineages)<- c("ID", "Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species", "Summary", "ID")
 #'
-#' T_collapse(F, T_table = david_stool_lineages, O_table = david_stoolA_otus, names_level = "Genus")
+#' T_collapse(is_phyloseq = F, T_table = david_stool_lineages, O_table = david_stoolA_otus, names_level = "Family")
 
 T_collapse <- function(is_phyloseq, ps, T_table, O_table, names_level) {
   if(is_phyloseq == T){

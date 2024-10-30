@@ -1,6 +1,6 @@
-# diff_nodes_graph
+# Identifying and highlighting statistically significant taxa differences in abundance.
 #'
-#' Identifies the most abundant taxa and recognizes which nodes have significant differences between their abundances (red) and which ones don't (blue).
+#' This function identifies the most abundant taxa and distinguishes between nodes with statistically significant differences in their abundance (red) and those without (blue).
 #' @usage diff_nodes_graph(T_Collapsed, n, mat_list, g.list, alpha)
 #' @param T_collapsed Abundance table collapsed at a certain taxonomic level (preprocessed by T_collapse).
 #' @param n Number of nodes to consider.
@@ -10,10 +10,10 @@
 #' @return Returns a plot with both networks collapsed.
 #' @examples
 #'
-#' g <- readRDS (file = "examples/Dstool_mlnet.rds")
-#' t <- readRDS (file = "examples/object_tc_dstool.rds")
+#' data (tc_dstool)
+#' data (mlnet_dstool)
 #'
-#' diff_nodes_graph (t, n=10, mat_list=t, g.list=g, alpha=0.5)
+#' diff_nodes_graph (tc_dstool, n=10, mat_list=t, g.list=mlnet_dstool, alpha=0.5)
 #'
 
 diff_nodes_graph<-function(T_Collapsed, n, mat_list, g.list, alpha){

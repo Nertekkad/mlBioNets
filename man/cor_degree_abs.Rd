@@ -2,7 +2,8 @@
 % Please edit documentation in R/cor_degree_abs.R
 \name{cor_degree_abs}
 \alias{cor_degree_abs}
-\title{This function graphs the Pearson correlation between degree and abundance.}
+\title{Correlation between degree and abundance
+Graphing Pearson correlation between degree and abundance.}
 \usage{
 cor_degree_abs(g.list, abs.list, layer_names, layer_colors, title)
 }
@@ -21,13 +22,13 @@ cor_degree_abs(g.list, abs.list, layer_names, layer_colors, title)
 Returns a correlation plot between the degree and abundance of each node. It shows the R-square and p-value.
 }
 \description{
-This function graphs the Pearson correlation between degree and abundance.
+Correlation between degree and abundance
+Graphing Pearson correlation between degree and abundance.
 }
 \examples{
 
-# Load multilayer net
-g <- readRDS (file = "examples/Dstool_mlnet.rds")
+data (mlnet_dstoolAB)
 
-cor_degree_abs (g, david_stool_lineages, layer_names = c("before", "meanwhile", "after"), layer_colors = c("blue", "purple", "green"), title = "Example")
+cor_degree_abs (g.list = mlnet_dstoolAB, abs.list = david_stool_lineages, layer_names = v, layer_colors = c("yellow", "pink"), title = "Sample graph")
 
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/node_color_mat.R
 \name{node_color_mat}
 \alias{node_color_mat}
-\title{Create a matrix that contains the assigned colors for the nodes of a multilayer network.}
+\title{Creates a matrix that contains assigned colors for the nodes of a multilayer network.}
 \usage{
 node_color_mat (g.list, type)
 }
@@ -15,12 +15,12 @@ node_color_mat (g.list, type)
 Returns a heatmap of the multilayer network according the type you chose.
 }
 \description{
-Create a matrix that contains the assigned colors for the nodes of a multilayer network.
+Creates a matrix that contains assigned colors for the nodes of a multilayer network.
 }
 \examples{
 
-g <- readRDS (file = "examples/Dstool_mlnet.rds")
-node_color_mat (g, type = "phylo")
+data (mlnet_dstoolAB)
+node_color_mat (mlnet_dstoolAB, type = "phylo")
 
-node_color_mat (g, type = "centrality")
+node_color_mat (mlnet_dstoolAB, type = "centrality")
 }

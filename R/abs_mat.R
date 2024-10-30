@@ -1,16 +1,16 @@
-# Abundances matrix function
-#' This function assigns colors to the nodes based on their abundance at the specified taxonomic level.
+#' Abundances matrix function
+#' This function colors nodes by abundance at a taxonomic level.
 #' @usage abs_mat (abs.list, g.list, n)
 #' @param abs.list Abundance list, the same lists you used to generate the network.
 #' @param g.list List of igraph objects (multilayer network).
-#' @param n Vertex number. Notice that if n>20 the nodes won't show so big.
+#' @param n Vertex number. Notice that if n>20 the nodes won't show too big.
 #' @return Returns a matrix, each column is a layer, and the values of the rows corresponds to the size of each node.
 #' @export
 #' @examples
 #'
-#' g <- readRDS (file = "examples/Dstool_mlnet.rds")
+#' data (mlnet_dstoolAB)
 #'
-#' abs_mat (david_stool_lineages, g, 10)
+#' abs_mat (abs.list = david_stool_lineages, g.list = mlnet_dstoolAB, n=10)
 
 abs_mat<-function(abs.list, g.list, n){
   # Colors for each node

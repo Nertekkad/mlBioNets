@@ -11,16 +11,16 @@
 #' @return An igraph object.
 #' @examples
 #'
-#' # Loads this library to create a vector with colors
+#' # Load this library to create a vector with colors
 #' library(viridis)
 #  c <- sample(viridis(100), 150)
 #'
-#' g <- readRDS("examples/Dstool_net.rds")
+#' data (net_dstoolA)
 #'
-#' v <- v_colored (g, T_table=david_stool_lineages, g_tax = "Family", p_tax = "Order", g_colors = c)
+#' g <- v_colored(net_dstA, T_table = david_stool_lineages, g_tax = "Class", p_tax = "Family", g_colors = c)
 #' # Nodes will be colored by Family, and the net was built by Order
 #'
-#' plot(v)
+#' plot(g)
 #'
 
 v_colored<-function(g, T_table, g_tax, p_tax, g_colors){

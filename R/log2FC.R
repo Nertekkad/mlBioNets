@@ -1,16 +1,17 @@
-# log2FC
+# Quantifying log-fold changes in centrality between network layers
 #'
 #' Quantifies and compares Log Fold Change value between chosen layers.
 #' @usage log2fc (phyl_ctr_df, control_layer, test_layer)
 #' @param phyl_ctr_df A data.frame preprocessed with phyl_ctr_df function.
 #' @param control_layer "Name" of control layer.
 #' @param test_layer "Name" of test layer.
-#' @return Returns a plot of Log Fold Change of the centrality between layers.
+#' @return Returns a Log Fold Change plot of the centrality between layers.
 #' @examples
 #'
-#' phcDstool <- readRDS (file = "examples/Dstool_phyl_ctr.rds")
+#' data (phyl_ctr_dstool)
 #'
-#' log2fc (phcDstool, "before_sickness", "after_sickness")
+#' log2fc (phyl_ctr_dstool, control_layer = "before", test_layer = "after")
+
 
 log2fc <- function(phyl_ctr_df, control_layer, test_layer){
   require(ggpubr)

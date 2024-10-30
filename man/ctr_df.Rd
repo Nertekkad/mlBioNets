@@ -2,7 +2,7 @@
 % Please edit documentation in R/ctr_df.R
 \name{ctr_df}
 \alias{ctr_df}
-\title{Creates a data.frame with the degree of each layer's nodes.}
+\title{The function ctr_df generates a data.frame containing the degree of nodes for each layer.}
 \usage{
 ctr_df (g.list, layer_names)
 }
@@ -12,18 +12,18 @@ ctr_df (g.list, layer_names)
 \item{layer_names}{Vector with the name of each layer.}
 }
 \value{
-Returns a data.frame with centrality value (if you preprocessed with ctr_ml or ctr_g: degree, betweenness or closeness), p_tax and g_tax of each node (function take this info from TaxGroup_ml).
+Returns a data.frame with centrality value (if preprocessed with ctr_ml or ctr_g: degree, betweenness or closeness), p_tax and g_tax of each node (the function takes this info from ml_TaxGroup).
 }
 \description{
-Creates a data.frame with the degree of each layer's nodes.
+The function ctr_df generates a data.frame containing the degree of nodes for each layer.
 }
 \examples{
 
 #Load the example net
-g <- readRDS (file = "examples/Dstool_mlnet.rds")
+data (mlTaxGroup_dstool)
 
-# Assign layer names
-v <- c("before", "meanwhile", "after")
+# Create a vector with layers' names
+v <- c("sample A", "sample B")
 
-ctr_df (g, layer_names = v)
+ctr_df (mlTaxGroup_dstool, layer_names = v)
 }

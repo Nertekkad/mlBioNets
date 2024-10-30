@@ -9,7 +9,7 @@ net_inference (taxa_abs, method)
 \arguments{
 \item{taxa_abs}{An abundance table (data.frame) preprocessed with function T_collapse.}
 
-\item{method}{The method to create the network ("sparcc", "aracne").}
+\item{method}{The method to create the network ("sparcc" or "aracne").}
 
 \item{p}{When method="sparcc", a threshold between 0-1.}
 }
@@ -21,11 +21,9 @@ Allows to infer a co-abundance network from an abundance table.
 }
 \examples{
 
-object_tc <- readRDS("examples/object_tc_dietswap.rds")
-aracnet <- net_inference (object_tc, "aracne")
-plot (aracnet)
+data (tc_dstool)
+net_inference (tc_dstool, method = "aracne")
 
-object_tc2 <- readRDS(file = "examples/object_tc_dstool.rds")
-sparccnet <- net_inference (object_tc2, "sparcc", p = 0.4)
-plot (sparccnet)
+data (tc_dietex)
+net_inference (tc_dietswap, method = "sparcc", p = 0.2)
 }
