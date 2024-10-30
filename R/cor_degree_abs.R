@@ -17,9 +17,9 @@
 #' lst <- list(david_stoolA_otus, david_stoolB_otus)
 #'
 #' # Create a vector for layers' names
-#' v <- c("Sample A", "Sample B")
+#' n <- c("Sample A", "Sample B")
 #'
-#' cor_degree_abs (g.list = mlnet_dstoolAB, abs.list = lst, layer_names = v, layer_colors = c("yellow", "pink"), title = "Sample graph")
+#' cor_degree_abs (g.list = mlnet_dstoolAB, abs.list = lst, layer_names = n, layer_colors = c("yellow", "pink"), title = "Sample graph")
 #'
 
 cor_degree_abs<-function(g.list, abs.list, layer_names, layer_colors, title){
