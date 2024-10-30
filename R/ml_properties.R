@@ -1,4 +1,4 @@
-# Multilayer network properties
+#' Multilayer network properties
 #'
 #' Quantifies different topological properties of a multilayer network.
 #' @usage ml_properties (g.list, treatments)
