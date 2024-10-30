@@ -1,4 +1,4 @@
-# TaxGroup
+#' TaxGroup
 #'
 #' Identifies the membership of a node to a certain higher-ranking taxon.
 #' @usage TaxGroup(g, T_table, g_tax, p_tax)
