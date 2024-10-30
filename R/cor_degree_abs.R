@@ -1,4 +1,4 @@
-# Correlation between degree and abundance
+#' Correlation between degree and abundance
 #' Graphing Pearson correlation between degree and abundance.
 #' @usage cor_degree_abs(g.list, abs.list, layer_names, layer_colors, title)
 #' @param g.list List of igraph objects (multilayer network).
