@@ -21,7 +21,11 @@ This function colors nodes by abundance at a taxonomic level.
 }
 \examples{
 
+library(seqtime)
 data (mlnet_dstoolAB)
 
-abs_mat (abs.list = david_stool_lineages, g.list = mlnet_dstoolAB, n=10)
+# Create abundance list
+lst <- list(david_stoolA_otus, david_stoolB_otus)
+
+abs_mat (abs.list = lst, g.list = mlnet_dstoolAB, n=10)
 }

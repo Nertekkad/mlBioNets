@@ -29,6 +29,12 @@ Graphing Pearson correlation between degree and abundance.
 
 data (mlnet_dstoolAB)
 
-cor_degree_abs (g.list = mlnet_dstoolAB, abs.list = david_stool_lineages, layer_names = v, layer_colors = c("yellow", "pink"), title = "Sample graph")
+# Create abundace list
+lst <- list(david_stoolA_otus, david_stoolB_otus)
+
+# Create a vector for layers' names
+n <- c("Sample A", "Sample B")
+
+cor_degree_abs (g.list = mlnet_dstoolAB, abs.list = lst, layer_names = n, layer_colors = c("yellow", "pink"), title = "Sample graph")
 
 }
