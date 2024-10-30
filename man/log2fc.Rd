@@ -2,7 +2,7 @@
 % Please edit documentation in R/log2FC.R
 \name{log2fc}
 \alias{log2fc}
-\title{This function quantifies and compares the logarithmic fold-change values of centrality measures between the selected layers.}
+\title{Quantifies and compares Log Fold Change value between chosen layers.}
 \usage{
 log2fc (phyl_ctr_df, control_layer, test_layer)
 }
@@ -14,10 +14,10 @@ log2fc (phyl_ctr_df, control_layer, test_layer)
 \item{test_layer}{"Name" of test layer.}
 }
 \value{
-Returns a plot of Log Fold Change of the centrality between layers.
+Returns a Log Fold Change plot of the centrality between layers.
 }
 \description{
-This function quantifies and compares the logarithmic fold-change values of centrality measures between the selected layers.
+Quantifies and compares Log Fold Change value between chosen layers.
 }
 \examples{
 

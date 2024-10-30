@@ -2,7 +2,7 @@
 % Please edit documentation in R/v_colored_ml.R
 \name{v_colored_ml}
 \alias{v_colored_ml}
-\title{Assigns a color to each node of a multilayer network depending of their taxonomic level, for example, the phylum.}
+\title{v_colored_ml}
 \usage{
 v_colored_ml (g.list, T_table, g_tax, p_tax, g_colors)
 }

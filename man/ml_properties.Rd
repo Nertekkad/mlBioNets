@@ -2,7 +2,7 @@
 % Please edit documentation in R/ml_properties.R
 \name{ml_properties}
 \alias{ml_properties}
-\title{Quantifies different topological properties of a multilayer network.}
+\title{Multilayer network properties}
 \usage{
 ml_properties (g.list, treatments)
 }

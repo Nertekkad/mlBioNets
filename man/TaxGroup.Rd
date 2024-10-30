@@ -2,7 +2,7 @@
 % Please edit documentation in R/TaxGroup.R
 \name{TaxGroup}
 \alias{TaxGroup}
-\title{Identifies the membership of a node to a certain higher-ranking taxon.}
+\title{TaxGroup}
 \usage{
 TaxGroup(g, T_table, g_tax, p_tax)
 }

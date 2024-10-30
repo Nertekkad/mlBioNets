@@ -1,4 +1,4 @@
-# v_colored_ml
+#' v_colored_ml
 #'
 #' Assigns a color to each node of a multilayer network depending of their taxonomic level, for example, the phylum.
 #' @usage v_colored_ml (g.list, T_table, g_tax, p_tax, g_colors)
