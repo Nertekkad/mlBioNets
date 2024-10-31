@@ -19,7 +19,7 @@ Creates a graph of the network.
 }
 \examples{
 
-data (ctr_g_dstool)
+data ("ctr_g_dstool")
 net_plot (ctr_g_dstool, type = "centrality")
 
 }

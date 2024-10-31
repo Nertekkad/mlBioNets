@@ -11,7 +11,7 @@
 #' @examples
 #'
 #' library(seqtime)
-#' data (mlnet_dstoolAB)
+#' data ("mlnet_dstoolAB")
 #'
 #' # Create abundance list
 #' lst <- list(david_stoolA_otus, david_stoolB_otus)

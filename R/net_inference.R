@@ -10,11 +10,10 @@
 #'
 #' @examples
 #'
-#' data (tc_dstool)
-#' net_inference (tc_dstool, method = "aracne")
+#' data ("tc_dstoolA")
+#' net_inference (tc_dstoolA, method = "aracne")
 #'
-#' data (tc_dietex)
-#' net_inference (tc_dietswap, method = "sparcc", p = 0.2)
+#' net_inference (tc_dstoolB, method = "sparcc", p = 0.2)
 
 net_inference<-function(taxa_abs, method, p){
   require(SpiecEasi)

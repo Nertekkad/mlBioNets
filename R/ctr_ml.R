@@ -9,7 +9,7 @@
 #'
 #' @examples
 #'
-#' g <- data (mlnet_dstoolAB)
+#' g <- data ("mlnet_dstoolAB")
 #'
 #' ctrl_ml (g, ctr_type = "degree")
 #' ctrl_ml (g, ctr_type = "betweenness")

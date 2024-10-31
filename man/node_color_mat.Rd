@@ -19,7 +19,8 @@ Creates a matrix that contains assigned colors for the nodes of a multilayer net
 }
 \examples{
 
-data (mlnet_dstoolAB)
+data ("mlnet_dstoolAB")
+
 node_color_mat (mlnet_dstoolAB, type = "phylo")
 
 node_color_mat (mlnet_dstoolAB, type = "centrality")

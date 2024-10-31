@@ -22,7 +22,7 @@ This function colors nodes by abundance at a taxonomic level.
 \examples{
 
 library(seqtime)
-data (mlnet_dstoolAB)
+data ("mlnet_dstoolAB")
 
 # Create abundance list
 lst <- list(david_stoolA_otus, david_stoolB_otus)

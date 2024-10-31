@@ -12,11 +12,12 @@
 #'
 #' @examples
 #'
+#' library(seqtime)
 #' # Loads this library to create a vector with colors
 #' library (viridis)
-#  c <- sample (viridis(100), num_nodes)
+#  c <- sample (viridis(100), 304)
 #'
-#' data(mlnet_dstoolAB)
+#' data("mlnet_dstoolAB")
 #'
 #' g <- v_colored_ml (g.list = mlnet_dstoolAB, T_table = david_stool_lineages, g_tax = "Order", p_tax = "Genus", g_colors = c)
 #'

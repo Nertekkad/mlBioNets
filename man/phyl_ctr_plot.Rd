@@ -21,7 +21,7 @@ This function shows centrality importance of the phyla.
 }
 \examples{
 
-data (phyl_ctr_dstool)
+data ("phyl_ctr_dstool")
 
 n <- c("Sample A", "Sample B")
 

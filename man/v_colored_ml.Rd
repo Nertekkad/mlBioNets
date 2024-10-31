@@ -25,10 +25,11 @@ Assigns a color to each node of a multilayer network depending of their taxonomi
 }
 \examples{
 
+library(seqtime)
 # Loads this library to create a vector with colors
 library (viridis)
 
-data(mlnet_dstoolAB)
+data("mlnet_dstoolAB")
 
 g <- v_colored_ml (g.list = mlnet_dstoolAB, T_table = david_stool_lineages, g_tax = "Order", p_tax = "Genus", g_colors = c)
 

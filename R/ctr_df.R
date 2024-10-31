@@ -10,7 +10,7 @@
 #' @examples
 #'
 #' #Load the example net
-#' data (mlTaxGroup_dstool)
+#' data ("mlTaxGroup_dstool")
 #'
 #' # Create a vector with layers' names
 #' v <- c("sample A", "sample B")

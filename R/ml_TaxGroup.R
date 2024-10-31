@@ -11,8 +11,9 @@
 #'
 #' @examples
 #'
+#' library (seqtime)
 #' # Load g.list
-#' data (mlnet_dstoolAB)
+#' data ("mlnet_dstoolAB")
 #'
 #' # Replace columns' names of T_table
 #' colnames (david_stool_lineages) <- c("ID", "Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species", "Summary", "ID")

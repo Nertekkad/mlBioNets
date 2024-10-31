@@ -15,11 +15,11 @@
 #'
 #' # Load this library to create a vector with colors
 #' library(viridis)
-#  c <- sample(viridis(100), 150)
+#  c <- sample(viridis(100), 152)
 #'
-#' data (net_dstoolA)
+#' data ("net_dstoolA")
 #'
-#' g <- v_colored(net_dstA, T_table = david_stool_lineages, g_tax = "Class", p_tax = "Family", g_colors = c)
+#' g <- v_colored(net_dstoolA, T_table = david_stool_lineages, g_tax = "Class", p_tax = "Family", g_colors = c)
 #' # Nodes will be colored by Family, and the net was built by Order
 #'
 #' plot(g)

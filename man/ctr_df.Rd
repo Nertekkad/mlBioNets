@@ -20,7 +20,7 @@ The function ctr_df generates a data.frame containing the degree of nodes for ea
 \examples{
 
 #Load the example net
-data (mlTaxGroup_dstool)
+data ("mlTaxGroup_dstool")
 
 # Create a vector with layers' names
 v <- c("sample A", "sample B")

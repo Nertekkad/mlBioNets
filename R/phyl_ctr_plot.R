@@ -10,7 +10,7 @@
 #'
 #' @examples
 #'
-#' data (phyl_ctr_dstool)
+#' data ("phyl_ctr_dstool")
 #'
 #' n <- c("Sample A", "Sample B")
 #'

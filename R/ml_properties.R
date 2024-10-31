@@ -9,7 +9,7 @@
 #'
 #' @examples
 #'
-#' data (mlnet_dstoolAB)
+#' data ("mlnet_dstoolAB")
 #'
 #' # The vector with layers' names
 #' t <- c("before", "after")
