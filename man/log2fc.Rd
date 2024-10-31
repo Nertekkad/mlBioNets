@@ -23,5 +23,5 @@ Quantifies and compares Log Fold Change value between chosen layers.
 
 data("phyl_ctr_dstool")
 
-log2fc (phyl_ctr_dstool, control_layer = "before", test_layer = "after")
+log2fc (phyl_ctr_dstool, control_layer = "sample A", test_layer = "sample B")
 }

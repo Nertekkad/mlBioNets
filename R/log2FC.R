@@ -12,7 +12,7 @@
 #'
 #' data("phyl_ctr_dstool")
 #'
-#' log2fc (phyl_ctr_dstool, control_layer = "before", test_layer = "after")
+#' log2fc (phyl_ctr_dstool, control_layer = "sample A", test_layer = "sample B")
 
 
 log2fc <- function(phyl_ctr_df, control_layer, test_layer){

@@ -13,7 +13,6 @@
 #' data ("tc_dstoolA")
 #' net_inference (tc_dstoolA, method = "aracne")
 #'
-#' net_inference (tc_dstoolB, method = "sparcc", p = 0.2)
 
 net_inference<-function(taxa_abs, method, p){
   require(SpiecEasi)

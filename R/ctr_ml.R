@@ -11,9 +11,9 @@
 #'
 #' g <- data ("mlnet_dstoolAB")
 #'
-#' ctrl_ml (g, ctr_type = "degree")
-#' ctrl_ml (g, ctr_type = "betweenness")
-#' ctrl_ml (g, ctr_type = "closeness")
+#' ctr_ml (g, ctr_type = "degree")
+#' ctr_ml (g, ctr_type = "betweenness")
+#' ctr_ml (g, ctr_type = "closeness")
 
 ctr_ml<-function(g.list, ctr_type){
   require(igraph)

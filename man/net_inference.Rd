@@ -24,5 +24,4 @@ Allows to infer a co-abundance network from an abundance table.
 data ("tc_dstoolA")
 net_inference (tc_dstoolA, method = "aracne")
 
-net_inference (tc_dstoolB, method = "sparcc", p = 0.2)
 }
