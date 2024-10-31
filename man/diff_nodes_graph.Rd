@@ -25,11 +25,9 @@ This function identifies the most abundant taxa and distinguishes between nodes 
 }
 \examples{
 
-data ("tc_dstoolA")
-data ("mlnet_dstoolAB")
+data (tc_dstool)
+data (mlnet_dstool)
 
-mlst <- list(tc_dstoolA, tc_dstoolB)
-
-diff_nodes_graph (tc_dstoolA, n=10, mat_list=mlst, g.list=mlnet_dstoolAB, alpha=0.5)
+diff_nodes_graph (tc_dstool, n=10, mat_list=t, g.list=mlnet_dstool, alpha=0.5)
 
 }
