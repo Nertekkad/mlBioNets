@@ -11,15 +11,17 @@
 #'
 #' @examples
 #'
-#' data (mlnet_dstoolAB)
+#' data("mlnet_dstoolAB")
+#' data("tc_dstoolA")
+#' data("tc_dstoolB")
 #'
 #' # Create abundace list
-#' lst <- list(david_stoolA_otus, david_stoolB_otus)
+#' lst <- list(tc_dstoolA, tc_dstoolB)
 #'
 #' # Create a vector for layers' names
 #' n <- c("Sample A", "Sample B")
 #'
-#' cor_degree_abs (g.list = mlnet_dstoolAB, abs.list = lst, layer_names = n, layer_colors = c("yellow", "pink"), title = "Sample graph")
+#' cor_degree_abs (g.list = mlnet_dstoolAB, abs.list = lst, layer_names = n, layer_colors = c("green", "orange"), title = "Sample graph")
 #'
 
 cor_degree_abs<-function(g.list, abs.list, layer_names, layer_colors, title){
