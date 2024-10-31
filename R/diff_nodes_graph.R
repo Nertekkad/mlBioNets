@@ -12,10 +12,12 @@
 #'
 #' @examples
 #'
-#' data (tc_dstool)
-#' data (mlnet_dstool)
+#' data ("tc_dstoolA")
+#' data ("mlnet_dstoolAB")
 #'
-#' diff_nodes_graph (tc_dstool, n=10, mat_list=t, g.list=mlnet_dstool, alpha=0.5)
+#' mlst <- list(tc_dstoolA, tc_dstoolB)
+#'
+#' diff_nodes_graph (tc_dstoolA, n=10, mat_list=mlst, g.list=mlnet_dstoolAB, alpha=0.5)
 #'
 
 diff_nodes_graph<-function(T_Collapsed, n, mat_list, g.list, alpha){
