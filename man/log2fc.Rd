@@ -21,6 +21,7 @@ Quantifies and compares Log Fold Change value between chosen layers.
 }
 \examples{
 
+library (viridis)
 data("phyl_ctr_dstool")
 
 log2fc (phyl_ctr_dstool, control_layer = "sample A", test_layer = "sample B")

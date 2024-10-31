@@ -10,6 +10,7 @@
 #'
 #' @examples
 #'
+#' library (viridis)
 #' data("phyl_ctr_dstool")
 #'
 #' log2fc (phyl_ctr_dstool, control_layer = "sample A", test_layer = "sample B")
