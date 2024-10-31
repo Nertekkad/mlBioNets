@@ -1,6 +1,6 @@
-# Phylum centrality data frame
+# Generating a data.frame of summed centrality values for a specified taxonomic level.
 #'
-#' Creates a data.frame of the sums of centrality values at a chosen taxonomic level.
+#' This function generates a data.frame containing the summed centrality values at a specified taxonomic level.
 #' @usage phyl_ctr_df (ctr_df, layer_names, n_layers)
 #' @param ctr_df Data.frame pre-processed with ctr_df function.
 #' @param layer_names Name of the layers.

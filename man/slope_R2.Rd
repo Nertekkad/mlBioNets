@@ -2,7 +2,7 @@
 % Please edit documentation in R/slope_R2.R
 \name{slope_R2}
 \alias{slope_R2}
-\title{Get the slope and R-squared of linear models of topological properties.}
+\title{This function computes  the slope and R-squared values of a linear-regression for topological properties from networks.}
 \usage{
 slope_R2 (df_properties)
 }
@@ -13,7 +13,7 @@ slope_R2 (df_properties)
 Returns a data.frame describing the slope and the R-squared of linear models.
 }
 \description{
-Get the slope and R-squared of linear models of topological properties.
+This function computes  the slope and R-squared values of a linear-regression for topological properties from networks.
 }
 \examples{
 

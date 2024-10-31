@@ -1,6 +1,6 @@
-# Network inference function
+# Inferring multilayer co-abundance network
 #'
-#' Allows to infer a co-abundance network from an abundance table.
+#' This function infers a co-abundance network from an abundance table.
 #' @usage net_inference (taxa_abs, method)
 #' @param taxa_abs An abundance table (data.frame) preprocessed with function T_collapse.
 #' @param method The method to create the network ("sparcc" or "aracne").

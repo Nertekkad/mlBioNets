@@ -2,20 +2,20 @@
 % Please edit documentation in R/node_color_mat.R
 \name{node_color_mat}
 \alias{node_color_mat}
-\title{Creates a matrix that contains assigned colors for the nodes of a multilayer network.}
+\title{This function creates a matrix containing the assigned colors for the nodes of a multilayer network.}
 \usage{
 node_color_mat (g.list, type)
 }
 \arguments{
 \item{g.list}{List of igraph objects.}
 
-\item{type}{"phylo" assigns the colors according to a certain taxonomic level; "centrality" assings the colors according to the centrality level.}
+\item{type}{"phylo" assigns the colors according to a certain taxonomic level; "centrality" assigns the colors according to the centrality level.}
 }
 \value{
 Returns a heatmap of the multilayer network according the type you chose.
 }
 \description{
-Creates a matrix that contains assigned colors for the nodes of a multilayer network.
+This function creates a matrix containing the assigned colors for the nodes of a multilayer network.
 }
 \examples{
 

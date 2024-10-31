@@ -2,7 +2,7 @@
 % Please edit documentation in R/net_plot.R
 \name{net_plot}
 \alias{net_plot}
-\title{Creates a graph of the network.}
+\title{This function creates a network plot. This function also provides options for customizing network visualizations, allowing users to adjust node sizes, edge weights, and color schemes to highlight specific patterns or relationships of interest.}
 \usage{
 net_plot (g, type)
 }
@@ -15,7 +15,7 @@ net_plot (g, type)
 An igraph object.
 }
 \description{
-Creates a graph of the network.
+This function creates a network plot. This function also provides options for customizing network visualizations, allowing users to adjust node sizes, edge weights, and color schemes to highlight specific patterns or relationships of interest.
 }
 \examples{
 

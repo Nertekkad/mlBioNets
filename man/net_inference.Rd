@@ -2,7 +2,7 @@
 % Please edit documentation in R/net_inference.R
 \name{net_inference}
 \alias{net_inference}
-\title{Allows to infer a co-abundance network from an abundance table.}
+\title{This function infers a co-abundance network from an abundance table.}
 \usage{
 net_inference (taxa_abs, method)
 }
@@ -17,7 +17,7 @@ net_inference (taxa_abs, method)
 The function returns an igraph object representing the existing co-abundances between nodes at a certain taxonomic level.
 }
 \description{
-Allows to infer a co-abundance network from an abundance table.
+This function infers a co-abundance network from an abundance table.
 }
 \examples{
 

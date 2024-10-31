@@ -1,9 +1,9 @@
-# Node-coloring function
+# Generating a  node color matrix
 #'
-#' Creates a matrix that contains assigned colors for the nodes of a multilayer network.
+#' This function creates a matrix containing the assigned colors for the nodes of a multilayer network.
 #' @usage node_color_mat (g.list, type)
 #' @param g.list List of igraph objects.
-#' @param type "phylo" assigns the colors according to a certain taxonomic level; "centrality" assings the colors according to the centrality level.
+#' @param type "phylo" assigns the colors according to a certain taxonomic level; "centrality" assigns the colors according to the centrality level.
 #' @return Returns a heatmap of the multilayer network according the type you chose.
 #' @export
 #'

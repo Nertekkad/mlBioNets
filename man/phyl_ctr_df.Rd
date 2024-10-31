@@ -2,7 +2,7 @@
 % Please edit documentation in R/phyl_ctr_df.R
 \name{phyl_ctr_df}
 \alias{phyl_ctr_df}
-\title{Creates a data.frame of the sums of centrality values at a chosen taxonomic level.}
+\title{This function generates a data.frame containing the summed centrality values at a specified taxonomic level.}
 \usage{
 phyl_ctr_df (ctr_df, layer_names, n_layers)
 }
@@ -17,7 +17,7 @@ phyl_ctr_df (ctr_df, layer_names, n_layers)
 A data.frame with one column per layer with their centrality value.
 }
 \description{
-Creates a data.frame of the sums of centrality values at a chosen taxonomic level.
+This function generates a data.frame containing the summed centrality values at a specified taxonomic level.
 }
 \examples{
 

@@ -1,6 +1,6 @@
-# Network plotting
+# Plotting a co-abundance network
 #'
-#' Creates a graph of the network.
+#' This function creates a network plot. This function also provides options for customizing network visualizations, allowing users to adjust node sizes, edge weights, and color schemes to highlight specific patterns or relationships of interest.
 #' @usage net_plot (g, type)
 #' @param g An igraph object preprocessed by v_colored or ctr_g.
 #' @param type You can choose between "phylo" or "centrality".

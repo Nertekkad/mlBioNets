@@ -2,7 +2,7 @@
 % Please edit documentation in R/phyl_ctr_plot.R
 \name{phyl_ctr_plot}
 \alias{phyl_ctr_plot}
-\title{This function shows centrality importance of the phyla.}
+\title{This function displays the  centrality measure of each phylum.}
 \usage{
 phyl_ctr_plot (phyl_ctr_df, layer_name, title)
 }
@@ -17,7 +17,7 @@ phyl_ctr_plot (phyl_ctr_df, layer_name, title)
 A bar plot of degree importance for each phylum.
 }
 \description{
-This function shows centrality importance of the phyla.
+This function displays the  centrality measure of each phylum.
 }
 \examples{
 
