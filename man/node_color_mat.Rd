@@ -12,7 +12,7 @@ node_color_mat (g.list, type)
 \item{type}{"phylo" assigns the colors according to a certain taxonomic level; "centrality" assigns the colors according to the centrality level.}
 }
 \value{
-Returns a heatmap of the multilayer network according the type you chose.
+Returns a heatmap of the multilayer network according to the type you chose.
 }
 \description{
 This function creates a matrix containing the assigned colors for the nodes of a multilayer network.

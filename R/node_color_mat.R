@@ -4,7 +4,7 @@
 #' @usage node_color_mat (g.list, type)
 #' @param g.list List of igraph objects.
 #' @param type "phylo" assigns the colors according to a certain taxonomic level; "centrality" assigns the colors according to the centrality level.
-#' @return Returns a heatmap of the multilayer network according the type you chose.
+#' @return Returns a heatmap of the multilayer network according to the type you chose.
 #' @export
 #'
 #' @examples
