@@ -21,7 +21,7 @@ Creates a data.frame of the sums of centrality values at a chosen taxonomic leve
 }
 \examples{
 
-data (ctr_df_dstool)
+data("ctr_df_dstool")
 
 # Create a vector with layers' names
 n <- c("sample A", "sample B")

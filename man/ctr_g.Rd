@@ -19,11 +19,11 @@ This function assigns colors to the network nodes based on their centrality meas
 }
 \examples{
 
-data (net_dstoolA)
+data ("net_dstoolA")
 ctr_g (net_dstoolA, ctr_type = "degree")
 ctr_g (net_dstoolA, ctr_type = "closeness")
 
-data (net_dstoolB)
+data ("net_dstoolB")
 ctr_g (net_dstoolB, ctr_type = "betweenness")
 ctr_g (net_dstoolB, ctr_type = "degree")
 }

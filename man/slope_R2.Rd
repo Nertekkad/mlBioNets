@@ -17,7 +17,7 @@ Get the slope and R-squared of linear models of topological properties.
 }
 \examples{
 
-data (ml_prop_dstool)
+data ("ml_prop_dstool")
 
 slope_R2 (ml_prop_dstool)
 }

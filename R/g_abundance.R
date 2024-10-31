@@ -9,10 +9,12 @@
 #'
 #' @examples
 #'
-#' data ()
+#' data("tc_dstoolA")
+#' data("tc_dstoolB")
 #'
-#' g_abundance (david_stool_lineages, net_dstA)
+#' g_abundance (layer_mat = tc_dstoolA, g = net_dstA)
 #'
+#' g_abundance (layer_mat = tc_dstoolB, g = net_dstB)
 
 g_abundance<-function(layer_mat, g){
   # Relative abundances quantification
