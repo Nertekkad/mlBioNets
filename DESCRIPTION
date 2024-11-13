@@ -20,10 +20,13 @@ Imports:
     igraph,
     ggpubr,
     viridis,
-    phyloseq
+    phyloseq,
+    SpiecEasi,
+    vegan
 Remotes:
     github::manlius/muxViz,
     github::hallucigenia-sparsa/seqtime,
-    github::zdk123/SpiecEasi
+    github::zdk123/SpiecEasi,
+    github::joey711/phyloseq
 RoxygenNote: 7.3.2
 Config/testthat/edition: 3
