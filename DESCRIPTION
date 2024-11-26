@@ -20,7 +20,6 @@ Imports:
     igraph,
     ggpubr,
     viridis,
-    phyloseq,
     SpiecEasi,
     vegan
 Remotes:
