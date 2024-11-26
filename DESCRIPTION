@@ -22,11 +22,9 @@ Imports:
     viridis,
     SpiecEasi,
     vegan,
-    muxViz,
     seqtime,
     phyloseq
 Remotes:
-    github::manlius/muxViz,
     github::hallucigenia-sparsa/seqtime,
     github::zdk123/SpiecEasi,
     github::joey711/phyloseq
