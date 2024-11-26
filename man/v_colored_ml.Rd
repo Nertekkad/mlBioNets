@@ -32,8 +32,4 @@ library (viridis)
 data("mlnet_dstoolAB")
 
 g <- v_colored_ml (g.list = mlnet_dstoolAB, T_table = david_stool_lineages, g_tax = "Order", p_tax = "Genus", g_colors = c)
-
-# Nodes will be colored by Order, and the net was built by Family
-
-plot(g)
 }
