@@ -23,10 +23,12 @@ Imports:
     SpiecEasi,
     vegan,
     seqtime,
-    phyloseq
+    phyloseq,
+    muxViz
 Remotes:
     github::hallucigenia-sparsa/seqtime,
     github::zdk123/SpiecEasi,
-    github::joey711/phyloseq
+    github::joey711/phyloseq,
+    github::manlius/muxViz
 RoxygenNote: 7.3.2
 Config/testthat/edition: 3
