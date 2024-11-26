@@ -21,7 +21,10 @@ Imports:
     ggpubr,
     viridis,
     SpiecEasi,
-    vegan
+    vegan,
+    muxViz,
+    seqtime,
+    phyloseq
 Remotes:
     github::manlius/muxViz,
     github::hallucigenia-sparsa/seqtime,
