@@ -29,6 +29,7 @@ Remotes:
     github::hallucigenia-sparsa/seqtime,
     github::zdk123/SpiecEasi,
     github::joey711/phyloseq,
-    github::manlius/muxViz
+    github::manlius/muxViz,
+    github::cran/minet
 RoxygenNote: 7.3.2
 Config/testthat/edition: 3
