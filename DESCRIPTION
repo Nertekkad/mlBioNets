@@ -5,7 +5,7 @@ Version: 0.1.0
 Author: Victor Lázaro, Valeria Hernández-Zendejas, Roberto Álvarez-Martínez
 Maintainer: The package maintainer <lav_victor@outlook.com>
 Description: mlBioNets uses abundances and taxa data sets to build multilayer networks and analyse certain properties of the communities.
-License: What license is it under?
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Depends: 
