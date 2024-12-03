@@ -10,12 +10,13 @@
 #' @return An igraph object.
 #' @export
 #'
+#' @import seqtime
+#' @import viridis
 #' @examples
 #'
-#' library(seqtime)
 #' # Loads this library to create a vector with colors
 #' library (viridis)
-#  c <- sample (viridis(304), 304)
+#' c <- sample (viridis(304), 304)
 #'
 #' data("mlnet_dstoolAB")
 #'
