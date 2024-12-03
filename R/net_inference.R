@@ -8,6 +8,8 @@
 #' @return The function returns an igraph object representing the existing co-abundances between nodes at a certain taxonomic level.
 #' @export
 #'
+#' @importFrom minet build.mim
+#'
 #' @examples
 #'
 #' data ("tc_dstoolA")
