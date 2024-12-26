@@ -19,12 +19,10 @@ This function assigns colors to the nodes based on their relative abundance.
 }
 \examples{
 
-data ("tc_dstoolA")
-data ("tc_dstoolB")
-data ("net_dstoolA")
-data ("net_dstoolB")
+data("tc_dstoolA")
+data("tc_dstoolB")
 
-g_abundance (layer_mat = tc_dstoolA, g = net_dstoolA)
+g_abundance (layer_mat = tc_dstoolA, g = net_dstA)
 
-g_abundance (layer_mat = tc_dstoolB, g = net_dstoolB)
+g_abundance (layer_mat = tc_dstoolB, g = net_dstB)
 }

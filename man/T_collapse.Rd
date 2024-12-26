@@ -25,11 +25,13 @@ This function aggregates the abundance data at a specified taxonomic level. It a
 # With BiocManager, package "microbiome"
 # if is_phyloseq = T
 
+library (microbiome)
 data ("dietswap")
 T_collapse (is_phyloseq = T, ps = dietswap, names_level ="Phylum")
 
 # if is_phyloseq = F
 
+library (seqtime)
 colnames (david_stool_lineages)<- c("ID", "Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species", "Summary", "ID")
 
 T_collapse(is_phyloseq = F, T_table = david_stool_lineages, O_table = david_stoolA_otus, names_level = "Family")
