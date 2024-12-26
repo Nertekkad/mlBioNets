@@ -9,17 +9,20 @@
 #' @param p_tax The taxonomic level at which the network was built.
 #' @param g_colors Set of colors. The vector must have the same length of g_tax elements.
 #' @return An igraph object.
-#' @export
+#'
+#'
+#' @import viridis
 #'
 #' @examples
 #'
 #' # Load this library to create a vector with colors
 #' library(viridis)
-#  c <- sample(viridis(152), 152)
+#' c <- sample(viridis(152), 152)
 #'
 #' data ("net_dstoolA")
 #'
-#' g <- v_colored(net_dstoolA, T_table = david_stool_lineages, g_tax = "Class", p_tax = "Family", g_colors = c)
+#' g <- v_colored(net_dstoolA, T_table = david_stool_lineages, g_tax = "Class",
+#' p_tax = "Family", g_colors = c)
 #'
 #' plot(g)
 #'

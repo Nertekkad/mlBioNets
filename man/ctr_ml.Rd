@@ -19,9 +19,9 @@ Colors the nodes according to their centrality.
 }
 \examples{
 
-g <- data ("mlnet_dstoolAB")
+data ("mlnet_dstoolAB")
 
-ctr_ml (g, ctr_type = "degree")
-ctr_ml (g, ctr_type = "betweenness")
-ctr_ml (g, ctr_type = "closeness")
+ctr_ml (mlnet_dstoolAB, ctr_type = "degree")
+ctr_ml (mlnet_dstoolAB, ctr_type = "betweenness")
+ctr_ml (mlnet_dstoolAB, ctr_type = "closeness")
 }
