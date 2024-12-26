@@ -9,9 +9,6 @@
 #' @return Returns a correlation plot between the degree and abundance of each node. It shows the R-square and p-value.
 #' @export
 #'
-#' @importFrom ggplot2 ggplot
-#' @importFrom ggpubr stat_cor
-#'
 #' @examples
 #'
 #' data("mlnet_dstoolAB")
