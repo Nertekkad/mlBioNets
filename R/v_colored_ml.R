@@ -12,6 +12,7 @@
 #'
 #' @import seqtime
 #' @import viridis
+#'
 #' @examples
 #'
 #' # Loads this library to create a vector with colors
@@ -21,6 +22,7 @@
 #' data("mlnet_dstoolAB")
 #'
 #' g <- v_colored_ml (g.list = mlnet_dstoolAB, T_table = david_stool_lineages, g_tax = "Order", p_tax = "Genus", g_colors = c)
+#'
 
 v_colored_ml <- function(g.list, T_table, g_tax, p_tax, g_colors){
   for(i in 1:length(g.list)){

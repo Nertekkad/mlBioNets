@@ -26,9 +26,9 @@ This function identifies the membership of a node to a certain higher-ranking ta
 # The input can be a net pre-processed by net_inference
 # This example uses david_stool data set
 
-library (seqtime)
-data ("tc_dstoolA")
-g <- net_inference (tc_dstoolA, "aracne")
+
+data ("tc_dstoolB")
+g <- net_inference (tc_dstoolB, "aracne")
 
 TaxGroup (g, T_table = david_stool_lineages, g_tax = "Order", p_tax = "Genus")
 }
