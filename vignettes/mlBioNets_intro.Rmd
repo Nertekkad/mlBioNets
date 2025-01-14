@@ -21,6 +21,11 @@ vignette: |
   %\VignetteEncoding{UTF-8}
 ---
 
+```{r install_rgl, echo=FALSE, include=FALSE}
+library(rgl)
+
+```
+
 # Network inference
 
 Load and preprocessing of data
@@ -57,7 +62,7 @@ Plantmat <- BN_bacter2[Plant,]
 
 # Network inference using the SparCC algorithm
 
-```{r NetInf_SparCC, echo=TRUE, results='hide'}
+```{r NetInf_SparCC, echo=TRUE, message=FALSE, warning=FALSE}
 library(igraph)
 # Beetle layer
 library(SpiecEasi)
@@ -79,7 +84,7 @@ plot_network(plant_sparCC)
 ```{r MultilayerPlt1, echo=TRUE, warning=FALSE, message=FALSE}
 library(muxViz)
 library(viridis)
-library(rgl)
+
 # Multilayer object
 g.list<-list(insect_sparCC, plant_sparCC)
 # Nodes' colors
@@ -138,7 +143,7 @@ matsize<-abs_mat(list(Insectmat, Plantmat), g.list, 10)
 # Multilayer plot
 lay <- layoutMultiplex(g.list, layout="kk", ggplot.format=F, box=T)
 clear3d(type = "all")
-plot_multiplex3D(g.list, layer.layout=lay,
+plot3d_1 <- plot_multiplex3D(g.list, layer.layout=lay,
                  layer.colors=c("red3", "green3"),
                  layer.shift.x=0.5, layer.space=2,
                  layer.labels=NULL,
@@ -148,6 +153,12 @@ plot_multiplex3D(g.list, layer.layout=lay,
                  edge.colors="black",
                  node.colors.aggr=NULL,
                  show.aggregate=F)
+```
+
+
+```{r 3dplot_1, echo=FALSE, results='hold'}
+
+plot3d_1
 rglwidget()
 
 
