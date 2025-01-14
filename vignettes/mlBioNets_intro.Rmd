@@ -11,6 +11,8 @@ author:
 package: mlBioNets
 output:
   BiocStyle::html_document
+html_document:
+  code_folding: show
 abstract: |
   Description of your vignette
 vignette: |
@@ -23,33 +25,39 @@ vignette: |
 
 Load and preprocessing of data
 
-```{r small, fig.cap="Small figure. A plot produced by a code chunk with option `fig.small = TRUE`.", fig.small=TRUE, echo=FALSE}
+```{r load_data, echo=TRUE}
 # Load packages and data
 library(mlBioNets)
 library(phyloseq)
-BN_bacter<-data(ps2)
+BN_bacter<-data(beetle_nightshade)
 # Let's extract the taxonomic and abundance tables
-T_table<-as.data.frame(tax_table(ps2)); dim(T_table)
-O_table<-as.data.frame(t(otu_table(ps2))); dim(O_table)
+T_table<-as.data.frame(tax_table(beetle_nightshade)); dim(T_table)
+
+O_table<-as.data.frame(t(otu_table(beetle_nightshade))); dim(O_table)
+
 # The ASVs abundances are collapsed at genus level
 BN_bacter2<-T_collapse(is_phyloseq = F, T_table = T_table,
                        O_table = O_table,
                        names_level = "Genus"); dim(BN_bacter2)
+
 # Eliminate unclassified data
 BN_bacter2<-BN_bacter2[,-c(which(colnames(BN_bacter2)=="unclassified"))]
+
 # Separate beetle and nightshade samples' ID
-Insect<-which(sample_data(ps2)$Type =="Insect")
-Insect<-sample_data(ps2)$ID[Insect]; Insect
-Plant<-which(sample_data(ps2)$Type =="Plant")
-Plant<-sample_data(ps2)$ID[Plant]; Plant
+Insect<-which(phyloseq::sample_data(beetle_nightshade)$Type =="Insect")
+Insect<-phyloseq::sample_data(beetle_nightshade)$ID[Insect]; Insect
+
+Plant<-which(sample_data(beetle_nightshade)$Type =="Plant")
+Plant<-sample_data(beetle_nightshade)$ID[Plant]; Plant
+
 # Separate abundances
-Insectmat <- T_Collapsed[Insect,]
-Plantmat <- T_Collapsed[Plant,]
+Insectmat <- BN_bacter2[Insect,]
+Plantmat <- BN_bacter2[Plant,]
 ```
 
-Network inference using the SparCC algorithm
+# Network inference using the SparCC algorithm
 
-```{r}
+```{r NetInf_SparCC, echo=TRUE, results='hide'}
 library(igraph)
 # Beetle layer
 library(SpiecEasi)
@@ -66,11 +74,12 @@ vertex.attributes(plant_sparCC) <- list(name = colnames(Plantmat))
 plot_network(plant_sparCC)
 ```
 
-Multilayer plotting
+## Multilayer plotting
 
-```{r}
+```{r MultilayerPlt1, echo=TRUE, warning=FALSE, message=FALSE}
 library(muxViz)
 library(viridis)
+library(rgl)
 # Multilayer object
 g.list<-list(insect_sparCC, plant_sparCC)
 # Nodes' colors
@@ -91,12 +100,13 @@ plot_multiplex3D(g.list, layer.layout=lay,
                  edge.colors="black",
                  node.colors.aggr=NULL,
                  show.aggregate=F)
+rglwidget()
 
 ```
 
-Network inference using ARACNe algorithm
+# Network inference using ARACNe algorithm
 
-```{r}
+```{r NetInf_ARACNe, echo=TRUE, warning=FALSE, message=FALSE}
 library(minet)
 # Beetle layer
 mim <- build.mim(Insectmat,estimator="spearman")
@@ -112,9 +122,9 @@ plant_aracne<-as.undirected(plant_aracne)
 plot_network(plant_aracne)
 ```
 
-Multilayer plotting
+## Multilayer plotting
 
-```{r}
+```{r MultilayerPlt2, echo=TRUE, warning=FALSE, message=FALSE}
 library(muxViz)
 library(viridis)
 # Multilayer object
@@ -127,6 +137,7 @@ matctr<-node_color_mat(g.list, "phylo")
 matsize<-abs_mat(list(Insectmat, Plantmat), g.list, 10)
 # Multilayer plot
 lay <- layoutMultiplex(g.list, layout="kk", ggplot.format=F, box=T)
+clear3d(type = "all")
 plot_multiplex3D(g.list, layer.layout=lay,
                  layer.colors=c("red3", "green3"),
                  layer.shift.x=0.5, layer.space=2,
@@ -137,65 +148,10 @@ plot_multiplex3D(g.list, layer.layout=lay,
                  edge.colors="black",
                  node.colors.aggr=NULL,
                  show.aggregate=F)
+rglwidget()
+
 
 ```
-
-# Getting started
-
-To enable the *Bioconductor* style in your R Markdown vignette you need to include the following in the `DESCRIPTION` file:
-
-```         
-VignetteBuilder: knitr
-Suggests: BiocStyle, knitr, rmarkdown
-```
-
-# Style macros
-
-*BiocStyle* introduces the following macros for referring to *R* packages:
-
--   `r Biocpkg("IRanges")`, for *Bioconductor* software, annotation and experiment data packages,
--   `r CRANpkg("data.table")`, for *R* packages available on CRAN,
--   `r Githubpkg("rstudio/rmarkdown")`, for *R* packages available on GitHub,
--   `r Rpackage("MyPkg")`, for *R* packages that are *not* available on *Bioconductor*, CRAN or GitHub.
-
-# Figures
-
-Assign captions to figures in the code chunk option `fig.cap` to automatically number them, and to be able to reference them, see Figure \@ref(fig:plot). The figure label is generated from the code chunk label by prefixing it with `fig:`.
-
-```{r plot, fig.cap="Regular figure. The first sentence of the figure caption is automatically emphasized to serve as figure title.", echo=FALSE}
-plot(cars)
-```
-
-Small and wide figures can be specified by `fig.small` and `fig.wide` code chunk options.
-
-```{r small, fig.cap="Small figure. A plot produced by a code chunk with option `fig.small = TRUE`.", fig.small=TRUE, echo=FALSE}
-plot(cars)
-```
-
-```{r wide, fig.cap="Wide figure. A plot produced by a code chunk with option `fig.wide = TRUE`.", fig.wide=TRUE, echo=FALSE}
-plot(cars)
-```
-
-# Equations
-
-To number and reference equations, put them in equation environments and assign labels to them, see Equation \@ref(eq:binom).
-
-\begin{equation}
-  f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
-  (\#eq:binom)
-\end{equation}
-
-# Tables
-
-Like figures, tables with captions will also be numbered and can be referenced, see Table \@ref(tab:table).
-
-| Fruit   | Price |
-|---------|-------|
-| bananas | 1.2   |
-| apples  | 1.0   |
-| oranges | 2.5   |
-
-: (#tab:table) A simple table. With caption.
 
 # Cross-references
 
@@ -211,6 +167,6 @@ Footnotes are displayed as side notes on the right margin[^1], which has the adv
 
 # Session info
 
-```{r sessionInfo, echo=FALSE}
+```{r sessionInfo, echo=TRUE}
 sessionInfo()
 ```

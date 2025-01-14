@@ -27,7 +27,8 @@ Imports:
     vegan,
     seqtime,
     phyloseq,
-    muxViz
+    muxViz,
+    rgl
 Remotes:
     github::hallucigenia-sparsa/seqtime,
     github::zdk123/SpiecEasi,
