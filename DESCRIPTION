@@ -32,3 +32,4 @@ Remotes:
     github::manlius/muxViz
 RoxygenNote: 7.3.2
 Config/testthat/edition: 3
+URL: https://nertekkad.github.io/mlBioNets/
