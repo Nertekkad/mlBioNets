@@ -40,7 +40,7 @@ environmental and biological contexts.
 
 ## Installation instructions
 
->>>>>>> bugFixes
+
 You can install the development version of mlBioNets like so:
 
 ``` r

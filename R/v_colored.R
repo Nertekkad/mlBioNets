@@ -10,11 +10,8 @@
 #' @param g_colors Set of colors. The vector must have the same length of g_tax elements.
 #' @return An igraph object.
 #' @export
-<<<<<<< HEAD
-=======
 #'
 #' @import viridis
->>>>>>> bugFixes
 #'
 #' @examples
 #'
