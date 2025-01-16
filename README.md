@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 **mlBionets** is an R package designed to comprehensively analyze microbiota data using a multilayer network approach. This package enables researchers to integrate and analyze multiple types of biological data, providing a robust framework for studying complex microbial communities and their interactions within different environmental and biological contexts.
-=======
->>>>>>> bugFixes
 
 
 **Features**
@@ -14,10 +11,7 @@
 
 
 
-<<<<<<< HEAD
 ## Installation
-
-=======
 **\*\*mlBionets\*\*** is an R package designed to comprehensively
 analyze microbiota data using a multilayer network approach. This
 package enables researchers to integrate and analyze multiple types of
@@ -51,10 +45,8 @@ You can install the development version of mlBioNets like so:
 
 ``` r
 devtools::install_github("Nertekkad/mlBioNets")
-<<<<<<< HEAD
 ```
 
-=======
 #> Skipping install of 'mlBioNets' from a github remote, the SHA1 (9c5dd68a) has not changed since last install.
 #>   Use `force = TRUE` to force installation
 ```
@@ -100,4 +92,3 @@ the vignettes and/or the paper(s) describing this package.
 Please note that the `mlBioNets` project is released with a [Contributor
 Code of Conduct](http://bioconductor.org/about/code-of-conduct/). By
 contributing to this project, you agree to abide by its terms.
->>>>>>> bugFixes
