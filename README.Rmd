@@ -19,6 +19,7 @@ knitr::opts_chunk$set(
 
 [![GitHub issues](https://img.shields.io/github/issues/Nertekkad/mlBioNets)](https://github.com/Nertekkad/mlBioNets/issues) [![GitHub pulls](https://img.shields.io/github/issues-pr/Nertekkad/mlBioNets)](https://github.com/Nertekkad/mlBioNets/pulls)
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![check-bioc](https://github.com/Nertekkad/mlBioNets/actions/workflows/check-bioc.yml/badge.svg)](https://github.com/Nertekkad/mlBioNets/actions/workflows/check-bioc.yml)
 <!-- badges: end -->
 
 **\*\*mlBionets\*\*** is an R package designed to comprehensively analyze microbiota data using a multilayer network approach. This package enables researchers to integrate and analyze multiple types of biological data, providing a robust framework for studying complex microbial communities and their interactions within different environmental and biological contexts.
