@@ -5,17 +5,14 @@ Version: 0.1.0
 Author: Victor Lázaro, Valeria Hernández-Zendejas, Karel Vázquez-Suárez, Roberto Álvarez-Martínez
 Maintainer: The package maintainer <lav_victor@outlook.com>
 Description: mlBioNets uses abundances and taxa data sets to build multilayer networks and analyse certain properties of the communities.
-License: MIT + file LICENSE
+License: What license is it under?
 Encoding: UTF-8
 LazyData: true
 Depends: 
-    R (>= 4.0)
+    R (>= 2.10)
 Suggests: 
-    BiocStyle,
     knitr,
-    RefManageR,
     rmarkdown,
-    sessioninfo,
     testthat (>= 3.0.0)
 VignetteBuilder: knitr
 Imports:
@@ -33,9 +30,6 @@ Remotes:
     github::hallucigenia-sparsa/seqtime,
     github::zdk123/SpiecEasi,
     github::joey711/phyloseq,
-    github::manlius/muxViz,
-    github::cran/minet,
-    github::microbiome/microbiome
-Roxygen: list(markdown = TRUE)
+    github::manlius/muxViz
 RoxygenNote: 7.3.2
 Config/testthat/edition: 3

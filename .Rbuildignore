@@ -1,5 +1,6 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
+<<<<<<< HEAD
 ^LICENSE\.md$
 ^README\.Rmd$
 ^_pkgdown\.yml$
@@ -8,3 +9,5 @@
 ^dev$
 ^doc$
 ^Meta$
+=======
+>>>>>>> main

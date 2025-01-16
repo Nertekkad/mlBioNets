@@ -9,16 +9,14 @@
 #' @returns Returns an igraph object with nodes colored based on their taxonomic rank.
 #' @export
 #'
-#' @import seqtime
-#'
 #' @examples
 #'
 #' # The input can be a net pre-processed by net_inference
 #' # This example uses david_stool data set
 #'
-#'
-#' data ("tc_dstoolB")
-#' g <- net_inference (tc_dstoolB, "aracne")
+#' library (seqtime)
+#' data ("tc_dstoolA")
+#' g <- net_inference (tc_dstoolA, "aracne")
 #'
 #' TaxGroup (g, T_table = david_stool_lineages, g_tax = "Order", p_tax = "Genus")
 

@@ -8,7 +8,10 @@
 #' @returns A bar plot of degree importance for each phylum.
 #' @export
 #'
+<<<<<<< HEAD
 #' @import viridis
+=======
+>>>>>>> main
 #' @examples
 #'
 #' data ("phyl_ctr_dstool")

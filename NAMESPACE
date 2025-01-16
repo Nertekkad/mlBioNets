@@ -20,6 +20,7 @@ export(phyl_ctr_plot)
 export(slope_R2)
 export(v_colored)
 export(v_colored_ml)
+<<<<<<< HEAD
 import(microbiome)
 import(phyloseq)
 import(seqtime)
@@ -27,3 +28,5 @@ import(viridis)
 importFrom(ggplot2,ggplot)
 importFrom(ggpubr,stat_cor)
 importFrom(minet,build.mim)
+=======
+>>>>>>> main
