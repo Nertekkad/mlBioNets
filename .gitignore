@@ -4,3 +4,8 @@
 .Ruserdata
 inst/doc
 docs
+<<<<<<< HEAD
+=======
+/doc/
+/Meta/
+>>>>>>> bugFixes

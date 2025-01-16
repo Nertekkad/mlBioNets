@@ -1,0 +1,184 @@
+---
+title: "mlBioNets"
+author:
+- name: Víctor Lázaro-Vidal
+  affiliation: Universidad Autónoma de Querétaro
+- name: Valeria Hernández Zendejas
+  affiliation: Universidad Autónoma de Querétaro
+- name: Karel Vázquez-Suárez
+  affiliation: Universidad Autónoma de Querétaro
+- name: Roberto Álvarez-Martínez
+  affiliation: Universidad Autónoma de Querétaro
+  email: roberto.alvarez@uaq.edu.mx
+package: mlBioNets
+output:
+  BiocStyle::html_document
+html_document:
+  code_folding: show
+abstract: |
+  Description of your vignette
+vignette: |
+  %\VignetteIndexEntry{mlBioNets}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r install_rgl, echo=FALSE, include=FALSE}
+library(rgl)
+
+```
+
+# Network inference
+
+Load and preprocessing of data
+
+```{r load_data, echo=TRUE}
+# Load packages and data
+library(mlBioNets)
+library(phyloseq)
+BN_bacter<-data(beetle_nightshade)
+# Let's extract the taxonomic and abundance tables
+T_table<-as.data.frame(tax_table(beetle_nightshade)); dim(T_table)
+
+O_table<-as.data.frame(t(otu_table(beetle_nightshade))); dim(O_table)
+
+# The ASVs abundances are collapsed at genus level
+BN_bacter2<-T_collapse(is_phyloseq = F, T_table = T_table,
+                       O_table = O_table,
+                       names_level = "Genus"); dim(BN_bacter2)
+
+# Eliminate unclassified data
+BN_bacter2<-BN_bacter2[,-c(which(colnames(BN_bacter2)=="unclassified"))]
+
+# Separate beetle and nightshade samples' ID
+Insect<-which(phyloseq::sample_data(beetle_nightshade)$Type =="Insect")
+Insect<-phyloseq::sample_data(beetle_nightshade)$ID[Insect]; Insect
+
+Plant<-which(sample_data(beetle_nightshade)$Type =="Plant")
+Plant<-sample_data(beetle_nightshade)$ID[Plant]; Plant
+
+# Separate abundances
+Insectmat <- BN_bacter2[Insect,]
+Plantmat <- BN_bacter2[Plant,]
+```
+
+# Network inference using the SparCC algorithm
+
+```{r NetInf_SparCC, echo=TRUE, message=FALSE, warning=FALSE}
+library(igraph)
+# Beetle layer
+library(SpiecEasi)
+sparccNet<-sparcc(Insectmat)
+sparccNet <- abs(sparccNet$Cor) >= 0.4
+insect_sparCC<-adj2igraph(sparccNet)
+vertex.attributes(insect_sparCC) <- list(name = colnames(Insectmat))
+plot_network(insect_sparCC)
+# Nightshade layer
+sparccNet<-sparcc(Plantmat)
+sparccNet <- abs(sparccNet$Cor) >= 0.4
+plant_sparCC<-adj2igraph(sparccNet)
+vertex.attributes(plant_sparCC) <- list(name = colnames(Plantmat))
+plot_network(plant_sparCC)
+```
+
+## Multilayer plotting
+
+```{r MultilayerPlt1, echo=TRUE, warning=FALSE, message=FALSE}
+library(muxViz)
+library(viridis)
+
+# Multilayer object
+g.list<-list(insect_sparCC, plant_sparCC)
+# Nodes' colors
+g.list<-v_colored_ml(g.list, T_table, "Phylum", "Genus",
+                     sample(viridis(100), length(unique(T_table[, "Phylum"]))))
+matctr<-node_color_mat(g.list, "phylo")
+# Nodes' size
+matsize<-abs_mat(list(Insectmat, Plantmat), g.list, 10)
+# Multilayer plot
+lay <- layoutMultiplex(g.list, layout="kk", ggplot.format=F, box=T)
+plot_multiplex3D(g.list, layer.layout=lay,
+                 layer.colors=c("red3", "green3"),
+                 layer.shift.x=0.5, layer.space=2,
+                 layer.labels=NULL,
+                 layer.labels.cex=1.5, node.size.values="auto",
+                 node.size.scale=matsize,
+                 node.colors=matctr,
+                 edge.colors="black",
+                 node.colors.aggr=NULL,
+                 show.aggregate=F)
+rglwidget()
+
+```
+
+# Network inference using ARACNe algorithm
+
+```{r NetInf_ARACNe, echo=TRUE, warning=FALSE, message=FALSE}
+library(minet)
+# Beetle layer
+mim <- build.mim(Insectmat,estimator="spearman")
+Imat <- aracne(mim)
+insect_aracne<-graph.adjacency(Imat)
+insect_aracne<-as.undirected(insect_aracne)
+plot_network(insect_aracne)
+# Nightshade layer
+mim <- build.mim(Plantmat,estimator="spearman")
+Pmat <- aracne(mim)
+plant_aracne<-graph.adjacency(Pmat)
+plant_aracne<-as.undirected(plant_aracne)
+plot_network(plant_aracne)
+```
+
+## Multilayer plotting
+
+```{r MultilayerPlt2, echo=TRUE, warning=FALSE, message=FALSE}
+library(muxViz)
+library(viridis)
+# Multilayer object
+g.list<-list(insect_aracne, plant_aracne)
+# Nodes' colors
+g.list<-v_colored_ml(g.list, T_table, "Phylum", "Genus",
+                     sample(viridis(100), length(unique(T_table[, "Phylum"]))))
+matctr<-node_color_mat(g.list, "phylo")
+# Nodes' size
+matsize<-abs_mat(list(Insectmat, Plantmat), g.list, 10)
+# Multilayer plot
+lay <- layoutMultiplex(g.list, layout="kk", ggplot.format=F, box=T)
+clear3d(type = "all")
+plot3d_1 <- plot_multiplex3D(g.list, layer.layout=lay,
+                 layer.colors=c("red3", "green3"),
+                 layer.shift.x=0.5, layer.space=2,
+                 layer.labels=NULL,
+                 layer.labels.cex=1.5, node.size.values="auto",
+                 node.size.scale=matsize,
+                 node.colors=matctr,
+                 edge.colors="black",
+                 node.colors.aggr=NULL,
+                 show.aggregate=F)
+```
+
+```{r 3dplot_1, echo=FALSE, results='hold'}
+
+plot3d_1
+rglwidget()
+
+
+```
+
+# Cross-references
+
+Apart from referencing figures (Section \@ref(figures)), tables (Section \@ref(tables)), and equations (Section \@ref(equations)), you can also use the same syntax to refer to sections by their default labels generated by pandoc.
+
+# Side notes
+
+Footnotes are displayed as side notes on the right margin[^1], which has the advantage that they appear close to the place where they are defined.
+
+[^1]: this is a side note entered as a footnote
+
+# References {.unnumbered}
+
+# Session info
+
+```{r sessionInfo, echo=TRUE}
+sessionInfo()
+```

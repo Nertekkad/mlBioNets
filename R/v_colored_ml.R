@@ -8,6 +8,7 @@
 #' @param p_tax The taxonomic level at which the network was built.
 #' @param g_colors Set of colors. The vector must have the same length of g_tax elements.
 #' @return An igraph object.
+#' @seealso [v_colored()]
 #' @export
 #'
 #' @examples
