@@ -2,7 +2,7 @@ Package: mlBioNets
 Type: Package
 Title: R package for the analysis of microbiota data using a multilayer networks approach
 Version: 0.1.0
-Author: Victor Lázaro, Valeria Hernández-Zendejas, Roberto Álvarez-Martínez
+Author: Victor Lázaro, Valeria Hernández-Zendejas, Karel Vázquez-Suárez, Roberto Álvarez-Martínez
 Maintainer: The package maintainer <lav_victor@outlook.com>
 Description: mlBioNets uses abundances and taxa data sets to build multilayer networks and analyse certain properties of the communities.
 License: MIT + file LICENSE

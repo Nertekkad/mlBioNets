@@ -1,4 +1,4 @@
-#' T_collapse
+# T_collapse
 #'
 #' This function aggregates the abundance data at a specified taxonomic level. It accepts a phyloseq object or a data.frame as input.
 #'
@@ -16,6 +16,7 @@
 #'
 #' @examples
 #' # With BiocManager, package "microbiome"
+#' library(microbiome)
 #' # if is_phyloseq = T
 #'
 #' data ("dietswap")

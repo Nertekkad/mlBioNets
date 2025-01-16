@@ -5,6 +5,8 @@ author:
   affiliation: Universidad Autónoma de Querétaro
 - name: Valeria Hernández Zendejas
   affiliation: Universidad Autónoma de Querétaro
+- name: Karel Vázquez-Suárez
+  affiliation: Universidad Autónoma de Querétaro
 - name: Roberto Álvarez-Martínez
   affiliation: Universidad Autónoma de Querétaro
   email: roberto.alvarez@uaq.edu.mx
@@ -16,7 +18,7 @@ html_document:
 abstract: |
   Description of your vignette
 vignette: |
-  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteIndexEntry{mlBioNets}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -154,7 +156,6 @@ plot3d_1 <- plot_multiplex3D(g.list, layer.layout=lay,
                  node.colors.aggr=NULL,
                  show.aggregate=F)
 ```
-
 
 ```{r 3dplot_1, echo=FALSE, results='hold'}
 
