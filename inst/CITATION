@@ -5,11 +5,13 @@ pkgVer <- function(pkg) {
 }
 
 c(
-
     bibentry(bibtype="manual",
-        title = "",
+        title = "mlBioNets",
         author = personList(
-            as.person("Nertekkad")
+            person(given = "Víctor", family = "Lázaro-Vidal", email = "LaV_Victor@outlook.com", role = "aut", comment = c(affiliation = "Universidad Autónoma de Querétaro")),
+            person(given = "Valeria", family = "Hernández-Zendejas", role = "aut", comment = c(affiliation = "Universidad Autónoma de Querétaro")),
+            person(given = "Karel", family = "Vázquez-Suárez", role = "aut", comment = c(affiliation = "Universidad Autónoma de Querétaro")),
+            person(given = "Roberto", family = "Álvarez-Martínez", role = "aut", comment = c(affiliation = "Universidad Autónoma de Querétaro", orcid = "https://orcid.org/0000-0002-0821-0067"))
         ),
         year = format(Sys.Date(), "%Y"),
         url = "http://www.bioconductor.org/packages/mlBioNets",
@@ -17,9 +19,12 @@ c(
         doi = '10.18129/B9.bioc.mlBioNets'
     ),
     bibentry(bibtype="article",
-        title = "",
+        title = "mlBioNets: A multilayer network approach for microbiota data analysis",
         author = personList(
-            as.person("Nertekkad")
+            person(given = "Víctor", family = "Lázaro-Vidal", email = "LaV_Victor@outlook.com", role = "aut", comment = c(affiliation = "Universidad Autónoma de Querétaro")),
+            person(given = "Valeria", family = "Hernández-Zendejas", role = "aut", comment = c(affiliation = "Universidad Autónoma de Querétaro")),
+            person(given = "Karel", family = "Vázquez-Suárez", role = "aut", comment = c(affiliation = "Universidad Autónoma de Querétaro")),
+            person(given = "Roberto", family = "Álvarez-Martínez", role = "aut", comment = c(affiliation = "Universidad Autónoma de Querétaro", orcid = "https://orcid.org/0000-0002-0821-0067"))
         ),
         year = format(Sys.Date(), "%Y"),
         journal = "bioRxiv",

@@ -2,5 +2,8 @@ pandoc: '3.2'
 pkgdown: 2.1.1
 pkgdown_sha: ~
 articles:
-  mlBioNets_intro: mlBioNets_intro.html
-last_built: 2024-12-26T11:49Z
+  mlBioNets: mlBioNets.html
+last_built: 2025-01-17T19:28Z
+urls:
+  reference: https://nertekkad.github.io/mlBioNets/reference
+  article: https://nertekkad.github.io/mlBioNets/articles
