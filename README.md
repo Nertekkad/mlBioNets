@@ -45,10 +45,6 @@ You can install the development version of mlBioNets like so:
 
 ``` r
 devtools::install_github("Nertekkad/mlBioNets")
-#> Using GitHub PAT from the git credential store.
-#> Downloading GitHub repo Nertekkad/mlBioNets@HEAD
-#> Installing package into '/tmp/RtmpVnAc2t/temp_libpathade7328186c1'
-#> (as 'lib' is unspecified)
 ```
 
 ## Citation
@@ -59,28 +55,6 @@ Please run this yourself to check for any updates on how to cite
 
 ``` r
 print(citation('mlBioNets'), bibtex = TRUE)
-#> To cite package 'mlBioNets' in publications use:
-#> 
-#>   Lázaro V, Hernández-Zendejas V, Vázquez-Suárez K, Álvarez-Martínez R
-#>   (2025). _mlBioNets: R package for the analysis of microbiota data
-#>   using a multilayer networks approach_. R package version 0.1.0,
-#>   commit f0d5bd3400bf2a555fbeee3cb86354e31156c67a,
-#>   <https://github.com/Nertekkad/mlBioNets>.
-#> 
-#> A BibTeX entry for LaTeX users is
-#> 
-#>   @Manual{,
-#>     title = {mlBioNets: R package for the analysis of microbiota data using a multilayer
-#> networks approach},
-#>     author = {Victor Lázaro and Valeria Hernández-Zendejas and Karel Vázquez-Suárez and Roberto Álvarez-Martínez},
-#>     year = {2025},
-#>     note = {R package version 0.1.0, commit f0d5bd3400bf2a555fbeee3cb86354e31156c67a},
-#>     url = {https://github.com/Nertekkad/mlBioNets},
-#>   }
-#> 
-#> ATTENTION: This citation information has been auto-generated from the
-#> package DESCRIPTION file and may need manual editing, see
-#> 'help("citation")'.
 ```
 
 Please note that the `mlBioNets` was only made possible thanks to many
