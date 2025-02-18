@@ -13,7 +13,7 @@ pulls](https://img.shields.io/github/issues-pr/Nertekkad/mlBioNets)](https://git
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
-**\*\*mlBionets\*\*** is an R package designed to comprehensively
+**mlBionets** is an R package designed to comprehensively
 analyze microbiota data using a multilayer network approach. This
 package enables researchers to integrate and analyze multiple types of
 biological data, providing a robust framework for studying complex
