@@ -51,7 +51,7 @@ devtools::install_github("Nertekkad/mlBioNets")
 
 Below is the citation output from using `citation('mlBioNets')` in R.
 Please run this yourself to check for any updates on how to cite
-**mlBioNets**.
+`mlBioNets`.
 
 ``` r
 citation("mlBioNets")
