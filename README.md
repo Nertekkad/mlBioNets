@@ -54,7 +54,7 @@ Please run this yourself to check for any updates on how to cite
 **mlBioNets**.
 
 ``` r
-print(citation('mlBioNets'), bibtex = TRUE)
+citation("mlBioNets")
 ```
 
 Please note that the `mlBioNets` was only made possible thanks to many
