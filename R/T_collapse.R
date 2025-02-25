@@ -27,7 +27,7 @@
 #' T_collapse(is_phyloseq = F, T_table = david_stool_lineages, O_table = david_stoolA_otus, names_level = "Family")
 
 T_collapse <- function(is_phyloseq, ps, T_table, O_table, names_level) {
-  require("phyloeq")
+  require("phyloseq")
   if(is_phyloseq == T){
     T_table<-as.data.frame(tax_table(ps))
     O_table<-as.data.frame(t(otu_table(ps)))
