@@ -32,7 +32,7 @@ library(rgl)
 
 Load and preprocessing of data
 
-```{r load_data, echo=TRUE}
+```{r load_data, echo=TRUE, fig.alt = "Image 1"}
 # Load packages and data
 library(mlBioNets)
 library(phyloseq)
@@ -64,7 +64,7 @@ Plantmat <- BN_bacter2[Plant,]
 
 # Network inference using the SparCC algorithm
 
-```{r NetInf_SparCC, echo=TRUE, message=FALSE, warning=FALSE}
+```{r NetInf_SparCC, echo=TRUE, message=FALSE, warning=FALSE, fig.alt = "Image 2"}
 library(igraph)
 # Beetle layer
 library(SpiecEasi)
@@ -83,7 +83,7 @@ plot_network(plant_sparCC)
 
 ## Multilayer plotting
 
-```{r MultilayerPlt1, echo=TRUE, warning=FALSE, message=FALSE}
+```{r MultilayerPlt1, echo=TRUE, warning=FALSE, message=FALSE, fig.alt = "Image 3"}
 library(muxViz)
 library(viridis)
 
@@ -113,7 +113,7 @@ rglwidget()
 
 # Network inference using ARACNe algorithm
 
-```{r NetInf_ARACNe, echo=TRUE, warning=FALSE, message=FALSE}
+```{r NetInf_ARACNe, echo=TRUE, warning=FALSE, message=FALSE, fig.alt = "Image 4"}
 library(minet)
 # Beetle layer
 mim <- build.mim(Insectmat,estimator="spearman")
@@ -131,7 +131,7 @@ plot_network(plant_aracne)
 
 ## Multilayer plotting
 
-```{r MultilayerPlt2, echo=TRUE, warning=FALSE, message=FALSE}
+```{r MultilayerPlt2, echo=TRUE, warning=FALSE, message=FALSE, fig.alt = "Image 5"}
 library(muxViz)
 library(viridis)
 # Multilayer object

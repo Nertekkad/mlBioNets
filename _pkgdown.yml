@@ -3,4 +3,6 @@ template:
   bootstrap: 5
   bslib:
     bootswatch: darkly
+includes:
+  in-header: inst/CitationStyle.CSS
 

@@ -49,8 +49,9 @@ You can install the development version of mlBioNets like so:
 
 ``` r
 devtools::install_github("Nertekkad/mlBioNets")
+#> Using GitHub PAT from the git credential store.
 #> Downloading GitHub repo Nertekkad/mlBioNets@HEAD
-#> Installing package into '/home/karelvazquez/R/x86_64-pc-linux-gnu-library/4.4'
+#> Installing package into '/tmp/RtmpiUtZG4/temp_libpath28e8722166fe8'
 #> (as 'lib' is unspecified)
 library(mlBioNets)
 ```
@@ -76,7 +77,7 @@ CRAN](https://cran.r-project.org/bin/macosx/tools/).
 
 ## Overview of the design and workflow with mlBioNets package
 
-![](man/figures/Diagram_workflow_mlBioNets.png)
+<img src="man/figures/Diagram_workflow_mlBioNets.png" alt="Diagram Workflow" width="100%" />
 
 ## Citation
 

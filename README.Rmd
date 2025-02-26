@@ -58,8 +58,9 @@ xcode-select --install
 Alternatively, the officially-supported fortran binaries [are on CRAN](https://cran.r-project.org/bin/macosx/tools/).
 
 ## Overview of the design and workflow with mlBioNets package
-
-![](man/figures/Diagram_workflow_mlBioNets.png)
+```{r, echo=FALSE, fig.alt="Diagram Workflow"}
+knitr::include_graphics("man/figures/Diagram_workflow_mlBioNets.png")
+```
 
 ## Citation
 
