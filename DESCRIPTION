@@ -1,7 +1,7 @@
 Package: mlBioNets
 type: Package
 Title: R package for the analysis of microbiota data using a multilayer networks approach
-Version: 0.1.0
+Version: 1.1.0
 Authors@R: c(
     person("Victor", "Lazaro", email = "lav_victor@outlook.com", role = c("aut", "cre")),
     person("Valeria", "Hernández-Zendejas", email = "valeria@gmail.com", role = "aut"),

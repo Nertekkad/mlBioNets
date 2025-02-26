@@ -3,7 +3,7 @@ pkgdown: 2.1.1
 pkgdown_sha: ~
 articles:
   mlBioNets: mlBioNets.html
-last_built: 2025-02-26T19:15Z
+last_built: 2025-02-26T19:42Z
 urls:
   reference: https://nertekkad.github.io/mlBioNets/reference
   article: https://nertekkad.github.io/mlBioNets/articles
