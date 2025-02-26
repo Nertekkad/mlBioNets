@@ -4,5 +4,5 @@ template:
   bslib:
     bootswatch: darkly
 includes:
-  in-header: inst/CitationStyle.CSS
+  in-header: pkgdown/extra.css
 
