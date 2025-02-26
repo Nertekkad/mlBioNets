@@ -1,5 +1,6 @@
 ---
 output: github_document
+title: mlBioNets
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -17,9 +18,8 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 
-[![GitHub issues](https://img.shields.io/github/issues/Nertekkad/mlBioNets)](https://github.com/Nertekkad/mlBioNets/issues) [![GitHub pulls](https://img.shields.io/github/issues-pr/Nertekkad/mlBioNets)](https://github.com/Nertekkad/mlBioNets/pulls)
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-[![check-bioc](https://github.com/Nertekkad/mlBioNets/actions/workflows/check-bioc.yml/badge.svg)](https://github.com/Nertekkad/mlBioNets/actions/workflows/check-bioc.yml)
+[![GitHub issues](https://img.shields.io/github/issues/Nertekkad/mlBioNets)](https://github.com/Nertekkad/mlBioNets/issues) [![GitHub pulls](https://img.shields.io/github/issues-pr/Nertekkad/mlBioNets)](https://github.com/Nertekkad/mlBioNets/pulls) [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental) [![check-bioc](https://github.com/Nertekkad/mlBioNets/actions/workflows/check-bioc.yml/badge.svg)](https://github.com/Nertekkad/mlBioNets/actions/workflows/check-bioc.yml)
+
 <!-- badges: end -->
 
 **\*\*mlBionets\*\*** is an R package designed to comprehensively analyze microbiota data using a multilayer network approach. This package enables researchers to integrate and analyze multiple types of biological data, providing a robust framework for studying complex microbial communities and their interactions within different environmental and biological contexts.
@@ -42,7 +42,24 @@ You can install the development version of mlBioNets like so:
 
 ```{r 'Intallation', eval = requireNamespace('mlBioNets'), results='hide'}
 devtools::install_github("Nertekkad/mlBioNets")
+library(mlBioNets)
 ```
+
+## OsX users
+
+Before installing the mlBioNets package, it is necessary to install some gfortran packages, so that it can work better, since it is necessary to compile the source code, which seems to generate problems for mac users.
+
+It is recommended to get [gfortan](https://developer.apple.com/downloads/index.action?=command%20line%20tools) [from](httpshttps://developer.apple.com/downloads/index.action?=command%20line%20tools://kingaa.github.io/mac-fortran.html) [xcode](https://developer.apple.com/downloads/index.action?=command%20line%20tools) by running the following code in a terminal (OSX 10.10 and later):
+
+```{bash, eval  = FALSE}
+xcode-select --install
+```
+
+Alternatively, the officially-supported fortran binaries [are on CRAN](https://cran.r-project.org/bin/macosx/tools/).
+
+## Overview of the design and workflow with mlBioNets package
+
+![](man/figures/Diagram_workflow_mlBioNets.png)
 
 ## Citation
 

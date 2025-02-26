@@ -49,9 +49,15 @@
   <main id="main" class="col-md-9"><div class="section level1">
 <div class="page-header"><h1 id="mlbionets">mlBioNets<a class="anchor" aria-label="anchor" href="#mlbionets"></a>
 </h1></div>
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+</div>
+<div class="section level1">
+<h1 id="mlbionets-1">mlBioNets<a class="anchor" aria-label="anchor" href="#mlbionets-1"></a>
+</h1>
 <!-- badges: start -->
 
-<p><strong>mlBionets</strong> is an R package designed to comprehensively analyze microbiota data using a multilayer network approach. This package enables researchers to integrate and analyze multiple types of biological data, providing a robust framework for studying complex microbial communities and their interactions within different environmental and biological contexts.</p>
+<!-- badges: end -->
+<p><strong>**mlBionets**</strong> is an R package designed to comprehensively analyze microbiota data using a multilayer network approach. This package enables researchers to integrate and analyze multiple types of biological data, providing a robust framework for studying complex microbial communities and their interactions within different environmental and biological contexts.</p>
 <p><strong>Features</strong></p>
 <ul>
 <li><p><strong>Multilayer Network Construction:</strong> Build and visualize multilayer networks from microbiota data, incorporating various layers such as phylogenetic, functional, and environmental information.</p></li>
@@ -65,14 +71,67 @@
 </h2>
 <p>You can install the development version of mlBioNets like so:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"Nertekkad/mlBioNets"</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"Nertekkad/mlBioNets"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Downloading GitHub repo Nertekkad/mlBioNets@HEAD</span></span>
+<span><span class="co">#&gt; Installing package into '/home/karelvazquez/R/x86_64-pc-linux-gnu-library/4.4'</span></span>
+<span><span class="co">#&gt; (as 'lib' is unspecified)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://nertekkad.github.io/mlBioNets/">mlBioNets</a></span><span class="op">)</span></span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="osx-users">OsX users<a class="anchor" aria-label="anchor" href="#osx-users"></a>
+</h2>
+<p>Before installing the mlBioNets package, it is necessary to install some gfortran packages, so that it can work better, since it is necessary to compile the source code, which seems to generate problems for mac users.</p>
+<p>It is recommended to get <a href="https://developer.apple.com/downloads/index.action?=command%20line%20tools" class="external-link">gfortan</a> <a href="httpshttps://developer.apple.com/downloads/index.action?=command%20line%20tools://kingaa.github.io/mac-fortran.html" class="external-link">from</a> <a href="https://developer.apple.com/downloads/index.action?=command%20line%20tools" class="external-link">xcode</a> by running the following code in a terminal (OSX 10.10 and later):</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="ex">xcode-select</span> <span class="at">--install</span></span></code></pre></div>
+<p>Alternatively, the officially-supported fortran binaries <a href="https://cran.r-project.org/bin/macosx/tools/" class="external-link">are on CRAN</a>.</p>
+</div>
+<div class="section level2">
+<h2 id="overview-of-the-design-and-workflow-with-mlbionets-package">Overview of the design and workflow with mlBioNets package<a class="anchor" aria-label="anchor" href="#overview-of-the-design-and-workflow-with-mlbionets-package"></a>
+</h2>
+<p><img src="reference/figures/Diagram_workflow_mlBioNets.png"></p>
 </div>
 <div class="section level2">
 <h2 id="citation">Citation<a class="anchor" aria-label="anchor" href="#citation"></a>
 </h2>
-<p>Below is the citation output from using <code>citation('mlBioNets')</code> in R. Please run this yourself to check for any updates on how to cite <code>mlBioNets</code>.</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/citation.html" class="external-link">citation</a></span><span class="op">(</span><span class="st">"mlBioNets"</span><span class="op">)</span></span></code></pre></div>
+<p>Below is the citation output from using <code>citation('mlBioNets')</code> in R. Please run this yourself to check for any updates on how to cite <strong>mlBioNets</strong>.</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/utils/citation.html" class="external-link">citation</a></span><span class="op">(</span><span class="st">'mlBioNets'</span><span class="op">)</span>, bibtex <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span><span class="co">#&gt; To cite package 'mlBioNets' in publications use:</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;   Lázaro-Vidal V, Hernández-Zendejas V, Vázquez-Suárez K,</span></span>
+<span><span class="co">#&gt;   Álvarez-Martínez R (2025). _mlBioNets_.</span></span>
+<span><span class="co">#&gt;   doi:10.18129/B9.bioc.mlBioNets</span></span>
+<span><span class="co">#&gt;   &lt;https://doi.org/10.18129/B9.bioc.mlBioNets&gt;,</span></span>
+<span><span class="co">#&gt;   https://github.com/Nertekkad/mlBioNets/mlBioNets - R package version</span></span>
+<span><span class="co">#&gt;   0.1.0, &lt;http://www.bioconductor.org/packages/mlBioNets&gt;.</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; A BibTeX entry for LaTeX users is</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;   @Manual{,</span></span>
+<span><span class="co">#&gt;     title = {mlBioNets},</span></span>
+<span><span class="co">#&gt;     author = {Víctor Lázaro-Vidal and Valeria Hernández-Zendejas and Karel Vázquez-Suárez and Roberto Álvarez-Martínez},</span></span>
+<span><span class="co">#&gt;     year = {2025},</span></span>
+<span><span class="co">#&gt;     url = {http://www.bioconductor.org/packages/mlBioNets},</span></span>
+<span><span class="co">#&gt;     note = {https://github.com/Nertekkad/mlBioNets/mlBioNets - R package version 0.1.0},</span></span>
+<span><span class="co">#&gt;     doi = {10.18129/B9.bioc.mlBioNets},</span></span>
+<span><span class="co">#&gt;   }</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;   Lázaro-Vidal V, Hernández-Zendejas V, Vázquez-Suárez K,</span></span>
+<span><span class="co">#&gt;   Álvarez-Martínez R (2025). "mlBioNets: A multilayer network approach</span></span>
+<span><span class="co">#&gt;   for microbiota data analysis." _bioRxiv_. doi:10.1101/TODO</span></span>
+<span><span class="co">#&gt;   &lt;https://doi.org/10.1101/TODO&gt;,</span></span>
+<span><span class="co">#&gt;   &lt;https://www.biorxiv.org/content/10.1101/TODO&gt;.</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; A BibTeX entry for LaTeX users is</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;   @Article{,</span></span>
+<span><span class="co">#&gt;     title = {mlBioNets: A multilayer network approach for microbiota data analysis},</span></span>
+<span><span class="co">#&gt;     author = {Víctor Lázaro-Vidal and Valeria Hernández-Zendejas and Karel Vázquez-Suárez and Roberto Álvarez-Martínez},</span></span>
+<span><span class="co">#&gt;     year = {2025},</span></span>
+<span><span class="co">#&gt;     journal = {bioRxiv},</span></span>
+<span><span class="co">#&gt;     doi = {10.1101/TODO},</span></span>
+<span><span class="co">#&gt;     url = {https://www.biorxiv.org/content/10.1101/TODO},</span></span>
+<span><span class="co">#&gt;   }</span></span></code></pre></div>
 <p>Please note that the <code>mlBioNets</code> was only made possible thanks to many other R and bioinformatics software authors, which are cited either in the vignettes and/or the paper(s) describing this package.</p>
 </div>
 <div class="section level2">
@@ -81,6 +140,7 @@
 <p>Please note that the <code>mlBioNets</code> project is released with a <a href="http://bioconductor.org/about/code-of-conduct/" class="external-link">Contributor Code of Conduct</a>. By contributing to this project, you agree to abide by its terms.</p>
 </div>
 </div>
+
   </main><aside class="col-md-3"><div class="license">
 <h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
@@ -107,7 +167,10 @@
 <div class="developers">
 <h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
-<li>The package maintainer <br><small class="roles"> Maintainer </small>  </li>
+<li>Victor Lazaro <br><small class="roles"> Author, maintainer </small>  </li>
+<li>Valeria Hernández-Zendejas <br><small class="roles"> Author </small>  </li>
+<li>Karel Vázquez-Suárez <br><small class="roles"> Author </small>  </li>
+<li>Roberto Álvarez-Martínez <br><small class="roles"> Author </small> <a href="https://orcid.org/0000-0002-0821-0067" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
 </ul>
 </div>
 
@@ -117,6 +180,7 @@
 <li><a href="https://github.com/Nertekkad/mlBioNets/issues" class="external-link"><img src="https://img.shields.io/github/issues/Nertekkad/mlBioNets" alt="GitHub issues"></a></li>
 <li><a href="https://github.com/Nertekkad/mlBioNets/pulls" class="external-link"><img src="https://img.shields.io/github/issues-pr/Nertekkad/mlBioNets" alt="GitHub pulls"></a></li>
 <li><a href="https://lifecycle.r-lib.org/articles/stages.html#experimental" class="external-link"><img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg" alt="Lifecycle: experimental"></a></li>
+<li><a href="https://github.com/Nertekkad/mlBioNets/actions/workflows/check-bioc.yml" class="external-link"><img src="https://github.com/Nertekkad/mlBioNets/actions/workflows/check-bioc.yml/badge.svg" alt="check-bioc"></a></li>
 </ul>
 </div>
 
@@ -125,7 +189,7 @@
 
 
     <footer><div class="pkgdown-footer-left">
-  <p>Developed by The package maintainer.</p>
+  <p>Developed by Victor Lazaro, Valeria Hernández-Zendejas, Karel Vázquez-Suárez, Roberto Álvarez-Martínez.</p>
 </div>
 
 <div class="pkgdown-footer-right">

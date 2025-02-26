@@ -34,5 +34,5 @@ data("mlnet_dstoolAB")
 g <- v_colored_ml (g.list = mlnet_dstoolAB, T_table = david_stool_lineages, g_tax = "Order", p_tax = "Genus", g_colors = c)
 }
 \seealso{
-[v_colored()]
+\code{\link[=v_colored]{v_colored()}}
 }

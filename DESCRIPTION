@@ -1,9 +1,13 @@
 Package: mlBioNets
-Type: Package
+type: Package
 Title: R package for the analysis of microbiota data using a multilayer networks approach
 Version: 0.1.0
-Author: Victor Lázaro, Valeria Hernández-Zendejas, Karel Vázquez-Suárez, Roberto Álvarez-Martínez
-Maintainer: The package maintainer <lav_victor@outlook.com>
+Authors@R: c(
+    person("Victor", "Lazaro", email = "lav_victor@outlook.com", role = c("aut", "cre")),
+    person("Valeria", "Hernández-Zendejas", email = "valeria@gmail.com", role = "aut"),
+    person("Karel", "Vázquez-Suárez", email = "karel.vs.alex@gmail.com", role = "aut"),
+    person("Roberto", "Álvarez-Martínez", email = "Roberto.alvarez@uaq.edu.mx", role = c("aut"), comment = c(ORCID = "0000-0002-0821-0067"))
+    )
 Description: mlBioNets uses abundances and taxa data sets to build multilayer networks and analyse certain properties of the communities.
 License: MIT + file LICENSE
 Encoding: UTF-8
@@ -31,6 +35,7 @@ Remotes:
     github::zdk123/SpiecEasi,
     github::joey711/phyloseq,
     github::manlius/muxViz
+Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
 Config/testthat/edition: 3
 URL: https://nertekkad.github.io/mlBioNets/
