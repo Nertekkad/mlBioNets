@@ -2,7 +2,7 @@
 % Please edit documentation in R/diff_nodes_graph.R
 \name{diff_nodes_graph}
 \alias{diff_nodes_graph}
-\title{This function identifies the most abundant taxa and distinguishes between nodes with statistically significant differences in their abundance (red) and those without (blue).}
+\title{Igraph object of differences between nodes}
 \usage{
 diff_nodes_graph(T_Collapsed, n, mat_list, g.list, alpha)
 }

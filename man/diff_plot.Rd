@@ -2,7 +2,7 @@
 % Please edit documentation in R/diff_plot.R
 \name{diff_plot}
 \alias{diff_plot}
-\title{This function identifies the most abundant taxa and distinguishes between nodes with statistically significant differences in their abundance (red) and those without (blue). The size of nodes corresponds to abundances.}
+\title{Plot diff_nodes_graph object.}
 \usage{
 diff_plot(diff_g, T_collapsed)
 }

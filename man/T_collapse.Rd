@@ -2,7 +2,7 @@
 % Please edit documentation in R/T_collapse.R
 \name{T_collapse}
 \alias{T_collapse}
-\title{Aggregates}
+\title{Aggregates the abundance data}
 \usage{
 T_collapse (is_phyloseq=T, ps=..., names_level=...)
 }
