@@ -27,16 +27,23 @@ Graphing Pearson correlation between degree and abundance.
 }
 \examples{
 
-data("mlnet_dstoolAB")
-data("tc_dstoolA")
-data("tc_dstoolB")
-
-# Create abundace list
-lst <- list(tc_dstoolA, tc_dstoolB)
-
-# Create a vector for layers' names
-n <- c("Sample A", "Sample B")
-
-cor_degree_abs (g.list = mlnet_dstoolAB, abs.list = lst, layer_names = n, layer_colors = c("green", "orange"), title = "Sample graph")
+data("BN_nets")
+data("beetle_nightshade")
+BN_genus <- T_collapse(is_phyloseq = T, ps = beetle_nightshade, names_level = "Genus")
+# Insect and plant data isolation
+library("phyloseq")
+Insect<-which(sample_data(beetle_nightshade)$Type =="Insect")
+Insect<-sample_data(beetle_nightshade)$ID[Insect]; Insect
+Plant<-which(sample_data(beetle_nightshade)$Type =="Plant")
+Plant<-sample_data(beetle_nightshade)$ID[Plant]; Plant
+Insectmat <- BN_genus[Insect,]
+Plantmat <- BN_genus[Plant,]
+# Network inference
+insect_sparcc<-net_inference(Insectmat, "sparcc", p = 0.4)
+plant_sparcc<-net_inference(Plantmat, "sparcc", p = 0.4)
+# Degree vs. abundance plot
+BN_ml<-list(insect_sparcc, plant_sparcc)
+BN_abs<-list(Insectmat, Plantmat)
+cor_degree_abs(g.list = BN_ml, abs.list = BN_abs, layer_names = c("Beetle", "Nightshade"), layer_colors = c("red4", "green4"), title = "Beetle-nightshade")
 
 }
