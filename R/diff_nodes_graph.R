@@ -12,12 +12,23 @@
 #'
 #' @examples
 #'
-#' data ("tc_dstoolA")
-#' data ("mlnet_dstoolAB")
-#'
-#' mlst <- list(tc_dstoolA, tc_dstoolB)
-#'
-#' diff_nodes_graph (tc_dstoolA, n=10, mat_list=mlst, g.list=mlnet_dstoolAB, alpha=0.5)
+#' data("BN_nets")
+#' data("beetle_nightshade")
+#' BN_genus <- T_collapse(is_phyloseq = T, ps = beetle_nightshade, names_level = "Genus")
+#' # Insect and plant data isolation
+#' Insect<-which(sample_data(beetle_nightshade)$Type =="Insect")
+#' Insect<-sample_data(beetle_nightshade)$ID[Insect]; Insect
+#' Plant<-which(sample_data(beetle_nightshade)$Type =="Plant")
+#' Plant<-sample_data(beetle_nightshade)$ID[Plant]; Plant
+#' Insectmat <- BN_genus[Insect,]
+#' Plantmat <- BN_genus[Plant,]
+#' # Network inference
+#' insect_sparcc<-net_inference(Insectmat, "sparcc", p = 0.4)
+#' plant_sparcc<-net_inference(Plantmat, "sparcc", p = 0.4)
+#' # Significant differences between replica nodes
+#' mat_list<-list(Insectmat, Plantmat)
+#' g.list<-list(insect_sparcc, plant_sparcc)
+#' diff_g<-diff_nodes_graph(BN_genus, n = 20, mat_list, g.list, alpha = 0.05)
 #'
 
 diff_nodes_graph<-function(T_Collapsed, n, mat_list, g.list, alpha){
