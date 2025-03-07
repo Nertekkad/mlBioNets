@@ -16,6 +16,7 @@
 #' data("beetle_nightshade")
 #' BN_genus <- T_collapse(is_phyloseq = T, ps = beetle_nightshade, names_level = "Genus")
 #' # Insect and plant data isolation
+#' library("phyloseq")
 #' Insect<-which(sample_data(beetle_nightshade)$Type =="Insect")
 #' Insect<-sample_data(beetle_nightshade)$ID[Insect]; Insect
 #' Plant<-which(sample_data(beetle_nightshade)$Type =="Plant")
