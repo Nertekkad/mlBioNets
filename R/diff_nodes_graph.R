@@ -7,7 +7,7 @@
 #' @param mat_list List of abundance matrices (preprocessed by T_collapse).
 #' @param g.list List of igraph objects (multilayer network), just 2 layers.
 #' @param alpha Significance. It must be a number between 0 and 1.
-#' @return Returns a plot with both networks collapsed.
+#' @return Returns an igraph object with both networks collapsed.
 #' @export
 #'
 #' @examples
