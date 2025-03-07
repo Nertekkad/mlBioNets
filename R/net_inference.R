@@ -10,8 +10,13 @@
 #'
 #' @examples
 #'
-#' data ("tc_dstoolA")
-#' net_inference (tc_dstoolA, method = "aracne")
+#' data("beetle_nightshade")
+#' # Insect data isolation
+#' Insect<-which(sample_data(beetle_nightshade)$Type =="Insect")
+#' Insect<-sample_data(beetle_nightshade)$ID[Insect]
+#' Insectmat <- BN_genus[Insect,]
+#' # Network inference
+#' net_inference(Insectmat, "sparcc", p = 0.4)
 #'
 
 net_inference<-function(taxa_abs, method, p){
