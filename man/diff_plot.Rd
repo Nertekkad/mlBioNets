@@ -15,7 +15,7 @@ diff_plot(diff_g, T_collapsed)
 Returns a plot with both networks collapsed.
 }
 \description{
-This function identifies the most abundant taxa and distinguishes between nodes with statistically significant differences in their abundance (red) and those without (blue). The size of nodes corresponds to abundances.
+This function identifies the most abundant taxa and distinguishes between nodes with statistically significant differences in their abundance (red) and those without (blue). The size of the nodes is proportional to the abundances.
 }
 \examples{
 
