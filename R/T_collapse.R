@@ -1,5 +1,7 @@
 # T_collapse
 #'
+#' Aggregates
+#'
 #' This function aggregates the abundance data at a specified taxonomic level. It accepts a phyloseq object or a data.frame as input.
 #'
 #' @usage T_collapse (is_phyloseq=T, ps=..., names_level=...)
