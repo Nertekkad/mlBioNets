@@ -1,6 +1,9 @@
-# Identifying and highlighting statistically significant taxa differences in abundance.
+# diff_nodes_graph
+#'
+#' Igraph object of differences between nodes
 #'
 #' This function identifies the most abundant taxa and distinguishes between nodes with statistically significant differences in their abundance (red) and those without (blue).
+#'
 #' @usage diff_nodes_graph(T_Collapsed, n, mat_list, g.list, alpha)
 #' @param T_collapsed Abundance table collapsed at a certain taxonomic level (preprocessed by T_collapse).
 #' @param n Number of nodes to consider.
